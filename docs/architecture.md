@@ -1,9 +1,9 @@
 # Architecture And Current Work
 
-Checkpoint: 2026-10-12. Verified simulation/decision features are green; new
-unit-tested data/evaluation tooling is yellow; future work is gray. Combat passed
-the real-engine integration suite. The latest numeric-feature extension compiles
-but still needs its real-game batch. No model has been trained.
+Checkpoint: 2026-10-12. Verified features are green; future work is gray.
+Eight real games completed naturally and exported/audited without rejection:
+11,504 rows, 668 meaningful choices, combat coverage in both seed-disjoint splits.
+No model has been trained. One seed per split permits only a training smoke test.
 
 ```mermaid
 flowchart LR
@@ -29,14 +29,15 @@ flowchart LR
     Rules --> Outcome["Engine winner or explicit truncation"]
     Outcome --> Trace
     end
-    subgraph TrainingPrep["Latest checkpoint: unit-tested, batch pending"]
+    subgraph TrainingPrep["Evaluation and training-data preparation"]
     Trace --> Dataset["Episode integrity checks and numeric features"]
     Dataset --> Masks["104 state features / 32 masked actions / 21 action features"]
     Evaluation["Matched seeds and four seating rotations"] --> Trace
     Dataset --> Split["Seed-group train / validation split"]
+    Split --> Readiness["Dataset audit: masks / transitions / choice coverage"]
     Evaluation --> Uncertainty["Clustered bootstrap after five seed blocks"]
     end
-    Split -.-> Gate["Real-batch and first-training readiness gate"]
+    Readiness --> Gate["Smoke-training readiness, not competitive evidence"]
     Evaluation -.-> Gate
     Gate -.-> Model["Small policy and value model"]
     Model -.-> Python
@@ -51,8 +52,8 @@ flowchart LR
     classDef draft fill:#fff0bc,stroke:#977000,color:#362a00
     classDef future fill:#edf0f3,stroke:#68737c,color:#26313a
     class Lists,Audit,Validate,Fixtures,Rules,Java,Choices,Helpers,IPC,Python,Trace,Outcome,Forge,Smoke,Tests verified
-    class Dataset,Masks,Evaluation,Split,Uncertainty draft
-    class Gate,Model,Gaps,FullCEDH,DeckSearch future
+    class Dataset,Masks,Split,Readiness,Evaluation,Uncertainty,Gate verified
+    class Model,Gaps,FullCEDH,DeckSearch future
 ```
 
 The current extension covers attacker/defender choices, blocker choices, public
@@ -76,3 +77,9 @@ Numeric training features exclude object UUIDs and hidden library/opponent-hand
 identities. Episode export requires successful, naturally completed basic-mode
 games with consistent selected/applied actions and terminal outcomes. Truncated
 games are reported separately and do not become win/loss training labels.
+
+The readiness report independently validates exported transition chains,
+padding/masks, actor rewards, and source row counts. Forced decisions have zero
+policy weight. It reports meaningful decisions by scope and collecting policy;
+random-policy labels must not be mistaken for demonstrations of strong play.
+Training and validation need meaningful choices and remain seed-disjoint.

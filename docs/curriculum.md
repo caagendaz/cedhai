@@ -67,3 +67,21 @@ receive all-zero rewards. A turn cap is an explicit truncation and has no termin
 reward label. Native mulligans, automatic mana payment, damage allocation, and
 commander-return replacement choices remain fixed environment helpers. The
 curriculum trains high-level decisions under those helpers, not full Magic control.
+
+## Dataset Readiness
+
+`cedhai.learning_data` exports only complete, consistent basic-mode episodes.
+Numeric input is 104 state features and up to 32 actions with 21 features each;
+padding has a boolean legal-action mask. Outcome labels come from native winners.
+Next states link to the same actor's next decision, not the next player's turn.
+Seed multiples of five are validation; all rotations remain in the same split.
+
+`cedhai.dataset_report --dataset <folder>` audits the exported file and manifest,
+then reports meaningful choices by decision scope and collecting policy. It exits
+nonzero on corrupt data or absent training/validation choices. It warns when
+either split has fewer than five seeds or lacks a decision scope. A passing report
+means the data can support a small training smoke test, not reliable win-rate
+estimation. Forced choices receive zero policy weight. Initial behavior cloning
+should use scripted-policy choices as controls; random choices are exploration,
+not expert targets. The first model should be evaluated on held-out seeds and
+then through the existing external `Agent` interface in real games.
