@@ -28,6 +28,24 @@ def applied(action_id="land:0"):
 
 
 class DecisionBridgeTests(unittest.TestCase):
+    def test_cast_application_and_resolution_are_distinct(self):
+        session = DecisionSession(io.StringIO(), 7, "develop")
+        event = decision()
+        event.update(schema_version=2, scope="priority_basic")
+        event["observation"]["legal_actions"][1] = {"id": "cast:0", "label": "Cast creature"}
+        self.assertEqual(session.handle(event)["action_id"], "cast:0")
+        cast = applied("cast:0")
+        cast.update(schema_version=2, zone="STACK", card_id="creature")
+        session.handle(cast)
+        self.assertEqual(session.cast_spells, 1)
+        self.assertEqual(session.resolved_spells, 0)
+        resolution = {"event": "resolved", "schema_version": 2, "request_id": "xmage-7:0",
+                      "card_id": "creature", "zone": "BATTLEFIELD"}
+        session.handle(resolution)
+        self.assertEqual(session.resolved_spells, 1)
+        with self.assertRaisesRegex(ValueError, "Unknown"):
+            session.handle(resolution)
+
     def test_choice_application_and_truncation_are_recorded_separately(self):
         writer = io.StringIO()
         session = DecisionSession(writer, 7, "land")

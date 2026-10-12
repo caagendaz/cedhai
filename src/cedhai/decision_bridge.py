@@ -12,7 +12,7 @@ from .engine import Action, Observation
 
 class DecisionSession:
     def __init__(self, writer: TextIO, seed: int, policy: str = "random"):
-        if policy not in {"random", "land", "pass"}:
+        if policy not in {"random", "land", "pass", "develop"}:
             raise ValueError("Unknown policy")
         self.writer = writer
         self.policy = policy
@@ -21,6 +21,9 @@ class DecisionSession:
         self.pending: dict | None = None
         self.decisions = 0
         self.applied_lands = 0
+        self.cast_spells = 0
+        self.resolved_spells = 0
+        self.casts: dict[str, str] = {}
         self.finished: dict | None = None
         self.game_id: str | None = None
 
@@ -31,13 +34,13 @@ class DecisionSession:
     def handle(self, event: dict) -> dict:
         if self.finished is not None:
             raise ValueError("Session already finished")
-        if event.get("schema_version") != 1:
+        if event.get("schema_version") not in {1, 2}:
             raise ValueError("Unsupported schema version")
         kind = event.get("event")
         if kind == "decision":
             if self.pending is not None:
                 raise ValueError("Previous decision has not been applied")
-            if event.get("scope") != "own_hand_land_or_pass":
+            if event.get("scope") not in {"own_hand_land_or_pass", "priority_basic"}:
                 raise ValueError("Unsupported action scope")
             data = event["observation"]
             seat, step = data["seat"], data["step"]
@@ -53,14 +56,17 @@ class DecisionSession:
             ids = [action.id for action in actions]
             if not ids or len(ids) != len(set(ids)) or "pass" not in ids:
                 raise ValueError("Empty, duplicate, or missing pass actions")
-            if any(action_id != "pass" and not action_id.startswith("land:") for action_id in ids):
+            prefixes = ("land:", "cast:") if event["scope"] == "priority_basic" else ("land:",)
+            if any(action_id != "pass" and not action_id.startswith(prefixes) for action_id in ids):
                 raise ValueError("Unsupported action type")
             observation = Observation(**{**data, "legal_actions": actions})
             if self.policy == "pass":
                 action = next(action for action in actions if action.id == "pass")
-            elif self.policy == "land":
+            elif self.policy in {"land", "develop"}:
                 lands = [action for action in actions if action.id.startswith("land:")]
-                action = self.rngs[seat].choice(lands or list(actions))
+                spells = [action for action in actions if action.id.startswith("cast:")]
+                choices = lands or (spells if self.policy == "develop" else [])
+                action = self.rngs[seat].choice(choices) if choices else next(a for a in actions if a.id == "pass")
             else:
                 action = self.agents[seat].choose_action(observation)
             response = {"request_id": event["request_id"], "action_id": action.id}
@@ -80,8 +86,25 @@ class DecisionSession:
                 if event.get("zone") != "BATTLEFIELD":
                     raise ValueError("Land was not applied to battlefield")
                 self.applied_lands += 1
+            elif response["action_id"].startswith("cast:"):
+                if event.get("zone") != "STACK" or not event.get("card_id"):
+                    raise ValueError("Spell was not applied to stack")
+                self.cast_spells += 1
+                self.casts[event["request_id"]] = event["card_id"]
             self.record(event)
             self.pending = None
+            return {"ok": True}
+        if kind == "resolved":
+            if self.pending is not None:
+                raise ValueError("Resolution while a decision is pending")
+            request_id = event.get("request_id")
+            if self.casts.get(request_id) != event.get("card_id") or request_id not in self.casts:
+                raise ValueError("Unknown or mismatched spell resolution")
+            if event.get("zone") != "BATTLEFIELD":
+                raise ValueError("Creature did not resolve to battlefield")
+            del self.casts[request_id]
+            self.resolved_spells += 1
+            self.record(event)
             return {"ok": True}
         if kind == "finished":
             if self.pending is not None or self.decisions == 0:
@@ -90,6 +113,9 @@ class DecisionSession:
                 raise ValueError("Incorrect final game or decision count")
             if event.get("applied_lands") != self.applied_lands:
                 raise ValueError("Incorrect final applied land count")
+            if event.get("schema_version") == 2 and (
+                    event.get("cast_spells") != self.cast_spells or event.get("resolved_spells") != self.resolved_spells):
+                raise ValueError("Incorrect final spell counts")
             if type(event.get("terminal")) is not bool or type(event.get("truncated")) is not bool:
                 raise ValueError("Missing completion status")
             if event["terminal"] == event["truncated"]:

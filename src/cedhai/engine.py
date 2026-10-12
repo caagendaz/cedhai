@@ -11,6 +11,7 @@ from .decklist import Decklist
 class Action:
     id: str
     label: str
+    features: dict | None = None
 
 
 @dataclass(frozen=True)

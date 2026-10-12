@@ -11,6 +11,23 @@ from cedhai.run_bridge import ROOT, run_bridge
 
 @unittest.skipUnless(os.environ.get("CEDHAI_TEST_XMAGE") == "1", "opt-in XMage integration test")
 class XMageIntegrationTests(unittest.TestCase):
+    def test_python_casts_are_paid_and_resolve(self):
+        jdk = next((ROOT / "tools/jdk").glob("jdk-*"))
+        deck = ROOT / "examples/decks/curriculum/isamaru.txt"
+        out = ROOT / "runs" / ("casting-integration-" + uuid.uuid4().hex[:12])
+        result = run_bridge(jdk, ROOT / "tools/magezero/xmage", [deck] * 4, out, 7, "develop", 4, 300, "basic")
+        self.assertTrue(result["success"], result)
+        self.assertEqual(result["cast_spells"], 4)
+        self.assertEqual(result["resolved_spells"], 4)
+        events = [json.loads(line) for line in (out / "trajectory.jsonl").read_text().splitlines()]
+        casts = [event for event in events if event["event"] == "applied" and event["action_id"].startswith("cast:")]
+        self.assertEqual({event["seat"] for event in casts}, {0, 1, 2, 3})
+        for cast in casts:
+            self.assertEqual(cast["zone"], "STACK")
+            self.assertTrue(cast["public_state"]["stack"])
+            lands = [p for p in cast["public_state"]["battlefield"] if p["controller_seat"] == cast["seat"]]
+            self.assertTrue(any(p["name"] == "Plains" and p["tapped"] for p in lands))
+
     def test_four_player_decisions_are_applied_and_private_hands_are_scoped(self):
         jdk = next((ROOT / "tools/jdk").glob("jdk-*"))
         decks = [ROOT / "tools/forge/res/adventure/Realm of Legends/decks/starter/commanderprecon" / name
@@ -34,7 +51,7 @@ class XMageIntegrationTests(unittest.TestCase):
             self.assertEqual(len(state["players"]), 4)
             # Opponents expose public counts, never hands or library identities.
             for player in state["players"]:
-                self.assertEqual(set(player), {"seat", "life", "hand_count", "library_count", "battlefield_count"})
+                self.assertEqual(set(player), {"seat", "life", "hand_count", "library_count", "battlefield_count", "in_game", "mana_pool"})
             self.assertEqual(set(observation["private_state"]), {"hand"})
             actor = state["players"][observation["seat"]]
             self.assertEqual(len(observation["private_state"]["hand"]), actor["hand_count"])

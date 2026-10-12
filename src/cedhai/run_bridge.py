@@ -51,7 +51,7 @@ def export_xmage_deck(source: Path) -> str:
 
 
 def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
-               seed: int, policy: str, turns: int, timeout: int) -> dict:
+               seed: int, policy: str, turns: int, timeout: int, mode: str = "land") -> dict:
     jdk, engine_dir, out = jdk.resolve(), engine_dir.resolve(), out.resolve()
     if len(decks) != 4 or turns < 1 or timeout < 1:
         raise ValueError("Require four decks and positive turn/time limits")
@@ -79,7 +79,8 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
     with (out / "compile.log").open("w", encoding="utf-8") as log:
         subprocess.run(compile_command, stdout=log, stderr=subprocess.STDOUT, check=True, timeout=90)
     metadata = {"schema_version": 1, "engine": "MageZero XMage v0.2.0-alpha",
-                "scope": "own_hand_land_or_pass", "seed": seed, "policy": policy,
+                "scope": "priority_basic" if mode == "basic" else "own_hand_land_or_pass", "seed": seed, "policy": policy,
+                "mode": mode, "mana_payment": "native automatic tapping",
                 "policy_seeds": [seed + seat for seat in range(4)],
                 "max_turns": turns, "decks": records, "compile_command": compile_command,
                 "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
@@ -118,7 +119,7 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
         thread.start()
         command = [str(java), "-Xmx3g", "-Djava.awt.headless=true",
                    "--add-opens=java.base/java.lang=ALL-UNNAMED", "-cp", str(classes) + ";" + lib,
-                   "cedhai.BridgeMain", str(server.server_address[1]), str(seed), str(turns), *paths]
+                   "cedhai.BridgeMain", str(server.server_address[1]), str(seed), str(turns), *paths, mode]
         metadata.update({"command": command, "cwd": str(engine_dir)})
         try:
             with (out / "stdout.log").open("w", encoding="utf-8") as stdout, \
@@ -139,6 +140,7 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
         if re.search(r"Exception|StackOverflowError|OutOfMemoryError|\bERROR\b", log_text):
             errors.append("Engine error detected; inspect stdout.log and stderr.log")
         metadata.update({"decisions": session.decisions, "applied_lands": session.applied_lands,
+                         "cast_spells": session.cast_spells, "resolved_spells": session.resolved_spells,
                          "completion": session.finished, "errors": errors,
                          "success": metadata["returncode"] == 0 and session.finished is not None and not errors})
     (out / "result.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
@@ -151,7 +153,8 @@ def main() -> None:
     parser.add_argument("--engine-dir", type=Path, default=ROOT / "tools/magezero/xmage")
     parser.add_argument("--decks", type=Path, nargs=4)
     parser.add_argument("--seed", type=int, default=7)
-    parser.add_argument("--policy", choices=("random", "land", "pass"), default="random")
+    parser.add_argument("--policy", choices=("random", "land", "pass", "develop"), default="random")
+    parser.add_argument("--mode", choices=("land", "basic"), default="land")
     parser.add_argument("--turns", type=int, default=4)
     parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument("--out", type=Path, required=True)
@@ -161,8 +164,8 @@ def main() -> None:
         parser.error("Portable JDK missing; specify --jdk")
     decks = args.decks or [ROOT / "tools/forge/res/adventure/Realm of Legends/decks/starter/commanderprecon" / name
                            for name in PRECONS]
-    result = run_bridge(jdk, args.engine_dir, decks, args.out, args.seed, args.policy, args.turns, args.timeout)
-    print(json.dumps({key: result[key] for key in ("success", "decisions", "applied_lands", "errors")}, indent=2))
+    result = run_bridge(jdk, args.engine_dir, decks, args.out, args.seed, args.policy, args.turns, args.timeout, args.mode)
+    print(json.dumps({key: result[key] for key in ("success", "decisions", "applied_lands", "cast_spells", "resolved_spells", "errors")}, indent=2))
     raise SystemExit(0 if result["success"] else 1)
 
 
