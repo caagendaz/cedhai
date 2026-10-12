@@ -4,9 +4,12 @@ Checkpoint: 2026-10-12. Verified features are green; future work is gray.
 Eight real games completed naturally and exported/audited without rejection:
 11,504 rows, 668 meaningful choices, combat coverage in both seed-disjoint splits.
 A five-epoch CPU policy/value smoke run completed. One seed per split permits
-only wiring checks, not performance claims. Hosted Colab execution is pending.
+only wiring checks, not performance claims. The user's downloaded Colab CPU
+checkpoint loads locally with matching data/source hashes; CUDA remains unverified.
 The checkpoint completed a native seed-11 game and lost to a scripted control;
 its six attacks verify the connection, not strategic quality.
+The returned Colab checkpoint completed a fresh seed-12 game without bridge
+errors and also lost to a scripted control. This verifies checkpoint portability.
 
 ```mermaid
 flowchart LR
@@ -46,10 +49,12 @@ flowchart LR
     Model --> Checkpoint["Resumable weights / optimizer / data and source hashes"]
     Checkpoint --> Learned["ModelAgent and local gameplay smoke check"]
     Learned --> Python
-    subgraph Cloud["Colab setup: hosted execution not yet verified"]
+    subgraph Cloud["Colab CPU checkpoint received and loaded locally"]
     Readiness --> Bundle["Checksummed Python and data upload bundle"]
     Bundle --> Notebook["Colab notebook: CPU or available CUDA"]
     Notebook --> Drive["User-authorized Drive checkpoint persistence"]
+    Notebook --> Download["Downloaded epoch-5 checkpoint / verified hashes"]
+    Download --> Learned
     Drive --> Checkpoint
     end
     Lists --> Forge["Forge built-in AI baseline and logs"]
@@ -64,8 +69,8 @@ flowchart LR
     classDef future fill:#edf0f3,stroke:#68737c,color:#26313a
     class Lists,Audit,Validate,Fixtures,Rules,Java,Choices,Helpers,IPC,Python,Trace,Outcome,Forge,Smoke,Tests verified
     class Dataset,Masks,Split,Readiness,Evaluation,Uncertainty,Gate verified
-    class Model,Checkpoint,Learned,Bundle verified
-    class Notebook,Drive draft
+    class Model,Checkpoint,Learned,Bundle,Notebook,Download verified
+    class Drive draft
     class Gaps,FullCEDH,DeckSearch future
 ```
 
@@ -101,4 +106,6 @@ The smoke trainer uses only meaningful scripted choices by default, scores
 legal actions with a small shared MLP, and predicts actor outcomes. Checkpoints
 retain optimizer state, configuration, and exact data/source hashes. Colab receives
 Python/data only; Java simulations remain local. The notebook mounts Drive only
-with user authorization. GPU hardware and hosted execution remain unverified.
+with user authorization. The returned CPU checkpoint records PyTorch 2.11.0+cpu
+and five epochs. GPU execution and Drive persistence have not been independently
+verified from this workspace.

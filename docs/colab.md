@@ -61,8 +61,10 @@ High imitation accuracy does not establish better play or cEDH competence.
 Local verification used PyTorch 2.14.1+cpu: five training epochs, checkpoint
 reload/resume tests, notebook syntax/extraction checks, and a naturally completed
 seed-11 XMage pod. The model cast three creatures and attacked six times, but
-lost. Hosted notebook execution, Drive authorization, and CUDA execution still
-need verification in the user's Colab account.
+lost. The user has since returned `latest.pt` from Colab: it records epoch 5 and
+PyTorch 2.11.0+cpu, loads successfully locally, and matches the exact dataset and
+source hashes. CUDA execution and persistent Drive contents are not independently
+verified. Checkpoint files are ignored by Git, including downloads in the root.
 
 Checkpoints use PyTorch's restricted `weights_only=True` loading rather than
 arbitrary object deserialization. Still load only trusted checkpoints; see

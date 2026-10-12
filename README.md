@@ -92,8 +92,12 @@ See [the Colab guide](docs/colab.md) for setup, resume, and local evaluation.
 This is scripted behavior cloning and outcome prediction, not reinforcement
 learning. Forced/random choices are excluded by default. The notebook supports
 CPU or available CUDA and saves resumable optimizer/model state. Local CPU
-training, checkpoint resume, and legal-action selection are tested; execution
-inside a hosted Colab account and CUDA have not been verified here.
+training, checkpoint resume, and legal-action selection are tested.
+The user-produced Colab CPU checkpoint has also loaded locally with matching
+dataset/source hashes. CUDA execution and Drive persistence have not been
+independently verified here. Model checkpoints (`*.pt`) remain local, outside Git.
+The Colab checkpoint completed a fresh seed-12 pod without bridge errors and
+lost to a scripted opponent; the end-to-end pipeline works, not necessarily the strategy.
 
 The local checkpoint also completed a real seed-11 XMage game, casting three
 creatures and declaring six attacks. It lost to a scripted opponent; this is a

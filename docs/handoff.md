@@ -60,8 +60,9 @@ integration tests. No simulation remains running.
 
 `notebooks/colab_training.ipynb` uploads a checksummed Python/data bundle, audits
 it, installs the optional training dependency, mounts Drive with authorization,
-and runs the trainer with per-epoch checkpoints. Hosted Colab and CUDA execution
-are not verified in this local session. The bundle excludes Git credentials and
+and runs the trainer with per-epoch checkpoints. The user has returned a Colab
+CPU checkpoint; CUDA and Drive persistence are not independently verified.
+The bundle excludes Git credentials and
 Java runtimes. User-facing setup is in `docs/colab.md`.
 
 The local five-epoch CPU run is `runs/model-colab-smoke`. It uses 162 meaningful
@@ -83,9 +84,18 @@ through actual gameplay, not improvement. The short/long runs share a seed and
 are not independent evaluation samples. Local testing used PyTorch 2.14.1+cpu;
 NumPy is absent and PyTorch emitted a nonfatal interoperability warning.
 
+The user's Colab `latest.pt` loads locally: epoch 5, PyTorch 2.11.0+cpu,
+12,354 model parameters, matching dataset and source hashes. Its checkpoint
+SHA-256 is `9ca52114aa913a470647456cea97a9dbabd7d1a4a3e582f75c3eaf52a21c9aef`.
+The fresh-seed pod `runs/colab-import-seed12` completed naturally with 1,596
+decisions, 49 lands, 16 casts/resolutions, 16 attacks, and eight blocks. Model
+seat 0 lost to scripted seat 3. No engine/bridge errors occurred. This verifies
+Colab checkpoint portability, not improvement. Root checkpoint downloads are
+now ignored by Git; the user's file is preserved locally.
+
 ## Next Milestone
 
-1. Run the notebook in the user's Colab account and verify persistent checkpoints.
+1. Verify persistent Drive checkpoints and retain training metrics from Colab.
 2. Expand held-out seeds and seating-balanced learned-agent evaluation. Scripts
    supply behavior-cloning controls, not optimal actions or RL objectives.
 3. Run engine games sequentially because XMage uses a shared H2 database.
