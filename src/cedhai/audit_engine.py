@@ -12,6 +12,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--decks", type=Path, nargs="+", required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--aliases", type=Path)
     args = parser.parse_args()
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=False)
@@ -21,9 +22,10 @@ def main():
     engine = ROOT / "tools/magezero/xmage"
     lib = str(engine / "lib/*")
     paths = []
+    aliases = json.loads(args.aliases.read_text(encoding="utf-8")) if args.aliases else None
     for path in args.decks:
         target = out / (path.stem + ".txt")
-        target.write_text(export_xmage_deck(path), encoding="utf-8")
+        target.write_text(export_xmage_deck(path, aliases), encoding="utf-8")
         paths.append(str(target))
     source = ROOT / "java/cedhai/DeckAuditMain.java"
     with (out / "compile.log").open("w", encoding="utf-8") as log:

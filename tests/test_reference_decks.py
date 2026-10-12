@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 import unittest
 
 from cedhai.decklist import load_decklist
@@ -9,6 +10,13 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ReferenceDeckTests(unittest.TestCase):
+    def test_explicit_aliases_change_only_staged_engine_names(self):
+        path = ROOT / "examples/decks/reference/winota.txt"
+        aliases = json.loads((ROOT / "docs/primers/card_aliases.json").read_text())
+        staged = export_xmage_deck(path, aliases)
+        self.assertIn("Jurin, Leading the Charge", staged)
+        self.assertIn("Greymond, Avacyn's Stalwart", staged)
+        self.assertIn("Holga, Relentless Rager", path.read_text())
     def test_all_reference_decks_have_100_playable_cards(self):
         for path in (ROOT / "examples/decks/reference").glob("*.txt"):
             with self.subTest(deck=path.stem):

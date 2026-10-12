@@ -1,0 +1,20 @@
+{
+  "Holga, Relentless Rager": {
+    "name": "Jurin, Leading the Charge",
+    "oracle_id": "de384867-8bb4-4edf-b542-970538718fdd",
+    "api_uri": "https://api.scryfall.com/cards/sld/1240",
+    "source": "https://scryfall.com/card/sld/1240/jurin-leading-the-charge"
+  },
+  "Rick, Steadfast Leader": {
+    "name": "Greymond, Avacyn's Stalwart",
+    "oracle_id": "739a5220-50cd-4148-be58-1bbdeef2954e",
+    "api_uri": "https://api.scryfall.com/cards/sld/143",
+    "source": "https://scryfall.com/card/sld/143/greymond-avacyns-stalwart"
+  },
+  "Unstable Harmonics": {
+    "name": "Rhystic Study",
+    "oracle_id": "53236dd7-845a-444c-96d5-f41ed7325d8f",
+    "api_uri": "https://api.scryfall.com/cards/sld/478",
+    "source": "https://scryfall.com/card/sld/478/rhystic-study"
+  }
+}

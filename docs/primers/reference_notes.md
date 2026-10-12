@@ -91,3 +91,24 @@ Reproduce the checks:
 The Scryfall command saves a timestamped snapshot and supports `--snapshot`
 for offline repeat audits. The engine audit verifies actual card construction
 and Commander validation. Run engine processes sequentially against the shared DB.
+
+## Verified Name Mappings
+
+On 2026-10-12, the user supplied the original
+[Winota list](https://moxfield.com/decks/vreLLzMBwk2e4UoyV7mZUw) and Scryfall
+links for its two unresolved names. Scryfall's card records identify
+[Jurin, Leading the Charge](https://scryfall.com/card/sld/1240/jurin-leading-the-charge)
+with printed name Holga, Relentless Rager, and
+[Greymond, Avacyn's Stalwart](https://scryfall.com/card/sld/143/greymond-avacyns-stalwart)
+with printed name Rick, Steadfast Leader. Their Oracle IDs and exact printing
+API endpoints are pinned in `card_aliases.json`, alongside Unstable Harmonics's
+Rhystic Study identity.
+
+Scryfall preflight now passes all four lists with these mappings. Engine audit
+with `--aliases docs/primers/card_aliases.json` confirms Jurin, Greymond, and
+Rhystic Study load. Winota now loads 99/100 cards (Scuzzback Scrounger missing);
+RogSi loads 98/100 (Hexing Squelcher and Samut missing). Yuriko and Kinnan's
+previous engine gaps remain. All 11 remaining distinct names have source files
+in the current upstream XMage tree. Those files have not been integrated or
+tested against the installed MageZero fork; source presence is not proof that
+our current runtime supports them.

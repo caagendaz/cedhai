@@ -15,8 +15,9 @@ import urllib.parse
 from .decklist import Decklist, load_decklist
 
 
-def fetch_cards(names: list[str]) -> dict:
+def fetch_cards(names: list[str], aliases: dict | None = None) -> dict:
     cards, missing = [], []
+    aliases = aliases or {}
     def normalized(card, aliases=()):
         result = {key: card.get(key) for key in (
             "id", "oracle_id", "name", "scryfall_uri", "color_identity", "legalities",
@@ -45,12 +46,15 @@ def fetch_cards(names: list[str]) -> dict:
     for name in missing:
         time.sleep(0.12)
         request = urllib.request.Request(
-            "https://api.scryfall.com/cards/named?exact=" + urllib.parse.quote(name),
+            aliases[name]["api_uri"] if name in aliases else "https://api.scryfall.com/cards/named?exact=" + urllib.parse.quote(name),
             headers={"Accept": "application/json", "User-Agent": "cedhai/0.1 (Commander research prototype)"},
         )
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
-                cards.append(normalized(json.load(response), [name]))
+                card = json.load(response)
+                if name in aliases and (card["name"] != aliases[name]["name"] or card["oracle_id"] != aliases[name]["oracle_id"]):
+                    raise ValueError(f"Canonical alias record changed for {name}")
+                cards.append(normalized(card, [name]))
         except urllib.error.HTTPError as ex:
             if ex.code != 404:
                 raise
@@ -122,10 +126,12 @@ def main() -> None:
     parser.add_argument("--decks", type=Path, nargs="+", required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--snapshot", type=Path, help="Use a saved Scryfall snapshot offline")
+    parser.add_argument("--aliases", type=Path, default=Path(__file__).resolve().parents[2] / "docs/primers/card_aliases.json")
     args = parser.parse_args()
     decks = [load_decklist(path) for path in args.decks]
     names = sorted({c.name for deck in decks for c in deck.cards})
-    snapshot = json.loads(args.snapshot.read_text(encoding="utf-8")) if args.snapshot else fetch_cards(names)
+    aliases = json.loads(args.aliases.read_text(encoding="utf-8")) if args.aliases.exists() else {}
+    snapshot = json.loads(args.snapshot.read_text(encoding="utf-8")) if args.snapshot else fetch_cards(names, aliases)
     args.out.mkdir(parents=True, exist_ok=False)
     (args.out / "scryfall.json").write_text(json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     report = {"source": snapshot["source"], "checked_at": snapshot["checked_at"],

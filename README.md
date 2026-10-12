@@ -41,3 +41,6 @@ not complete legal Commander decks.
 
 Open `docs/research.md` for the engine comparison and phased implementation
 plan.
+
+See [the architecture diagram](docs/architecture.md) for the decision loop and
+the work leading to the first training run.
