@@ -1,0 +1,9 @@
+[project]
+name = "cedhai"
+version = "0.1.0"
+description = "Small Python-side prototype for cEDH MARL engine integration."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
