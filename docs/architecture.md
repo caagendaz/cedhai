@@ -53,6 +53,9 @@ flowchart LR
     Checkpoint --> Learned["ModelAgent and local gameplay smoke check"]
     Learned --> Python
     subgraph Cloud["Cloud-first: Linux gameplay preflight pending"]
+    VSCode["VS Code notebook + official Colab kernel"] --> Upload["Explorer upload / Contents download"]
+    Upload --> Bundle
+    VSCode --> Notebook
     Readiness --> Bundle["Checksummed Python and data upload bundle"]
     Bundle --> Notebook["Colab notebook: CPU or available CUDA"]
     Bundle --> CloudSetup["Pinned XMage archive + Linux Java 21 setup"]
@@ -80,6 +83,7 @@ flowchart LR
     class Dataset,Masks,Split,Readiness,Evaluation,Uncertainty,Gate verified
     class Model,Checkpoint,Learned,Bundle,Notebook,Download,Diagnostics verified
     class Drive,CloudSetup,CloudRules,CloudResults draft
+    class VSCode,Upload draft
     class Gaps,FullCEDH,DeckSearch future
 ```
 
@@ -124,3 +128,8 @@ fixtures alongside Python. The bridge now uses OS-appropriate Java binary names
 and classpath separators. Archive/path checks and resume accounting are tested
 locally; Linux engine startup still requires the user to run the Colab preflight.
 No cloud simulation speed or reliability claim is made yet.
+
+The VS Code notebook avoids browser-only transfer widgets and guards against
+local execution. Installed extension settings/commands were inspected (0.9.7).
+Google account sign-in and remote kernel selection remain user-controlled;
+opening the notebook does not itself start simulations or provision a runtime.

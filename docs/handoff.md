@@ -8,6 +8,14 @@ Current user constraint: maximize hosted Colab use because this PC is slow. Do
 not launch more local long simulations or training. Only editing and lightweight
 checks belong here. The next required user action is a real Colab/Linux preflight.
 
+Preferred UI is now VS Code's official Google Colab extension (installed 0.9.7).
+`notebooks/colab_vscode.ipynb` uses Explorer uploads and Contents downloads,
+not unsupported browser transfer widgets. `.vscode` settings/recommendations and
+`scripts/open_colab.ps1` are provided. Three focused bundle/notebook tests pass,
+including syntax and accidental-local-runtime rejection. User must select a
+remote Colab CPU kernel and complete Google/Drive authorization; the coding agent
+cannot claim a live authenticated runtime. See `docs/colab.md` for exact steps.
+
 ## Verified Foundation
 
 - Forge four-player Commander baseline and seeded normalized-log comparison.

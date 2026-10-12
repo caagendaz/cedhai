@@ -1,5 +1,37 @@
 # Colab Training
 
+## VS Code Workflow
+
+The official `google.colab` extension version 0.9.7 and Jupyter are installed
+locally. Workspace settings enable the supported upload and Contents/Resources
+views; no credentials or local compute defaults are configured.
+
+1. Open `notebooks/colab_vscode.ipynb` in VS Code (or run `scripts/open_colab.ps1`).
+2. Select Kernel > Colab > New Colab Server and choose CPU; complete Google
+   sign-in when prompted. Auto Connect is also available, but check the assigned
+   resources. Do not choose the local `.venv` kernel.
+3. In local Explorer, select `runs/cedhai-cloud.zip` and `latest.pt`, right-click
+   > Upload to Colab. Check the remote Contents view for `/content/cedhai-cloud.zip`
+   and `/content/latest.pt`; adjust the first code cell if uploads are nested.
+4. Run cells in order. Drive mounting requests authorization through the
+   extension. The command palette also offers Colab: Mount Google Drive to Server...
+   if an explicit mount cell is needed.
+5. Results stay in Drive. In Colab Contents, refresh and find
+   `drive/MyDrive/cedhai/cloud/cloud-evaluation-v1/evaluation-summary.zip`, then
+   right-click > Download. Checkpoints/logs are available in the same remote tree.
+
+The extension's [official guide](https://github.com/googlecolab/colab-vscode/wiki/User-Guide)
+documents kernel selection, uploads, Drive mounting, and runtime file access.
+Browser-style `google.colab.files.upload/download` is not used in this variant;
+the [known-issues page](https://github.com/googlecolab/colab-vscode/wiki/Known-Issues-and-Workarounds)
+describes those limitations. Authentication can still use a browser, but routine
+notebook execution is inside VS Code and compute remains hosted by Google.
+
+The first code cell guards against accidental local execution. Syntax and
+transfer-widget avoidance are tested; actual VS Code remote authentication,
+Drive mounting, and Linux game preflight need the user's connected session.
+No runtime has been provisioned or account authorized by the coding agent.
+
 ## Cloud-First Simulation And Evaluation
 
 The user's PC should no longer run substantial simulation/training. Open

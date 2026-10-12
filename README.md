@@ -2,6 +2,13 @@
 
 ## Cloud-First Workflow
 
+**VS Code:** Open [colab_vscode.ipynb](notebooks/colab_vscode.ipynb), select a
+**Colab** kernel, and sign in. Right-click `runs/cedhai-cloud.zip` and `latest.pt`
+in Explorer > **Upload to Colab**, then run the notebook cells. Use the Colab
+Contents sidebar to download results. No routine Colab website navigation is
+needed; Google sign-in/Drive authorization may still open a browser tab.
+The notebook refuses local Windows execution. See [the VS Code guide](docs/colab.md#vs-code-workflow).
+
 Simulation, evaluation, data generation, and training now target Colab; this PC
 is for editing and lightweight checks. The local long batch was stopped at the
 user's request. Linux XMage gameplay needs a real Colab preflight before it is

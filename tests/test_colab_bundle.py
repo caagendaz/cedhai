@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 from cedhai.colab_bundle import bundle
@@ -38,3 +39,18 @@ class ColabBundleTests(unittest.TestCase):
         for cell in json.loads(path.read_text())["cells"]:
             if cell["cell_type"] == "code":
                 compile("".join(cell["source"]), str(path), "exec")
+
+    def test_vscode_notebook_avoids_browser_transfer_widgets(self):
+        path = Path(__file__).resolve().parents[1] / "notebooks/colab_vscode.ipynb"
+        code = ""
+        for cell in json.loads(path.read_text())["cells"]:
+            if cell["cell_type"] == "code":
+                source = "".join(cell["source"])
+                compile(source, str(path), "exec")
+                code += source
+        self.assertNotIn("files.upload(", code)
+        self.assertNotIn("files.download(", code)
+        self.assertIn("Select a remote Colab kernel", code)
+        with patch("platform.system", return_value="Windows"), self.assertRaisesRegex(RuntimeError, "remote Colab kernel"):
+            notebook = json.loads(path.read_text())
+            exec("".join(notebook["cells"][1]["source"]), {})
