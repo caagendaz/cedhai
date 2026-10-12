@@ -24,6 +24,17 @@ real four-player Commander game using bundled C17 preconstructed decks. Use a
 new output directory for each run. See `docs/forge_setup.md` for custom decks
 and installation details.
 
+The next spike now connects Python agents to real XMage priority decisions:
+
+```powershell
+.\.venv\Scripts\python.exe -m cedhai.run_bridge --policy random --seed 7 --out runs/bridge-new
+```
+
+It runs four validated Commander decks with Python choosing land plays or pass,
+and records each decision and confirmed application. See
+[`docs/decision_bridge.md`](docs/decision_bridge.md) for reproducible installation,
+source findings, tests, and the remaining work toward full gameplay control.
+
 The original `cedhai.run_smoke` module is a synthetic interface test, not a
 Magic simulation. The tiny decklists in `examples/decks` are parser fixtures,
 not complete legal Commander decks.

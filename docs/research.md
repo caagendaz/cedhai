@@ -2,6 +2,12 @@
 
 Date: 2026-10-11
 
+Follow-up source inspection and a verified four-player external-decision spike
+are documented in [decision_bridge.md](decision_bridge.md). The current code
+reuses MageZero's prebuilt XMage libraries with a small independent Java harness;
+it does not require an engine fork for the land/pass boundary. A full fork may
+still be needed for broader decisions, throughput, and rules fixes.
+
 ## Summary Recommendation
 
 Use XMage as the primary long-term rules engine, with MageZero as the closest
@@ -9,11 +15,10 @@ existing proof that XMage can be adapted into a learning environment. Use Forge
 only as a near-term baseline simulator for AI-vs-AI deck smoke tests and coarse
 deck-optimization experiments.
 
-The smallest useful prototype in this repository is therefore Python-side
-plumbing: deck loading, observation/action interfaces, externally selected
-actions, deterministic seeds, and trajectory recording. The next Java milestone
-should be a thin XMage fork or plugin that emits legal-action observations and
-accepts selected actions over a local IPC protocol.
+The initial prototype provided Python-side deck loading, observation/action
+interfaces, seeded agents, and trajectory recording. The standalone Java
+harness now applies real land/pass actions selected over local IPC. The next
+Java milestone is to cover more decision families and visible game state.
 
 ## XMage
 
@@ -121,12 +126,13 @@ Optional baseline adapter
 2. Forge CLI baseline runner: run installed Forge against real Commander decks,
    parse winners, and store reproducible metadata. This does not provide RL
    actions, but gives immediate deck-test automation.
-3. XMage code inspection spike: locate player decision APIs, AI player classes,
+3. XMage code inspection spike (implemented): locate player decision APIs, AI player classes,
    test-mode harness, random/seeding points, and deck loading. Produce a tiny
-   Java proof that logs legal actions for one decision.
-4. XMage external-agent bridge: local HTTP/gRPC/socket bridge from Java to
+   Java proof that logs legal actions for one decision. The spike now logs and
+   applies own-hand land/pass decisions in four-player Commander.
+4. XMage external-agent bridge (land/pass implemented): local HTTP/gRPC/socket bridge from Java to
    Python with request/response schemas matching `cedhai.engine`.
-5. Four-player Commander harness: pod creation, seating randomization, hidden
+5. Four-player Commander harness (fixed seating implemented): pod creation, seating randomization, hidden
    observation redaction, terminal scoring, and trajectory persistence.
 6. Foundational agents: random, pass-priority baseline, scripted combo
    execution tests, and behavior-cloned policy from heuristic traces.
