@@ -1,6 +1,8 @@
 # Architecture And Current Work
 
 Checkpoint: 2026-10-12. Verified features are green; future work is gray.
+The compute target is now cloud-first at the user's request. Local long-running
+simulation was stopped. Linux/Colab gameplay is implemented but not yet verified.
 Eight real games completed naturally and exported/audited without rejection:
 11,504 rows, 668 meaningful choices, combat coverage in both seed-disjoint splits.
 A five-epoch CPU policy/value smoke run completed. One seed per split permits
@@ -38,10 +40,11 @@ flowchart LR
     subgraph TrainingPrep["Evaluation and training-data preparation"]
     Trace --> Dataset["Episode integrity checks and numeric features"]
     Dataset --> Masks["104 state features / 32 masked actions / 21 action features"]
-    Evaluation["Matched seeds and four seating rotations"] --> Trace
+    Evaluation["Frozen checkpoint / fresh seeds / four seat rotations / resume"] --> Trace
     Dataset --> Split["Seed-group train / validation split"]
     Split --> Readiness["Dataset audit: masks / transitions / choice coverage"]
     Evaluation --> Uncertainty["Clustered bootstrap after five seed blocks"]
+    Trace --> Diagnostics["Choice diagnostics and per-seat performance"]
     end
     Readiness --> Gate["Smoke-training readiness, not competitive evidence"]
     Evaluation -.-> Gate
@@ -49,13 +52,19 @@ flowchart LR
     Model --> Checkpoint["Resumable weights / optimizer / data and source hashes"]
     Checkpoint --> Learned["ModelAgent and local gameplay smoke check"]
     Learned --> Python
-    subgraph Cloud["Colab CPU checkpoint received and loaded locally"]
+    subgraph Cloud["Cloud-first: Linux gameplay preflight pending"]
     Readiness --> Bundle["Checksummed Python and data upload bundle"]
     Bundle --> Notebook["Colab notebook: CPU or available CUDA"]
+    Bundle --> CloudSetup["Pinned XMage archive + Linux Java 21 setup"]
+    CloudSetup --> CloudRules["Colab CPU: preflight then sequential games"]
+    CloudRules --> Evaluation
+    CloudRules --> Trace
     Notebook --> Drive["User-authorized Drive checkpoint persistence"]
     Notebook --> Download["Downloaded epoch-5 checkpoint / verified hashes"]
     Download --> Learned
     Drive --> Checkpoint
+    Evaluation --> CloudResults["Drive: completed games / partial attempts / summaries"]
+    CloudResults --> Drive
     end
     Lists --> Forge["Forge built-in AI baseline and logs"]
     Smoke["Synthetic SmokeEngine protocol tests"] --> Tests["Automated Python and real-engine tests"]
@@ -69,8 +78,8 @@ flowchart LR
     classDef future fill:#edf0f3,stroke:#68737c,color:#26313a
     class Lists,Audit,Validate,Fixtures,Rules,Java,Choices,Helpers,IPC,Python,Trace,Outcome,Forge,Smoke,Tests verified
     class Dataset,Masks,Split,Readiness,Evaluation,Uncertainty,Gate verified
-    class Model,Checkpoint,Learned,Bundle,Notebook,Download verified
-    class Drive draft
+    class Model,Checkpoint,Learned,Bundle,Notebook,Download,Diagnostics verified
+    class Drive,CloudSetup,CloudRules,CloudResults draft
     class Gaps,FullCEDH,DeckSearch future
 ```
 
@@ -109,3 +118,9 @@ Python/data only; Java simulations remain local. The notebook mounts Drive only
 with user authorization. The returned CPU checkpoint records PyTorch 2.11.0+cpu
 and five epochs. GPU execution and Drive persistence have not been independently
 verified from this workspace.
+
+The cloud simulation notebook carries Java bridge sources and legal curriculum
+fixtures alongside Python. The bridge now uses OS-appropriate Java binary names
+and classpath separators. Archive/path checks and resume accounting are tested
+locally; Linux engine startup still requires the user to run the Colab preflight.
+No cloud simulation speed or reliability claim is made yet.

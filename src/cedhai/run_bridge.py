@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import socketserver
@@ -19,6 +20,15 @@ from .engine import Agent
 
 ROOT = Path(__file__).resolve().parents[2]
 MAX_MESSAGE_BYTES = 1024 * 1024
+
+
+def java_tools(jdk: Path, platform: str | None = None):
+    suffix = ".exe" if (platform or os.name) == "nt" else ""
+    return jdk / "bin" / ("java" + suffix), jdk / "bin" / ("javac" + suffix)
+
+
+def java_classpath(classes: Path, lib: str):
+    return str(classes) + os.pathsep + lib
 
 
 def export_xmage_deck(source: Path, aliases: dict | None = None) -> str:
@@ -79,8 +89,7 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
         records.append({"seat": seat, "source": str(source),
                         "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
                         "staged_sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
-    bin_dir = jdk / "bin"
-    java, javac = bin_dir / "java.exe", bin_dir / "javac.exe"
+    java, javac = java_tools(jdk)
     lib = str(engine_dir / "lib" / "*")
     source = ROOT / "java/cedhai/BridgeMain.java"
     (out / "BridgeMain.java").write_bytes(source.read_bytes())
@@ -129,7 +138,7 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
         thread = threading.Thread(target=server.serve_forever, daemon=True)
         thread.start()
         command = [str(java), "-Xmx3g", "-Djava.awt.headless=true",
-                   "--add-opens=java.base/java.lang=ALL-UNNAMED", "-cp", str(classes) + ";" + lib,
+                   "--add-opens=java.base/java.lang=ALL-UNNAMED", "-cp", java_classpath(classes, lib),
                    "cedhai.BridgeMain", str(server.server_address[1]), str(seed), str(turns), *paths, mode]
         metadata.update({"command": command, "cwd": str(engine_dir)})
         try:

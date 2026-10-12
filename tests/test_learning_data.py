@@ -127,7 +127,7 @@ class EvaluationTests(unittest.TestCase):
     def test_winners_are_mapped_to_profiles_and_truncation_is_excluded(self):
         game = {"seed": 7, "success": True, "terminal": True, "truncated": False,
                 "seat_to_profile": [1, 2, 3, 0], "winners": [3]}
-        truncation = {**game, "truncated": True, "terminal": False, "winners": []}
+        truncation = {**game, "seed": 8, "truncated": True, "terminal": False, "winners": []}
         summary = summarize([game, truncation], ["random"] * 4)
         self.assertEqual(summary["profiles"][0]["wins"], 1)
         self.assertEqual(summary["profiles"][0]["completed"], 1)

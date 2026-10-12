@@ -20,6 +20,8 @@ class ColabBundleTests(unittest.TestCase):
                 names = archive.namelist()
                 metadata = json.loads(archive.read("bundle.json"))
                 self.assertIn("project/src/cedhai/train.py", names)
+                self.assertIn("project/java/cedhai/BridgeMain.java", names)
+                self.assertIn("project/examples/decks/curriculum/yargle.txt", names)
                 self.assertIn("dataset/examples.jsonl", names)
                 self.assertEqual(set(names), set(metadata["sha256"]) | {"bundle.json"})
                 self.assertFalse(any(".git/" in name or ".venv/" in name or "tools/" in name for name in names))
@@ -30,3 +32,9 @@ class ColabBundleTests(unittest.TestCase):
             self.assertEqual((path / "extracted/dataset/examples.jsonl").read_bytes(), (path / "examples.jsonl").read_bytes())
             with self.assertRaises(FileExistsError):
                 bundle(path, target)
+
+    def test_cloud_notebook_cells_compile(self):
+        path = Path(__file__).resolve().parents[1] / "notebooks/colab_simulation.ipynb"
+        for cell in json.loads(path.read_text())["cells"]:
+            if cell["cell_type"] == "code":
+                compile("".join(cell["source"]), str(path), "exec")

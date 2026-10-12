@@ -1,8 +1,49 @@
 # Colab Training
 
-Keep Java/XMage simulations on the PC. Colab receives audited numeric examples
-and Python source, trains a small policy/value model, and saves checkpoints to
-Drive for local gameplay evaluation. This is scripted behavior cloning plus
+## Cloud-First Simulation And Evaluation
+
+The user's PC should no longer run substantial simulation/training. Open
+`notebooks/colab_simulation.ipynb` in a hosted Colab CPU runtime and upload
+`runs/cedhai-cloud.zip` plus the downloaded `latest.pt`. This new bundle contains
+Python, Java harness sources, legal curriculum fixtures, and the initial dataset;
+it does not contain credentials or downloaded engine distributions.
+
+The notebook installs a Linux Java 21 compiler and downloads the same pinned
+MageZero engine archive used locally, verifying its SHA-256 before extraction.
+The runtime must allow the apt package install and GitHub download. Then it mounts
+Drive with user authorization and runs a four-turn preflight. Linux gameplay has
+not been exercised here: if the preflight fails, preserve its logs and do not
+claim cloud engine integration works.
+
+The evaluation uses five fresh seeds and four seat rotations, one frozen model
+profile against three `defend` controls. Declared development seeds are rejected
+if reused for evaluation. The checkpoint itself does not encode all development
+seeds, so freshness still depends on an honest declaration. Reports track
+completed games, draws, truncations, errors, per-seat wins, and meaningful choices.
+Seed-block bootstrap ranges require five complete blocks and may be degenerate
+for all-zero/all-one observations; they are not proofs of the true win rate.
+
+Drive stores input files, trajectories, logs, checkpoint snapshots, and per-game
+progress. To resume after a runtime interruption, reconnect, upload the exact
+same bundle/checkpoint, keep `RUN_NAME`, and rerun in order. Stop the previous
+cell before retrying in the same runtime. The evaluator verifies configuration,
+skips saved successful games (including documented truncations), and preserves
+interrupted/failed directories as separate attempts. It never labels partial
+games as completed wins/losses. Do not change seeds or weights while resuming.
+
+The diagnostic report counts casts/attacks/blocks offered and declined. It does
+not infer optimal play. The final download is `evaluation-summary.zip`; full
+trajectories remain in Drive. Optional cells generate new scripted/random games
+using different seeds, export data, and train on the Colab CPU. Run the optional
+training cell once per new run name; evaluation seeds must remain separate.
+
+Only training/checkpoint portability has been verified from the returned Colab
+file so far. Drive persistence and full Linux simulation still require the user's
+Colab session. No more local long games are launched by default.
+
+The original training-only notebook receives audited numeric examples and Python
+source, trains a small policy/value model, and saves checkpoints to Drive.
+The new simulation notebook moves the rules engine to Colab too. This is scripted behavior cloning plus
 outcome prediction, not self-play reinforcement learning.
 
 ## Prepared Files
@@ -11,8 +52,8 @@ outcome prediction, not self-play reinforcement learning.
 - Upload archive: `runs/cedhai-colab.zip` (generated locally, not committed).
 - Local dataset: `runs/curriculum-dataset-verified`.
 
-The archive contains only Python source, package configuration, and the audited
-dataset. It excludes Git credentials, `.git`, engine distributions, and raw
+The current archive contains source, package configuration, curriculum fixtures,
+and the audited dataset. It excludes Git credentials, `.git`, engine distributions, and raw
 trajectories. Each member has a SHA-256 checksum. Treat the archive as executable
 code; upload only bundles you trust. Dataset/source hashes identify exact inputs;
 the bundle also records the repository's HEAD revision as a reference.

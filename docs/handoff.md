@@ -4,6 +4,10 @@ Work has resumed. The private repository is `caagendaz/cedhai`. Every feature
 push includes README and Mermaid updates. Runtimes, the virtual environment,
 and generated artifacts remain local under ignored `tools/`, `.venv/`, and `runs/`.
 
+Current user constraint: maximize hosted Colab use because this PC is slow. Do
+not launch more local long simulations or training. Only editing and lightweight
+checks belong here. The next required user action is a real Colab/Linux preflight.
+
 ## Verified Foundation
 
 - Forge four-player Commander baseline and seeded normalized-log comparison.
@@ -95,7 +99,27 @@ now ignored by Git; the user's file is preserved locally.
 
 ## Next Milestone
 
-1. Verify persistent Drive checkpoints and retain training metrics from Colab.
+The latest feature adds frozen-checkpoint seating-balanced evaluation, per-seat
+accounting, fresh-seed declarations, guarded resume, preserved partial attempts,
+and action-choice diagnostics. External baseline adapters match bridge controls.
+The first local attempt failed before gameplay due to the `model` label being
+passed into a baseline-only field; fixed and covered by a mocked CLI regression.
+The corrected local batch completed seed 13 rotation 0 (model won), then was
+stopped at the user's request to move compute to Colab. Its remaining games are
+not completed outcomes; one win is not an evaluation result. Partial artifacts
+are retained in `runs/colab-model-evaluation-v2`, and seed 13 is now development.
+
+`notebooks/colab_simulation.ipynb` runs engine installation, short preflight,
+20-game checkpoint evaluation, diagnostics, and optional data generation/training
+on hosted Colab CPUs. `runs/cedhai-cloud.zip` is the prepared upload bundle.
+The portable Java paths/classpath, archive checks, notebook syntax/extraction,
+and mocked evaluation resume tests pass. No Linux simulation has run here, and
+no local simulation remains running. Full suite before cloud changes: 40 passed,
+four opt-in engine tests skipped. Subsequent focused cloud/data tests: 13 passed;
+mocked checkpoint evaluation/resume tests also pass.
+
+1. Run the new cloud notebook preflight in the user's Colab account. Keep its
+   logs if Linux/engine startup fails. Verify persistent Drive results.
 2. Expand held-out seeds and seating-balanced learned-agent evaluation. Scripts
    supply behavior-cloning controls, not optimal actions or RL objectives.
 3. Run engine games sequentially because XMage uses a shared H2 database.

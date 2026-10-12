@@ -4,25 +4,12 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-import random
 
 import torch
 
 from .model import ModelAgent
+from .agents import BaselineAgent
 from .run_bridge import ROOT, run_bridge
-
-
-class ScriptedAgent:
-    def __init__(self, seed, defend=False):
-        self.rng = random.Random(seed)
-        self.defend = defend
-
-    def choose_action(self, observation):
-        for kind in ("land", "cast", "attack", "block"):
-            choices = [action for action in observation.legal_actions if action.id.startswith(kind + ":")]
-            if choices and (kind != "block" or self.defend):
-                return self.rng.choice(choices)
-        return next(action for action in observation.legal_actions if action.id in {"pass", "skip"})
 
 
 def main():
@@ -35,7 +22,7 @@ def main():
     args = parser.parse_args()
     torch.set_num_threads(1)
     learned = ModelAgent(args.checkpoint)
-    agents = tuple(learned if seat == args.seat else ScriptedAgent(args.seed + seat, defend=True)
+    agents = tuple(learned if seat == args.seat else BaselineAgent(args.seed + seat, "defend")
                    for seat in range(4))
     deck = ROOT / "examples/decks/curriculum/yargle.txt"
     result = run_bridge(next((ROOT / "tools/jdk").glob("jdk-*")), ROOT / "tools/magezero/xmage",

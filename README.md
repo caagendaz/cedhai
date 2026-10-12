@@ -1,5 +1,23 @@
 # cEDH MARL Prototype
 
+## Cloud-First Workflow
+
+Simulation, evaluation, data generation, and training now target Colab; this PC
+is for editing and lightweight checks. The local long batch was stopped at the
+user's request. Linux XMage gameplay needs a real Colab preflight before it is
+declared verified.
+
+Upload [colab_simulation.ipynb](notebooks/colab_simulation.ipynb) in Colab, then
+upload the prepared `runs/cedhai-cloud.zip` and your `latest.pt` when prompted.
+Use a **CPU runtime** for Java simulations. The notebook checks the bundle,
+installs Java 21 and a checksum-pinned XMage distribution, mounts Drive with your
+authorization, and runs a short preflight before the 20-game evaluation.
+
+Completed games and logs remain in Drive. Reconnect with the same files and
+`RUN_NAME` to resume; interrupted attempts are preserved and retried. Optional
+cells collect new training games and train a larger smoke dataset entirely in
+Colab. See [the cloud guide](docs/colab.md). No private GitHub token is required.
+
 This repository starts with a deliberately small prototype for a future
 multi-agent reinforcement-learning system for competitive Commander.
 
@@ -51,6 +69,12 @@ See [the architecture diagram](docs/architecture.md) for the decision loop and
 the work leading to the first training run.
 
 ## Evaluation And Data Readiness
+
+Checkpoint evaluation supports `--checkpoint`, a `model` policy profile,
+`--development-seeds`, and `--resume`. Reports include per-seat outcomes and
+meaningful choice counts. A frozen checkpoint snapshot prevents mid-batch weight
+changes. Diagnostic reports describe declined available actions without claiming
+that passing or skipping was strategically wrong.
 
 The latest eight-game real-engine batch completed without errors or truncations.
 All eight trajectories passed export/audit: 11,504 rows and 668 meaningful
