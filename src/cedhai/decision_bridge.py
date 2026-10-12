@@ -7,16 +7,23 @@ import random
 from typing import TextIO
 
 from .agents import RandomAgent
-from .engine import Action, Observation
+from .engine import Action, Agent, Observation
 
 
 class DecisionSession:
-    def __init__(self, writer: TextIO, seed: int, policy: str = "random"):
+    def __init__(self, writer: TextIO, seed: int, policy: str = "random",
+                 policies: tuple[str, ...] | None = None, agents: tuple[Agent, ...] | None = None):
         if policy not in {"random", "land", "pass", "develop", "defend"}:
             raise ValueError("Unknown policy")
         self.writer = writer
         self.policy = policy
-        self.agents = [RandomAgent(seed + seat) for seat in range(4)]
+        self.policies = policies or (policy,) * 4
+        if len(self.policies) != 4 or any(p not in {"random", "land", "pass", "develop", "defend"} for p in self.policies):
+            raise ValueError("Require four known seat policies")
+        if agents is not None and len(agents) != 4:
+            raise ValueError("Require four external agents")
+        self.external_agents = agents is not None
+        self.agents = agents if agents is not None else tuple(RandomAgent(seed + seat) for seat in range(4))
         self.rngs = [random.Random(seed + seat) for seat in range(4)]
         self.pending: dict | None = None
         self.decisions = 0
@@ -63,19 +70,24 @@ class DecisionSession:
                         "block": ("block:",), "own_hand_land_or_pass": ("land:",)}[event["scope"]]
             if any(action_id != idle and not action_id.startswith(prefixes) for action_id in ids):
                 raise ValueError("Unsupported action type")
-            observation = Observation(**{**data, "legal_actions": actions})
-            if self.policy == "pass":
+            observation = Observation(**{**data, "legal_actions": actions, "decision_type": event["scope"]})
+            policy = self.policies[seat]
+            if self.external_agents:
+                action = self.agents[seat].choose_action(observation)
+            elif policy == "pass":
                 action = next(action for action in actions if action.id == idle)
-            elif self.policy in {"land", "develop", "defend"}:
+            elif policy in {"land", "develop", "defend"}:
                 lands = [action for action in actions if action.id.startswith("land:")]
                 spells = [action for action in actions if action.id.startswith("cast:")]
                 attacks = [action for action in actions if action.id.startswith("attack:")]
                 blocks = [action for action in actions if action.id.startswith("block:")]
-                choices = lands or (spells or attacks or (blocks if self.policy == "defend" else [])
-                                    if self.policy in {"develop", "defend"} else [])
+                choices = lands or (spells or attacks or (blocks if policy == "defend" else [])
+                                    if policy in {"develop", "defend"} else [])
                 action = self.rngs[seat].choice(choices) if choices else next(a for a in actions if a.id == idle)
             else:
                 action = self.agents[seat].choose_action(observation)
+            if action.id not in ids:
+                raise ValueError("External agent selected an unavailable action")
             response = {"request_id": event["request_id"], "action_id": action.id}
             self.pending = {"request": event, "response": response}
             self.decisions += 1

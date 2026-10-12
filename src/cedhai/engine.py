@@ -22,6 +22,7 @@ class Observation:
     public_state: dict
     private_state: dict
     legal_actions: tuple[Action, ...]
+    decision_type: str = "priority"
 
 
 @dataclass(frozen=True)

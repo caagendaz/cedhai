@@ -1,17 +1,25 @@
 # Architecture And Current Work
 
-Solid arrows describe the existing simulation and recording path. Dotted arrows
-describe the next data/evaluation/training stages. The combat extension has passed
-the real-engine integration suite. The first learning environment is the bounded
-basic-creature Commander curriculum; full cEDH decisions remain later work.
+Checkpoint: 2026-10-12. Verified simulation/decision features are green; new
+unit-tested data/evaluation tooling is yellow; future work is gray. Combat passed
+the real-engine integration suite. The latest numeric-feature extension compiles
+but still needs its real-game batch. No model has been trained.
 
 ```mermaid
 flowchart LR
+    subgraph References["Deck and card inputs"]
     Lists["User decklists and primers"] --> Audit["Scryfall preflight and verified name aliases"]
     Audit --> Validate["Installed XMage card and Commander validation"]
+    Lists --> Fixtures["Legal Isamaru and Yargle curricula"]
+    end
     Validate -->|supported deck| Rules["Four-player XMage rules engine"]
+    Fixtures --> Rules
     Validate -->|missing implementation| Gaps["Engine update backlog"]
+    subgraph Simulation["Verified gameplay foundation"]
     Rules --> Java["BridgePlayer decision hooks"]
+    Java --> Choices["Land / cast / attack / block choices"]
+    Choices --> Java
+    Rules --> Helpers["Native mana payment / mulligans / damage"]
     Java -->|acting-player observation and available choices| IPC["Loopback JSONL protocol"]
     IPC --> Python["Python random and scripted policies"]
     Python -->|selected action ID| IPC
@@ -20,11 +28,31 @@ flowchart LR
     IPC --> Trace["Decision, application, resolution and outcome records"]
     Rules --> Outcome["Engine winner or explicit truncation"]
     Outcome --> Trace
-    Trace -.-> Dataset["Validated training examples"]
-    Dataset -.-> Evaluation["Held-out seeds and balanced seating"]
-    Evaluation -.-> Gate["First-training readiness gate"]
+    end
+    subgraph TrainingPrep["Latest checkpoint: unit-tested, batch pending"]
+    Trace --> Dataset["Episode integrity checks and numeric features"]
+    Dataset --> Masks["104 state features / 32 masked actions / 21 action features"]
+    Evaluation["Matched seeds and four seating rotations"] --> Trace
+    Dataset --> Split["Seed-group train / validation split"]
+    Evaluation --> Uncertainty["Clustered bootstrap after five seed blocks"]
+    end
+    Split -.-> Gate["Real-batch and first-training readiness gate"]
+    Evaluation -.-> Gate
     Gate -.-> Model["Small policy and value model"]
     Model -.-> Python
+    Lists --> Forge["Forge built-in AI baseline and logs"]
+    Smoke["Synthetic SmokeEngine protocol tests"] --> Tests["Automated Python and real-engine tests"]
+    Java --> Tests
+    Dataset --> Tests
+    Gaps -.-> FullCEDH["Future full cEDH decisions and self-play"]
+    Model -.-> FullCEDH
+    FullCEDH -.-> DeckSearch["Future deck optimization"]
+    classDef verified fill:#d9f2e3,stroke:#247548,color:#132b1e
+    classDef draft fill:#fff0bc,stroke:#977000,color:#362a00
+    classDef future fill:#edf0f3,stroke:#68737c,color:#26313a
+    class Lists,Audit,Validate,Fixtures,Rules,Java,Choices,Helpers,IPC,Python,Trace,Outcome,Forge,Smoke,Tests verified
+    class Dataset,Masks,Evaluation,Split,Uncertainty draft
+    class Gate,Model,Gaps,FullCEDH,DeckSearch future
 ```
 
 The current extension covers attacker/defender choices, blocker choices, public
@@ -36,3 +64,15 @@ interface, not an assertion that every Magic decision is Python-controlled.
 Reference decks retain their supplied card names. Explicit engine-name mappings
 can be selected during audit/import, with their Oracle IDs and Scryfall sources
 recorded in `primers/card_aliases.json`. No missing card is automatically cut.
+
+The reference library contains Winota, Yuriko, Rograkh/Silas, and Kinnan, plus
+three raw supplied primers and Winota strategy notes/source link. All four
+lists pass Scryfall preflight with verified printed-name mappings. Eleven distinct
+card implementations remain missing from the installed engine, although source
+files exist in current upstream XMage. Full cEDH simulation remains blocked on
+that engine update and additional decision coverage.
+
+Numeric training features exclude object UUIDs and hidden library/opponent-hand
+identities. Episode export requires successful, naturally completed basic-mode
+games with consistent selected/applied actions and terminal outcomes. Truncated
+games are reported separately and do not become win/loss training labels.

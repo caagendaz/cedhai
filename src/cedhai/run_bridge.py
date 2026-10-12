@@ -14,6 +14,7 @@ import threading
 from .decision_bridge import DecisionSession
 from .decklist import load_decklist
 from .forge_cli import PRECONS
+from .engine import Agent
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -58,9 +59,10 @@ def export_xmage_deck(source: Path, aliases: dict | None = None) -> str:
 
 
 def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
-               seed: int, policy: str, turns: int, timeout: int, mode: str = "land") -> dict:
+               seed: int, policy: str, turns: int, timeout: int, mode: str = "land",
+               policies: tuple[str, ...] | None = None, agents: tuple[Agent, ...] | None = None) -> dict:
     jdk, engine_dir, out = jdk.resolve(), engine_dir.resolve(), out.resolve()
-    if len(decks) != 4 or turns < 1 or timeout < 1:
+    if len(decks) != 4 or turns < 1 or timeout < 1 or mode not in {"land", "basic"}:
         raise ValueError("Require four decks and positive turn/time limits")
     out.mkdir(parents=True, exist_ok=False)
     classes = out / "classes"
@@ -88,6 +90,8 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
     metadata = {"schema_version": 1, "engine": "MageZero XMage v0.2.0-alpha",
                 "scope": "priority_basic" if mode == "basic" else "own_hand_land_or_pass", "seed": seed, "policy": policy,
                 "mode": mode, "mana_payment": "native automatic tapping",
+                "observation_features_version": 1,
+                "seat_policies": list(policies or (policy,) * 4) if agents is None else [type(a).__module__ + "." + type(a).__qualname__ for a in agents],
                 "policy_seeds": [seed + seat for seat in range(4)],
                 "max_turns": turns, "decks": records, "compile_command": compile_command,
                 "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
@@ -97,7 +101,7 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
                                 stderr=subprocess.STDOUT, text=True).strip()}
     errors: list[str] = []
     with (out / "trajectory.jsonl").open("w", encoding="utf-8") as trajectory:
-        session = DecisionSession(trajectory, seed, policy)
+        session = DecisionSession(trajectory, seed, policy, policies, agents)
 
         class Handler(socketserver.StreamRequestHandler):
             def handle(self):
@@ -163,6 +167,7 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--policy", choices=("random", "land", "pass", "develop", "defend"), default="random")
     parser.add_argument("--mode", choices=("land", "basic"), default="land")
+    parser.add_argument("--policies", nargs=4, choices=("random", "land", "pass", "develop", "defend"))
     parser.add_argument("--turns", type=int, default=4)
     parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument("--out", type=Path, required=True)
@@ -172,7 +177,8 @@ def main() -> None:
         parser.error("Portable JDK missing; specify --jdk")
     decks = args.decks or [ROOT / "tools/forge/res/adventure/Realm of Legends/decks/starter/commanderprecon" / name
                            for name in PRECONS]
-    result = run_bridge(jdk, args.engine_dir, decks, args.out, args.seed, args.policy, args.turns, args.timeout, args.mode)
+    result = run_bridge(jdk, args.engine_dir, decks, args.out, args.seed, args.policy, args.turns, args.timeout, args.mode,
+                        tuple(args.policies) if args.policies else None)
     print(json.dumps({key: result[key] for key in ("success", "decisions", "applied_lands", "cast_spells", "resolved_spells", "errors")}, indent=2))
     raise SystemExit(0 if result["success"] else 1)
 

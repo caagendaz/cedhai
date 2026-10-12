@@ -44,3 +44,6 @@ plan.
 
 See [the architecture diagram](docs/architecture.md) for the decision loop and
 the work leading to the first training run.
+
+The latest work is paused at a saved nightly checkpoint. See
+[the handoff note](docs/handoff.md) for verification results and the exact resume steps.

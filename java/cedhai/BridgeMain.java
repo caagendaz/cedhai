@@ -24,6 +24,7 @@ import mage.game.combat.CombatGroup;
 import mage.player.ai.ComputerPlayer;
 import mage.players.Player;
 import mage.util.RandomUtil;
+import mage.filter.FilterMana;
 import mage.watchers.common.CommanderInfoWatcher;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
@@ -59,6 +60,11 @@ public final class BridgeMain {
             result.put((String) pairs[i], pairs[i + 1]);
         }
         return result;
+    }
+
+    private static List<Boolean> colors(Card card) {
+        FilterMana color = card.getColorIdentity();
+        return List.of(color.isWhite(), color.isBlue(), color.isBlack(), color.isRed(), color.isGreen());
     }
 
     private static JsonObject exchange(Map<String, Object> event) {
@@ -101,7 +107,9 @@ public final class BridgeMain {
                     damage.add(watcher == null ? 0 : watcher.getDamageToPlayer().getOrDefault(target.getId(), 0));
                 }
                 commanders.add(fields("owner_seat", original.seat, "name", card.getName(), "id", id.toString(),
-                    "zone", game.getState().getZone(id), "damage_to_seats", damage));
+                    "zone", game.getState().getZone(id), "damage_to_seats", damage,
+                    "mana_value", card.getManaValue(), "power", card.getPower().getValue(),
+                    "toughness", card.getToughness().getValue(), "colors", colors(card)));
             }
         }
         List<Object> battlefield = new ArrayList<>();
@@ -112,7 +120,9 @@ public final class BridgeMain {
             if (!permanent.isFaceDown(game)) {
                 item.putAll(fields("name", permanent.getName(), "power", permanent.getPower().getValue(),
                     "toughness", permanent.getToughness().getValue(), "mana_value", permanent.getManaValue(),
-                    "mana_cost", permanent.getManaCost().getText()));
+                    "mana_cost", permanent.getManaCost().getText(), "colors", colors(permanent),
+                    "creature", permanent.getCardType(game).contains(CardType.CREATURE),
+                    "land", permanent.getCardType(game).contains(CardType.LAND)));
             }
             battlefield.add(item);
         }
@@ -256,7 +266,8 @@ public final class BridgeMain {
                         actions.add(fields("id", id, "label", "Block " + target.getName() + " with " + creature.getName(),
                             "features", fields("kind", "block", "card_id", creature.getId().toString(),
                                 "target_seat", seat(target.getControllerId()), "power", creature.getPower().getValue(),
-                                "toughness", creature.getToughness().getValue())));
+                                "toughness", creature.getToughness().getValue(), "target_power", target.getPower().getValue(),
+                                "target_toughness", target.getToughness().getValue(), "target_mana_value", target.getManaValue())));
                     }
                 }
                 String[] choice = ask(game, "block", actions);
@@ -299,7 +310,7 @@ public final class BridgeMain {
                 actions.add(fields("id", (land ? "land:" : "cast:") + i,
                     "label", (land ? "Play " : "Cast ") + card.getName(),
                     "features", fields("kind", land ? "land" : "cast", "card_id", card.getId().toString(),
-                        "mana_value", card.getManaValue(), "power", card.getPower().getValue(),
+                        "mana_value", card.getManaValue(), "colors", colors(card), "power", card.getPower().getValue(),
                         "toughness", card.getToughness().getValue())));
             }
             String[] choice = ask(game, basicMode ? "priority_basic" : "own_hand_land_or_pass", actions);
