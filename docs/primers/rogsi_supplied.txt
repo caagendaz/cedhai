@@ -1,0 +1,821 @@
+🕵️Moxfield is taking longer than expected...Skip to main content
+Moxfield Logo
+caagendaz's Profile
+Home
+Explore
+Moxle
+Help
+Your Decks
+Collection
+Wish List
+🕵️Moxfield is taking longer than expected...
+Rograkh, Son of Rohgahh
+theepicstorm's Profile Picture
+The EPIC Storm
+Primer[cEDH] Rograkh Silas Storm Combo
+Support us on Patreon to remove ads and more!
+Table of Contents
+Back to Top
+Introduction
+How to Play
+Mulligan Guide
+Resources
+Card Choices
+FAQ
+Deck Updates
+Primer
+RogSi Storm Combo
+Competitive Elder Dragon Highlander Primer
+"The best combo deck in the format!" — Bryant Cook, The EPIC Storm
+
+cedh/Commander Storm combo — Rograkh Silas
+
+Introduction
+Are you ready to elevate your combo game and maybe learn a thing or two? This primer will hopefully do that, but before we delve deep into what makes Rograkh, Son of Rohgahh & Silas Renn, Seeker Adept such a powerful commander combination allow me to introduce myself — I'm Bryant Cook, the owner of The EPIC Storm. You may have visited our website in the past to read some sweet Storm content or maybe even to grab one of those token packs that are perfect for Spelltable cEDH gameplay, but most people know The EPIC Storm through our YouTube channel where we upload combo content for all formats — including Commander!
+
+Many people do not know this, but I was heavily involved with the beginning era of "Elder Dragon Highlander" and had a few write-ups for decks back in the day. You may have heard of, "Bryant's Pile of Broken" as one of cEDH's earliest and most degenerate combo decks. You guessed it, that was me. Today, I'm here to tell you that Rograkh, Son of Rohgahh / Silas Renn, Seeker Adept, or as I affectionately like to call it, "RogSi" is the modern-day version of that deck. Settle in, I'm about to explain why I believe that RogSi is the best combo deck in Competitive EDH.
+
+If you enjoy this primer, do me a favor and hit that follow button!
+
+Is RogSi for you?
+There are so many reasons to play or not play any given deck in the game of Magic: the Gathering, but what it comes down to for most players is personal preference. Let's start with an easy question, "Do you enjoy playing combo decks?" If the answer is yes, that's a good start. Perhaps, you're just a "best deck" player — that's okay too. We'll welcome you but the learning curve will be steeper! Playing combo decks is one of the most difficult aspects of this game, but playing them well is incredibly rewarding as each game feels as if you're solving a puzzle or navigating through intense situations. New players of RogSi often struggle with opening hand decisions, because of this we've included a mulligan guide down below.
+
+Combo strategies are often decks where the game is played with hidden information, by this I mean that the game is often like a battle between two chess grandmasters or Obi-Wan Kenobi vs. Darth Vader. The moves are being made without any action on the battlefield, the real war is happening in your seven-card hand, library, and mind.
+
+If you're someone who plays a lot of Magic Arena, newer cards are often designed to be played to the table — RogSi may be a tougher sell for you. If you're someone who enjoys playing to the battlefield, that's perfectly fine! RogSi normally plays a lot from the hand. Perhaps you're up for a new challenge in playing this broken combo deck. But go in knowing that if you prefer the combat step, locking the opponent out of the game, or long controlling games, there's a chance that this deck may not be for you.
+
+Why Play RogSi?
+Card Advantage vs. Mana Advantage
+A common phrase you may have heard when discussing cEDH is "card advantage in the Command Zone" when referring to what makes a commander good. This comes with an inherent player bias towards midrange strategies and decks that play what many people refer to as, "a normal game of Magic." I wouldn't let this dissuade you, there are many ways to play this beautiful game, and combo decks do not need to follow the same rules as midrange decks. What RogSi looks to accomplish is to create something called, "virtual card advantage" out of the Command Zone which may seem odd, but hear me out.
+
+By having a free card outside of your opening hand, you've already created card advantage. But what can we do with this free card? How can we push the envelope to do something powerful? By having a zero mana value commander (...or 'general' back in my day!) you're able to take advantage of free to cast spells if you control a commander, such as:
+
+Flare of Duplication
+Fierce Guardianship
+Deflecting Swat
+Deadly Rollick
+This doesn't equate to actual card advantage as much as it does a mana advantage, due to our free card in the Command Zone. I believe that the biggest restraints in the cEDH format are time and mana — by playing Rograkh, Son of Rohgahh as one of your commanders, you're already ahead due to these powerful cards from C20. This is 10 mana value worth of spells that you can play for free. That said, any commander pairing within the grixis color scheme has access to these spells. The difference is that RogSi isn't required to take a turn to cast its commanders, which costs both time and mana. When you're a combo deck, spending mana on commanders that would be used to advance your primary game plan can be looked at as slowing you down or a potentially a game losing play. Not to be over-dramatic, but every additional turn you provide the table is another three opportunities for your opponents to win the game or lock you out of it.
+
+What RogSi does well is to use that little Kobold to enable other cards to increase the speed of the deck, which in return allows for fewer turns for the opponents. Here are the cards that Rograkh, Son of Rohgahh improves:
+
+Phyrexian Tower
+Otawara, Soaring City
+Mox Amber
+Paradise Mantle
+Springleaf Drum
+Moonsnare Prototype (Not in current list)
+Culling the Weak
+Infernal Plunge
+Guild Artisan (Not in current list)
+Jeska's Will
+Diabolic Intent
+Concerted Defense (Not in current list)
+Flare of Duplication
+Fierce Guardianship
+Deflecting Swat
+Deadly Rollick
+You may have noticed that most of these Rograkh payoffs generate mana, which plays into the theory of time and mana being the most important resources in the format. Having more access points to broken mana naturally increases speed.
+
+While being fast is certainly great, it's not everything — which leads to a common stereotype about RogSi: that it's fragile or a "glass cannon", speculating to the idea that it crumbles when disrupted. This stance pre-dates any of the work that I've done on the deck, dating back to early 2022. If you're interested in reading more on why this isn't true — check out our FAQ section.
+
+Card Payoff Density
+I began this section off by talking about card advantage before switching to explaining how Rograkh, Son of Rohgahh creates an unrivaled mana advantage. If our commander creates mana, then it becomes fairly easy to see how we should construct our deck! We offset the mana by playing additional payoffs and a higher density of tutors compared to other combo decks in the format, such as:
+
+Jeska's Will
+Harnfel, Horn of Bounty
+Windfall, Timetwister, Wheel of Fortune, Wheel of Misfortune (A higher draw seven density)
+Diabolic Intent
+Praetor's Grasp // Grim Tutor
+Narset, Parter of Veils (Not in current list)
+Necropotence
+Necrodominance
+It's not that other decks can't or won't play these cards, it's that on average you see less of these in other decks. We fill our deck with these additional ways to use our mana, this balances out the lack of actual card advantage in the Command Zone. If mana is one of the biggest choke points in the format would you rather start the game with additional mana or draw spells in the Command Zone? From where I'm sitting it's an easy decision.
+
+Oh yeah, I guess we play Silas Renn, Seeker Adept too. I'll be honest, Silas is typically mostly an afterthought in this deck but does have some uses. Make sure to check those out in the Commanders section.
+
+The Best Spells
+When many players discuss the cEDH metagame, they often reference three cards as the most powerful things you can be doing:
+
+Ad Nauseam
+Underworld Breach
+Dockside Extortionist
+RogSi happens to play all three of these as they happen to live within the Grixis (Rakdos really) shell. The difference between other decks and RogSi is that we tend to push the limits on these cards with our higher density of tutors, which means that we have access to these cards more often. This was a big level-up moment for deck construction, as I led the charge on the removal of Peer into the Abyss from the archetype to play Praetor's Grasp as well as Grim Tutor. When I did this I saw my win percentage quickly rise.
+
+Outside of the obvious broken spells, we have the two most effective card advantage engines in Mystic Remora and Rhystic Study. I would argue that RogSi may even be the best deck for these cards as we play a higher density of "free" spells due to Rograkh, Son of Rohgahh enabling Fierce Guardianship, Deflecting Swat, and Deadly Rollick as well as Daze, Force of Negation, and Mindbreak Trap. This is relevant because if another player makes a win attempt, you're more equipped to deal with the problem. This plays into another reason that RogSi is such an effective Mystic Remora / Rhystic Study deck, when the card advantage does accumulate up, RogSi is very likely to end the game with the additional resources that these blue enchantments provided.
+
+If you're looking for a cEDH deck to play, I'd suggest one that has the format's best cards in it.
+
+How to Play
+
+
+When it comes to playing RogSi, new combo pilots often fall into a common trap — "It's a turbo Ad Nauseam deck, we'll plan around doing that." While Ad Nauseam is a wonderful card to have access to, tunnel visioning on a singular goal can do more harm than good. One thing I learned when deck-building in other formats, specifically early on with The EPIC Storm, was that having different options or paths to victory will lead to better results. This is actually both a feature and a bug, it's wonderful to have choices for beating varying complex board states or cards you're trying to navigate through, but it's often increasingly difficult for new players to attempt to figure out on the fly. Hopefully, some of the content below will help guide you to some sweet victories on the Commander battlegrounds.
+
+This section will focus on overall strategy as well as some card combinations, due to a heavy overlap between game plans and individual cards (see list below) some plans can be found in the Payoff Spells section under card choices.
+
+Mnemonic Betrayal
+Yawgmoth's Will
+Necropotence
+Harnfel, Horn of Bounty
+General Strategy
+At its core, this RogSi list is a Storm Combo deck, not an Ad Nauseam-centric deck. Other RogSi lists tend to focus more on Ad Nauseam itself and restrict the possible cards they play for this reason. Those lists tend to look at overall mana values a lot more closely than our list. But why is that? When I entered this format, it was the norm and I wish I had a better answer other than, "we've always done this." It's not that Ad Nauseam isn't great, quite the contrary, but we've figured out a better way to maximize our win percentage while keeping the card very effective. To read more on how we did this, check out the Turbo Nauz section down below. When you glance over the decklist, you may see cards that other RogSi lists commonly don't have:
+
+Ancient Tomb
+Force of Negation
+Mindbreak Trap
+Deadly Rollick
+Birgi, God of Storytelling
+Necropotence
+Necrodominance
+Once again, it's not that other decks can't or won't play these cards, it's that you often see fewer of these specific cards in other lists. Our decklist is focused on playing as many high-impact cards while trying to break the rules on... do I need to say it again? Time and mana.
+
+What makes our deck built like a Storm deck rather than anything else? It's a difficult thing to define. Others might say ritual effects, combo engines, and cards with the actual Storm mechanic on them may be a good start. To me, it's more than that — it's not just slamming an Ad Nauseam and praying that it resolves, but a resilient strategy that is also fast, calculated, consistent, interactive, and looks to do the most powerful thing it can with the resources available. It's worth noting, a majority of the time we don't even win with a card that has the Storm mechanic on it — but that doesn't mean we're any less of a Storm Combo deck. If winning with Thassa's Oracle is wrong, we don't want to be right.
+
+A defining feature of Storm combo decks is often speed, and Rograkh, Son of Rohgahh allows us the capability to do that easily. You should be looking to win the game within the first three turns of the game, if your hand cannot do that, it may be worth taking a mulligan for something that is more representative of what we're looking to achieve.
+
+A major level-up for any Storm pilot is knowing when to go for it, finding that window and seizing the opportunity is so important. But it's also knowing when the door is going to be shut on you — it's a delicate balance that really takes experience and a raw number of games to sense. The reason that it's so tough to describe is that when games of cEDH are played, it's fairly rare that any two games are identical due to the singleton nature of the format. This means that developing the Intuition for this takes time. Do not feel defeated if your first handful or so of games with RogSi are unsuccessful. Playing any complex deck at a high level takes time, practice, and patience — you'll get there with enough hard work and dedication to Keranos, God of Storms.
+
+Thassa's Oracle Combo
+How we often win the game! Thassa's Oracle is the most efficient and compact win in the format for combo decks. Most wins consist of a total mana value of three () between Thassa's Oracle and Demonic Consultation or add in  for Tainted Pact. For this low cost you can see why this is the most common win pattern there is in cEDH. It's also worth noting, this win condition ignores infinite life, library size, and so many other possible nuances — it's just incredibly clean.
+
+If you're unfamiliar with the combo, the idea is to remove your own library from the game using either of the powerful black instants — Demonic Consultation or Tainted Pact before resolving the Thassa's Oracle trigger. This means that creature removal on the Merfolk Wizard won't matter as your library count will still be zero.
+
+A tip for executing this pairing is to play Thassa's Oracle first to see if it resolves (in a format where Pyroblast/Red Elemental Blast is popular), making it safe to exile your library. At this point, cast either Demonic Consultation or Tainted Pact.
+
+Underworld Breach Combo
+Not only our secondary win condition, but also just a very common game plan. But before we delve too deep into specifics, let's explain how the combo works! You want to assemble Underworld Breach in conjunction with Brain Freeze and the third piece can be slightly variable, the most common card being Lion's Eye Diamond, but it can also be Lotus Petal. The idea here is to Brain Freeze yourself, then use cards in the graveyard to Escape back Lion's Eye Diamond to generate  and then cast Brain Freeze again. As you do this, you'll mill various protection pieces such as Defense Grid, Pact of Negation, and/or Flusterstorm to further protect yourself. Eventually, your library will be empty, and then you can play Thassa's Oracle to win the game.
+
+If your Thassa's Oracle is in exile for one reason or another, you can now begin to Brain Freeze your opponents over and over. Typically, this should win the game but if for some reason it doesn't you can use Mnemonic Betrayal to play a combo out of your opponent's graveyard or perhaps even their own Thassa's Oracle. Similarly, Praetor's Grasp can be used to grab another player's Thassa's Oracle.
+
+A common play pattern is to only have a single tutor such as Demonic Tutor, with enough mana in play as well as cards in graveyard this should result in a win. The idea is to use Demonic Tutor to find Underworld Breach and then Escape Demonic Tutor to search for the Brain Freeze. With RogSi containing a high density of powerful mana, even if you don't mill Lion's Eye Diamond or Lotus Petal, there's often enough mana between cards such as Chrome Mox, Mox Opal, and many others. Use these as a bridge to cast another Brain Freeze to close the gap.
+
+Turbo Nauz
+I've spent a lot of time in this primer saying why you shouldn't look at RogSi as an Ad Nauseam deck. That said, it's still a deck that leverages this broken combo engine very well between the high density of acceleration between both rituals and artifacts. The real difference is that this list opts to run more high mana-value powerful cards alongside Ad Nauseam, which isn't necessarily a bad thing in case it were to be exiled. How do we make up for this increased mana value? I thought you'd never ask:
+
+Final Fortune
+Last Chance
+Warrior's Oath
+When I started playing RogSi in late 2021, a common complaint or knock against the deck was that while it was very good at making  mana post-Ad Nauseam, it was very bad at making other colors. It's easy to see why when you look at the mana from Simian Spirit Guide, Mox Amber, Rite of Flame, Jeska's Will, and Infernal Plunge. This was an issue because of the increased difficulty in generating  for Thassa's Oracle without a Dockside Exortionist. In order to get around this, many players (including myself) played Strike It Rich. For a variety of reasons, Strike It Rich wasn't good enough as a temporary mana boost. An easy solution were these red Time Walk effects, allowing RogSi to untap all of its colored mana sources including Talismans. While the two mana artifacts aren't anything special or unique, common stock lists of RogSi play very few of them, which makes winning off post-Ad Nauseam not the easiest task. Over time, I found myself growing further and further away from the average list to the point where this primer list has four Talisman effects. This means that even with only colorless mana as your starting mana, there are paths to victory.
+
+As a deck that uses its life-total for a resource, you should expect opponents to target you when it comes time to declare combat. This is a way of making Ad Nauseam less effective but, there isn't a definitive point where I would recommend not casting the spell. Most games of cEDH are complex, but I would suggest reviewing the amount of initial mana sources (IMS) that are left within your library.
+
+A reminder, Ad Nauseam is an instant. You are able to cast it on the opponents' turns when there is a window, you do not need to recklessly jam into open mana.
+
+Piecing It Together
+With cEDH being a format with naturally higher variance due to being a singleton format, there will be some number of games where you do not have access to Ad Nauseam or Underworld Breach despite the high density of tutors. Perhaps you have access, but not the time or mana. Piecing it together is basically saying, "lets wing it!" and that's a perfectly valid strategy.
+
+Something I've heard multiple times in larger cEDH spaces is that Windfall, Timetwister, Wheel of Fortune, and Wheel of Misfortune (these cards are commonly known as Wheels or Wheel effects) are a last ditch effort and that can't be further from the truth. I honestly believe that it shows a lack of understanding of the goals in our deck that has a commander that creates a mana advantage. These are frequently cards we love to see. A common play pattern is to mulligan aggressively for fast initial mana sources and then wheel quickly to refuel. This not only refuels the previously depleted hands, but also provides cards in graveyard for Underground Breach, Yawgmoth's Will, and Mnemonic Betrayal. My opinion is that you should be casting Wheels early and often — many players call RogSi "Turbo Nauz" but in reality, if we had to tie a card type to the name it should be RogSi "Turbo Wheels" and then you could make some sort of bad joke about card and the four wheel effects.
+
+Something that I preach when tutoring new Storm players in Legacy is to keep your options open, "be fluid". Don't force yourselves down any one path and to re-evaluate when there's new information. There's no reason that doesn't apply here, have an overall game plan but don't be afraid to change it or adjust on the fly.
+
+Mulligan Guide
+
+
+For the sake of these exercises, we'll be facing another turbo deck (Codie Nauz or K'rrik, Son of Yawgmoth), a blue midrange deck (Najeela or Blue Farm), and a prison strategy (Winota Stax or Heliod Stax). Below you will find 10 hands that were created using the Moxfield hand generator on the main decklist page. None of these hands were doctored (do you believe that I would leave white-boarder cards in there? C'mon!), you see them as my screenshot did!
+
+Hand 1
+
+
+Hand 1 — Seat 1
+Paradise Mantle, Misty Rainforest, Mana Vault, Defense Grid, Demonic Tutor, Ad Nauseam, Chain of Vapor
+
+Keep. While there are no guarantees, this hand is likely a second turn Ad Nauseam that is protected by Defense Grid. An important thing to note for my 60-card friends is that within multiplayer formats you do get to draw first when on the play — pretty broken, right? This means that we have two opportunities to draw another mana source off the top. When originally examining the seven-card hand my brain went to playing Rograkh, Son of Rohgahh, Paradise Mantle, Equip, and then pass but that's actually not the right play. Some people like to joke about how you wouldn't choose to play mana dorks in your combo deck, why would you play Paradise Mantle? This is actually a terrific example of why that isn't true.
+
+You can play Rograkh, Son of Rohgahh, use Misty Rainforest to search up Underground Sea, cast Mana Vault, and then play Paradise Mantle (playing this last as it's least likely to be the target of Mindbreak Trap). On the second turn, take your draw (for now, let's pretend we don't know what the two draws were) and then tap Mana Vault to Equip floating . Our Rograkh, Son of Rohgahh is now a Birds of Paradise where we were able to selectively choose when to spend the mana (Narrator: Paradise Mantle haters in shambles).
+
+At this point, we can Demonic Tutor for Culling the Weak by tapping the Rograkh, Son of Rohgahh (it's worth noting that Paradise Mantle itself doesn't tap to activate, there are corner cases where moving it to another creature can create additional colored mana). You can now tap the Underground Sea to cast the Culling the Weak and then follow it by playing the Ad Nauseam. Now if you drew a land or some other sort of plus one mana source, you can start this turn by casting Defense Grid and then using Chain of Vapor on the Mana Vault to generate an additional mana.
+
+When you're in the first seat, you don't need to consider your opponent's hands as much. Especially when you have the potential to be protected for your win attempt.
+
+Hand 2
+
+
+Hand 2 — Seat 2
+Mana Confluence, Lotus Petal, City of Traitors, Mystical Tutor, Thassa's Oracle, Transmute Artifact, Simian Spirit Guide
+
+Mulligan. This hand may be capable of a second turn Ad Nauseam (Mystical Tutor for Ad Nauseam by tapping Mana Confluence]. Untap, play City of Traitors, exile Simian Spirit Guide, sacrifice Lotus Petal) and then cast Ad Nauseam). But what are we really doing? We have no way to protect our Ad Nauseam and if we're stopped, we have two uncastable cards in our hand that don't exactly work together. Outside of not being able to protect ourselves, I have a concern about not being able to interact with the opposing turbo deck (which could be blue for all we know) or answering a lock piece from the Stax deck. It's not that I don't think a second turn Ad Nauseam isn't good, it's that we have no insurance whatsoever. This hand is very all in and it plays directly into a lot of the stereotypes about the deck. RogSi is not a "Belcher" deck! You're capable of better openings if you're willing to mulligan. It's worth noting that while I would send this back as a first seven (It's worth mentioning once again for our 60-card readers that you do get a free mulligan to seven in this format!), I would consider keeping it as a second seven card hand depending on which deck is in front of me. If it's the other turbo deck, I would keep because the blue player likely needs to keep them inline first. If it's the Stax deck, there's no chance that I would keep this. Finally, flip a coin on the blue deck (likely not?).
+
+Do not be lured by a, "this can be a turn 2 win!" hand. Wait, isn't that what the first hand was? Not quite, we had a definitive win that had two opportunities to hit the right card that enabled it to beat interaction. With this specific hand, we have to pray our first draw step is a free interaction spell which has a low probability of happening — It's not exactly the same thing as needing a land drop. If you're eye-balling a potential Thassa's Oracle win, we would need to draw a land or Talisman on exactly the first draw step because the second draw step would need to be our Mystical Tutor target (Demonic Consultation). If you miss on the land, you just add a turn to your potential win cycle. Meanwhile, you cannot interact with the table in any sort of meaningful capacity or even protect yourself. This hand is a lottery ticket and I'm looking for better odds than this.
+
+Hand 3
+
+
+Hand 3 — Seat 3
+Underground Sea, City of Brass, Talisman of Dominance, Bolas's Citadel, Ragavan, Nimble Pilferer, Wheel of Misfortune, Wheel of Fortune
+
+Mulligan. "Wheel early and often, it's what you said!" That part would be true, typically when you cast a Wheel effect you want to accrue some store of value and there's some to be had here — a Ragavan, Nimble Pilferer isn't nothing. With a solid draw in the first two turns (or flips off of the Ragavan, Nimble Pilferer) we could maybe play the Talisman of Dominance out first and that would be decent, but we're not looking for a "maybe decent" start. Do not be afraid to mulligan aggressively for more powerful or interactive hands depending on the seat order.
+
+Here in seat 3, we're likely downstream of at least one of the Ad Nauseam decks and probability says of the Prison deck too. You can't afford to have your first win attempt be on the third turn against these prison decks when they're ahead of you, it's just asking for a bad time. It's not that this hand is bad, it's just that we have better hands. It doesn't matter to me if this was a first or even a second seven card hand, I would shuffle it back for something more impactful.
+
+Hand 4
+
+
+Hand 4 — Seat 4
+Verdant Catacombs, Flooded Strand, Pact of Negation, Swan Song, Mystical Tutor, Moonsnare Prototype, Mnemonic Betrayal
+
+Mulligan. There's this adage within cEDH where seat 4 is supposed to be "responsible" and keep hands that interact with the table to ensure that they get to see a few more untap sets — what garbage. It is not your obligation as the individual at an already huge disadvantage by going fourth to then play as the table's enforcer. If anything, I am more likely to keep more explosive hands in a chance to catch the opponents off-guard and sneak in a win. The point here is that you do not need to play by the community culture, what's important is wins and not much else.
+
+While interactive pieces are nice, this hand doesn't do much. There's no acceleration unless we go find it with Mystical Tutor and even then, our payoff spell is really a mid-game card that requires setup from the opponents.
+
+Hand 5
+
+
+Hand 5 — Seat 1
+Mox Opal, Mox Amber, Dark Ritual, Cabal Ritual, Thassa's Oracle, Borne Upon a Wind, Simian Spirit Guide
+
+What? No. C'mon! This hand may be actual evidence that I didn't doctor hands.
+
+You do have Rograkh, Son of Rohgahh to enable the Mox Amber, but the Mox Opal doesn't have Metalcraft — you're also unable to play Silas Renn, Seeker Adept to do so. This hand cannot take advantage of two  mana, even if an Arcane Signet was our draw step. This hand would then be choked on blue and black mana even if we were able to use Opposition Agent into an opponent's Tainted Pact or Demonic Consultation.
+
+Hand 6
+
+
+Hand 6 — Seat 2
+Blood Crypt, Paradise Mantle, Command Tower, Praetor's Grasp, Ad Nauseam, Swan Song, Dockside Extortionist
+
+Keep. This hand is strangely similar to Hand 1. When evaluating this hand, you need to understand that Dockside Extortionist is a variable piece — it may not make the desired five mana on the second turn (which could be offset by drawing acceleration in the first two turns).
+
+In a perfect world, we play Rograkh, Son of Rohgahh and then Equip it with Paradise Mantle by tapping the Command Tower. We opt to play Command Tower over Blood Crypt to potentially save some life for the Ad Nauseam. On the second turn, the Dockside Extortionist would ideally make enough mana to play Ad Nauseam with Swan Song as backup. A judgment call you would need to make is if Keranos, God of Storms is shining its light down on you and if the Dockside Extortionist somehow made 6+ mana on the first turn cycle, if you would play out the Blood Crypt before casting the Dockside Extortionist. If you don't, there wouldn't be Swan Song backup to protect the Dockside Extortionist but if you do play it your odds of missing on the Bolas's Citadel are higher. Personally, I'd rather ensure that my spells resolve.
+
+In a realistic world, we miss on Dockside Extortionist making a large amount of mana and this becomes a turn three win situation. It would depend on our draw steps what the following plays are, but an option would be to Praetor's Grasp for an answer to the Stax deck or an additional counterspell to protect your win (or to make sure you remain alive). You could also play out the Dockside Extortionist to ensure it doesn't get discarded to an opposing Wheel of Fortune. It's difficult to know without the perfect information of our draw steps, but there's no chance that I shuffle this back.
+
+Hand 7
+
+
+Hand 7 — Seat 3
+City of Brass, Ancient Tomb, Gemstone Mine, Springleaf Drum, Necrodominance, Rhystic Study, Deflecting Swat
+
+F*&$ Yeah! These are the hands that thrive within these pods. While going third isn't ideal, this hand is capable of going Rograkh, Son of Rohgahh into Springleaf Drum on the first turn followed by a second turn Rhystic Study or Necrodominance]. We even have Deflecting Swat backup to protect the Rhystic Study! Assuming that it resolves, by playing the Ancient Tomb we have a mana to interact with the rest of the table as well.
+
+The reason that this is so good within the pod composition is that it's typically easiest to beat the combination of Stax + Blue Midrange when you have some additional resources. You could make a joke here about Tymna the Weaver being a commander choice, but the card advantage that Rhystic Study provides is dramatically better than the few cards per turn cycle that Tymna the Weaver provides. For more on RogSi vs. Tymna/Kraum, click here.
+
+Within a turn cycle or two, you should have enough resources to overload the table even through their Stax pieces. If you don't, you likely have enough interaction to take another trip around the table. You don't have to win quickly when you're ahead on cards, play to the situation. Naturally, opponents should be running out of cards as you're accumulating them making the game easier as time goes on. One of the strengths of Legacy The EPIC Storm that I've built into RogSi is that due to the additional card advantage engines is that you're able to play to the match-ups, you aren't necessarily forced into any given role.
+
+Hand 8
+
+
+Hand 8 — Seat 4
+Mox Amber, Lion's Eye Diamond, Polluted Delta, Talisman of Dominance, Necropotence, Timetwister, Jeska's Will
+
+Keep. All avenues begin with playing Rograkh, Son of Rohgahh, Polluted Delta, search up Badlands (we have 3 Final Fortune effects in your library with a Necropotence in hand), Talisman of Dominance, and Lion's Eye Diamond (playing it out early to avoid opposing Wheel of Fortune effects or lock pieces). On the second turn, depending on your draw steps, you have your choice between:
+
+Jeska's Will (Not as ideal in Seat 4 on turn 2 as it could be, fewer cards in hand, etc.)
+Timetwister
+Necropotence
+This scenario is likely too contextual to play out any further, but it goes to show you the options/choices that we discussed in the How to Play section. Not being forced down any given path will often lead to increased results. An interesting aspect of this hand is that Lion's Eye Diamond can be used to play spells off of Jeska's Will or perhaps even sacrifice for  with the Necropotence triggers on the stack to provide mana for Final Fortune.
+
+Hand 9
+
+
+Hand 9 — Seat 1
+Mox Opal, Ancient Tomb, Steam Vents, Scalding Tarn, Misty Rainforest, Defense Grid, Final Fortune
+
+Mulligan. If you kept this, you're a bolder person than I. The idea here would be to play a first turn Defense Grid off of Ancient Tomb, as well as Mox Opal, and then pass. I wouldn't even play out the Rograkh, Son of Rohgahh as it paints a larger target on the little kobold's head. Assuming that you were fortunate enough to draw a payoff spell, you could cast it with the few mana that we have access to at the moment. There isn't even  to play the Final Fortune. Now you're asking to not only draw a payoff spell, but an artifact to provide Metalcraft as well. One again, you're also unable to play Silas Renn, Seeker Adept to do so. This hand is a real long-shot, we can do better with the London Mulligan plus the free mulligan to seven.
+
+The one silver lining of this hand is I do believe it's acceptable to play and pass with Defense Grid from the first seat. I can't say how often I'd do this from anywhere else at the table.
+
+Hand 10
+
+
+Hand 10 — Seat 2
+Mox Diamond, City of Brass, Mana Crypt, Talisman of Indulgence, Vampiric Tutor, Flusterstorm, Dress Down
+
+Keep. I'd expect to do something broken with this hand, we start the game with at least four mana and then five if we hit a land as our draw step as well as protection/interaction against the other decks at the table. We have Flusterstorm for the other turbo deck as well as the Blue Midrange deck and then arguably the most effective answer to the Stax strategies. The real question is, "What do you Vampiric Tutor for?"
+
+I would likely play the beginning of this game the same way for these scenarios: Rograkh, Son of Rohgahh, Mana Crypt, Mox Diamond (discarding City of Brass), and then tapping Mana Crypt to play Talisman of Indulgence. This sequencing allows us to have access to both of the instants in our hand for the turn cycle.
+
+If your first draw step was a land, Ad Nauseam is on top of the list most likely. An interesting thing to consider about this is that you would have three mana, you could then cast Dress Down (Ideally, before the end step you don't want to make your own possible win more difficult than it needs to be with Dockside Extortionist and Thassa's Oracle) on an opponent's turn to give yourself an opportunity to draw another mana source. If you do, Flusterstorm could then protect your Ad Nauseam.
+If the first draw step was a land, but you're more conservative with your chances, you could simply find Wheel of Fortune if you don't want to risk the Dress Down against the lock pieces deck.
+If you miss on the land, you could choose to play the Dress Down for more information to inform a choice about an upkeep Vampiric Tutor. This allows you the ability to high-roll into a mana source such as Dark Ritual, Culling the Weak, or Dockside Extortionist to experience greatness.
+If you miss on the land, searching up Wheel of Fortune with Vampiric Tutor and appreciating the extra mana post-Wheel.
+Interesting plays to think about!
+
+Resources
+Token Pack
+The EPIC Storm Token Pack
+Looking to make comboing off easier? Buy The EPIC Storm Mini-Token Pack! These tokens are literally half the size of actual Magic: The Gathering cards (44.45 × 63.5mm) and are double-sided to maximize your value and functionality. They are designed to be usable at any level of play, from kitchen-table to competitive REL. Make playing your favorite combo deck a little bit easier and pick-up a token pack, we promise that you'll love it!
+
+Storm Discord Server
+Join Our Discord
+Do you have questions? Join our Storm Discord server that covers all formats — including Commander! Our community is full of players of all skill levels, from beginners to experts. We're a collective of individuals who are happy to help you expand your RogSi knowledge!
+
+YouTube Channel
+Subscribe Now to YouTube
+Want to see RogSi in action? Check out our YouTube Channel! We have terrific combo content for all formats including Commander. We have a dedicated RogSi playlist below that has everything from hot new cards arriving in the mail, member's exclusive videos, and free gameplay videos!
+
+
+Card Choices
+Commanders
+
+
+Rograkh, Son of Rohgahh — I would recommend checking out the Why Play RogSi section as I'm going to avoid repeating content that's already written above. But to summarize a few quick points: An unparalleled mana advantage, spells that allow you to cast for free if you control a commander, and being in the Grixis shell being able to play:
+
+Ad Nauseam
+Dockside Extortionist
+Underworld Breach
+Mystic Remora
+Rhystic Study
+In general, you should typically play Rograkh, Son of Rohgahh out on the first turn every game (barring some Birgi, God of Storytelling shenanigans). It's a small advantage, but if you were to draw a Paradise Mantle after your initial hand you wouldn't be punished for the choice or surprised by a Drannith Magistrate. The sequencing can vary based on trying to play around Mindbreak Trap — it should not always be your first spell. Most opponents generally do not spend their turns trying to kill a 0/1 Kobold, so you shouldn't fret too much about our warrior dying.
+
+Silas Renn, Seeker Adept — While Silas Renn, Seeker Adept is primarily in the deck to provide  to pair with Rograkh, Son of Rohgahh, it's not a completely useless card as some may have you believe. "RogSi has no card advantage in the command zone" What? Have they not read Silas Renn, Seeker Adept?!?! I'm only half-joking, Silas Renn, Seeker Adept is very useful at recasting a countered Defense Grid or Wishclaw Talisman (sometimes discarded to Wheel of Fortune). More often than not, Silas Renn, Seeker Adept (Deathtouch) is played to hold back Tymna the Weaver and friends from attacking you. This can be a good way of preserving your life points for Ad Nauseam or Necropotence.
+
+
+Artifact Acceleration
+
+
+Paradise Mantle — Above we spoke to Rograkh, Son of Rohgahh proving a mana advantage, cards such as Paradise Mantle are what we're talking about: finding efficient ways to turn a free creature into something productive. Paradise Mantle allows RogSi to go from one to three mana on the second turn, which helps cast card advantage engines ahead of curve. A unique aspect of Paradise Mantle is that you can swap it between creatures. A friendly reminder is that you don't have to Equip your creature on the first turn. While that is something you can do, you can also filter a colorless mana later as seen in Hand 1. People like to joke about, "Mana dorks are bad" while trying to cut this card, I believe those individuals may not see the entire picture of how RogSi is constructed.
+
+Springleaf Drum — Similar to Paradise Mantle in a lot of ways, the big difference between the two is that Springleaf Drum essentially has Haste. What I mean by this is that you can tap Rograkh, Son of Rohgahh and the Springleaf Drum immediately for mana. While playing Springleaf Drum on the first turn is great, you can always cast it later to filter mana off of Grim Monolith. Ideally, you would cast it off of Talisman of Indulgence on the first turn to untap with four mana.
+
+Chrome Mox — "Free" acceleration at the cost of a card in hand, the key here is that RogSi is very good at off-setting the lost card with Ad Nauseam or one of the four "Wheel" effects. Acceleration that ramps you into one of the four Talismans on the first turn is always welcome. Not to mention, we do need initial mana sources post-Ad Nauseam as well. A few things to note about Chrome Mox is it does state non-artifact, even if they're colored artifacts such as Wishclaw Talisman. If you're considering playing or discarding Chrome Mox without the ability to Imprint to a "Wheel" effect. I almost always play it out due to Metalcraft or returning it to hand with Chain of Vapor. There are rare circumstances in which you may need it for Escape fuel for Underworld Breach but I wouldn't play towards that.
+
+Mox Amber — Another initial mana source, such as Chrome Mox. Except that here, there's no card disadvantage! We get to make use of Rograkh, Son of Rohgahh in the command zone for a Mox Ruby right off the bat. Later on in the game, we can play Silas Renn, Seeker Adept to unlock the full Grixis color scheme. This card along with the cast for free commander cards (Fierce Guardianship, Deflecting Swat, and Deadly Rollick) are on the higher-end of payoffs for choosing to play this deck. Due to having Rograkh, Son of Rohgahh as a free commander, we do not play Jeweled Lotus. Instead, we have a piece of power.
+
+Mox Diamond — In a deck with only 24 lands, it can sometimes be tough to play. That said, we need starting mana sources for after a resolved Wheel of Fortune or Ad Nauseam to keep executing the combo. If you're stuck in a spot where you're unsure whether or not to play a land or play Mox Diamond, I typically lean towards the five-colored mana source that can be later used for Metalcraft for Mox Opal. If it's a mid-combo decision, it's always Mox Diamond as you can play another land later on in the turn after a draw seven. A small incidental kicker is an additional card in the graveyard for Escape.
+
+Mox Opal — When I began to play Rogsi, lists were playing very few artifacts. At one point, I was playing eleven total and then a few cards that created artifacts such as Dockside Extortionist. Mox Opal was not a reliable mana source, this has changed drastically! The current list plays twenty, yes TWENTY artifacts and this doesn't include Ragavan, Nimble Pilferer, or Dockside Extortionist. Mox Opal is more reliable than ever and the switch to focus on permanent mana sources was the main push for its success.
+
+Lotus Petal — It's very clear how good free mana acceleration is in cEDH, even if it is temporary. Players tend to tunnel vision on Lion's Eye Diamond in the Underworld Breach combo when paired with Brain Freeze but Lotus Petal can often be better. Lotus Petal doesn't require you to discard your hand that may have interaction in it. Knowing when to play it is always contextual, but don't be afraid to play it out early to avoid a Mindbreak Trap or to represent one-mana interaction.
+
+Lion's Eye Diamond — One of the most powerful cards in all of Legacy! It has to be pretty good in cEDH, right? There's the very common win-the-game line with Underworld Breach and Brain Freeze that most people like to focus on. But Lion's Eye Diamond can also be used very effectively with Yawgmoth's Will, Harnfel, Horn of Bounty, and even Necropotence. While it may not seem obvious, Necropotence creates a trigger on the end step to put the cards to your hand. I have often sacrificed Lion's Eye Diamond for , which provides enough mana to then play Final Fortune backed by Pyroblast. One thing Lion's Eye Diamond not do is be used to cast spells in your hand, this often catches new players off-guard as traditionally in Magic you announce spells and then pay costs. Lion's Eye Diamond specifically says you can only use it as an instant. A final note on Lion's Eye Diamond is that if you want to add mana in response to a tutor, you must maintain priority and then do so. You may not pass priority around the turn, see if your spell resolves, and then add mana.
+
+Mana Crypt, Sol Ring — If cEDH had defined "Power" these cards would be in it. They are acceleration that is so far past format-rate that it's broken. Being a player that opens on one of these effects puts you so much further ahead than opponents who do not draw one of these in their starting seven. The  mana is such a boon that these were the inspiration behind me leaning into Ancient Tomb and City of Traitors in conjunction with the Talismans. Being able to convert the powerful colorless acceleration in our deck is very key and we have very many ways to do so but perhaps the best way is our four "wheel" effects. What better way to spend mana than cards that will allow you to keep spending the above-rate mana provided? These are truly must-plays for any competitive strategy.
+
+Mana Vault — Colorless Dark Ritual?! Sign me up! Mana Vault actually has two triggers. One in the upkeep to untap Mana Vault and another in the draw step to take a damage. This is important because Necropotence skips your draw step, you'll never be required to untap Mana Vault to take less damage. A common play pattern is to play Mana Vault on the first turn so that after you play your land on the second turn, you'll have enough mana to cast Ad Nauseam. Some previous lists played Dramatic Reversal which does increase the value of Mana Vault effects.
+
+Grim Monolith — Similar to Mana Vault in a lot of ways, but really helps reward you for your Sol Ring, Mana Crypt, Ancient Tomb, and City of Traitors openings. In general, more powerful colorless ramp to play into Ad Nauseam, Pact of Negation triggers, Harnfel, Horn of Bounty, Defense Grid, and more is always welcome. Mana Vault and [Grim Monolith
+
+Arcane Signet — The best of the Talisman effects! Arcane Signet provides us with all three colors without any life-based drawbacks. Generally, these two mana artifacts want to be played on the first turn off of Sol Ring, Mana Crypt, Ancient Tomb, or City of Traitors as they're great ways to convert colorless mana into something we can use to win the game. One of the most common instances for you to convert mana is post-Ad Nauseam. Colorless and red mana tend to be the easiest colors to create and Talisman effects get RogSi to the point where we're able to create  for Thassa's Oracle.
+
+Talisman of Creativity, Talisman of Dominance, Talisman of Indulgence — A change in deck-building philosophy happened early on in my testing, the deck was focused on mana acceleration that allowed you to go from one to three mana on the first to the second turn. These effects were things such as Strike It Rich, Infernal Plunge, and a few others. I made a conscious effort to switch these effects into permanent mana sources such as these Talismans, Grim Monolith, and others. Having recurring mana makes being able to recover from failed combo attempts possible as well as allowing you to combo off on consecutive turn cycles. Having Talisman of Creativity, Talisman of Dominance, and Talisman of Indulgence really stood out when testing Final Fortune effects.
+
+
+Ritual Effects
+
+
+Rite of Flame — Did you know that Rite of Flame is symmetrical? This means that it looks at opponent's graveyards for the additional  to generate. I am not afraid to use this The EPIC Storm staple to power out an Arcane Signet. While Rite of Flame is only creating an extra mana, in our deck with Final Fortune, Last Chance, and Warrior's Oath I cannot imagine cutting a spell that enables these cards so easily on our combo turn.
+
+Culling the Weak — We've been speaking to "Mana Advantage" with Rograkh, Son of Rohgahh and Culling the Weak is one of the best examples. Due to our zero mana commander, we have consistent access to a card that is more powerful than Dark Ritual allowing for an increased turn one win percentage over other decks. If you think about it, the only other cards that make as much mana in the deck are Dockside Extortionist and Jeska's Will and those are both more costly and rely on the opponent.
+
+Dark Ritual — When we look at the tutors + payoff spells, it's hard to ignore Necropotence, Ad Nauseam, Grim Tutor, and others without realizing the amount of  mana needed to make this happen. Dark Ritual has been around since Alpha/Beta and its power has been known about just as long. It's clear to see why our Storm combo deck would want to play one of the best accelerants in the history of the game.
+
+Cabal Ritual — Threshold isn't always the easiest thing to achieve when we're focused so hard on permanent mana sources over things such as Strike it Rich or Infernal Plunge. Thankfully, we are playing the full nine fetchlands (Polluted Delta, Misty Rainforest, etc.) that we're allowed to play to make this easier. More commonly, we should expect to reach Threshold by casting a Wheel of Fortune, just casting spells, or in dire circumstances setting it up on an opponent's end step with Brain Freeze. An important rules interaction to note is that Cabal Ritual checks for card count when it resolves. This means that it cannot be the seventh card in your graveyard to make the . If you have to cast it as a glorified Pyretic Ritual, don't be afraid to do so! I often use it aggressively to accelerate into Necropotence.
+
+Jeska's Will — Just another way to make use of Rograkh, Son of Rohgahh in the Elder Dragon Zone (doesn't quite have the same ring to it). When having a free commander, we're able to use half-halves of Jeska's Will in most situations when casting this card. Meaning that we often get a card that is at least on par with Seething Song with Act on Impulse attached. Neither of these would be playable on its own, but fused together and we have a spark. I recently tried to cut this card, but… IT'S BACK! After playing some games without the powerful red ritual I realized that I missed the explosiveness that Jeska's Will provides on the early turns with setting up a Final Fortune, Last Chance, or Warrior's Oath into either Wheel of Fortune or Wheel of Misfortune. Perhaps you opened on Harnfel, Horn of Bounty alongside Red Elemental Blast. The deck has changed a lot over the last year from being unable to profitably use  mana to having plenty of ways to spend it — think about all of the artifact acceleration that was included! When evaluating mulligan decisions I tend to look at Jeska's Will as a ritual and not as a payoff spell. This is a calculated decision after realizing my lesson one too many times, it's primarily an accelerant and any additional cards or protection pieces it provides are just a wonderful bonus.
+
+
+Mana Creatures
+
+
+Ragavan, Nimble Pilferer — I've stressed the importance of permanent mana, while Ragavan, Nimble Pilferer isn't exactly that; it is recurring mana most of the time. There's always an asterisk as over the course of a game your opponents will deploy blockers. But at a table of four, the probability that it connects is fairly high. If there does come a point in which it isn't useful anymore, we have plenty of ways to take advantage of the body whether it's Springleaf Drum or Diabolic Intent. Having other creatures to sacrifice to pay costs for does help as it means that Rograkh, Son of Rohgahh gets to live which keeps Fierce Guardianship and others online. The card advantage aspect of Ragavan, Nimble Pilferer isn't consistent, even less so than Jeska's Will. I tend to be thankful to anything I can cast off a Ragavan, Nimble Pilferer because the likelihood that I hit something that I'm interested in casting is typically fairly low — not that it can't happen.
+
+Dockside Extortionist — One of the best mana generators in the format and a primary reason to play red. Dockside Extortionist's value shifts in placement at the table or seat order, as initially, it isn't very good. The more time the opponents have to play mana rocks or other artifacts, the better the card becomes. It really offsets being in 4th position in games where that is the situation. Knowing when to cast this Goblin Pirate is a skill that is quickly realized when playing games, if it's only for two to three Treasure tokens it may not be worthwhile unless they're enabling Metalcraft for Mox Opal. Typically, I tend to use the card more as a Jeska's Will or a red Cabal Ritual. Unlike those powerful mana generators, Treasure tokens stay on the battlefield and do not need to be used all at once. Another unique aspect of Dockside Extortionist as a "ritual" effect is that it can be returned to hand via Snap or Chain of Vapor to be used again — this is a terrific way of creating a LOT of mana. When looking at RogSi, the deck doesn't have too many effective blockers outside of Silas Renn, Seeker Adept. Dockside Extortionist can help stave off attackers preventing an additional Tyma the Weaver trigger or there.
+
+Simian Spirit Guide — More acceleration! It helps cast artifact acceleration such as Arcane Signet on the first turn and provides a starting mana post-Ad Nauseam, but my favorite thing to do with it is surprise a player with Pyroblast.
+
+Birgi, God of Storytelling — There's so much to say about our red god, she's so incredibly good! Make sure to read below on Harnfel, Horn of Bounty. Let's begin by talking about Birgi, God of Storytelling's stats — she's big. What I mean by this is her 3/3 body is often large enough to convince opponents to attack another direction, saving our life points for Ad Nauseam. The mana she provides doesn't go away at the end of phases, this is important for emptying opponents mana pools but also for casting a Final Fortune later in the turn (perhaps it was recently drawn off of a Necropotence). Having Birgi, God of Storytelling on the battlefield for Underworld Breach, Ad Nauseam, and even Timetwister effects will generate enough mana for those cards to do more damage on less resources. I have spoken to how red mana is the easiest color to make post-Ad Nauseam, well with Birgi, God of Storytelling you can have it in abundance. This makes converting mana into other colors using a Dashed Ragavan, Nimble Pilferer, Dockside Extortionist, or Talisman of Indulgence much more realistic on our limited resources. If you wait to cast Rograkh, Son of Rohgahh until after Birgi, God of Storytelling hits the table, you have now converted our fearless Kobold leader into a  mana.
+
+
+Interaction & Protection
+
+
+Pact of Negation — A free counterspell, often used on your combo turn to protect your own win if you don't plan on passing the turn or will lose the game on your end step — thanks Final Fortune. People often tunnel vision on Pact of Negation only being used a certain way, but the reality is, sometimes it's correct to just cast it on your opponent's spell and then get them to use another counterspell on your Pact of Negation. With this list having more permanent mana sources than other RogSi lists, we're more likely to be able to pay the upkeep cost if it comes down to it.
+
+Mental Misstep — If Mystic Remora is arguably the best draw spell in the format, I would have to imagine that  to stop it is worthwhile. Outside of this very narrow, specific case, Mental Misstep can often be used to stop the opponent's interaction on your payoff spell or a Pyroblast looking to destroy Rhystic Study. Mental Misstep isn't very versatile in what it does, but it's extremely effective at what it can do.
+
+Swan Song — A restrictive, but very good counterspell. Swan Song cannot hit artifacts but is able to stop enchantments such as Mystic Remora, Rhystic Study, Necropotence, or Underworld Breach as well as instants and sorceries. Swan Song can stop two (Underworld Breach and Ad Nauseam) of the three central cards in the format. The downside is a Swan token, which isn't entirely free when we're a life-total based deck or even Tyma the Weaver triggers.
+
+Flusterstorm — While Flusterstorm only hits instants and sorceries, it's often very good at making sure the desired outcome happens. If you're trying to stop an Ad Nauseam, what better way than a way that puts multiple counterspells on it? Or if you're trying to force through a spell, it ensures that the opponent's interaction will be countered. Flusterstorm is one of the few commonly played ways to stop an opposing Underworld Breach plus Brain Freeze combo.
+
+Daze — At its core, RogSi is a turbo deck. Not that it can't play a value game or go long but it's best when threatening to win quickly with protection. In cEDH, most games players are optimizing for something meaningful in the first few turns and typically this means using all of their mana. These initial turns of the game are where Daze rises to the occasion by being a temporary hard counterspell. When you look at the structure of the manabase, Rogsi has 9 fetchlands and 4 Islands (Underground Sea, Watery Grave, Volcanic Island, and Steam Vents). This is over 50% of the lands in the deck that active Daze for using in the early turn cycles.
+
+Defense Grid — The question that most players have regarding Defense Grid is, "when do you play it?" and the truth is that there are no hard rules. In an early seat, I'm completely fine casting it on the first turn if my plan is to try to win the game on the second turn. I've also seen some players say, "you should only cast it on the combo turn as a colorless silence" and I don't agree with that. Magic is a very deep game and living by these hard rules will only hinder growth. Play the card based on the situation and if you lose because of it, that was a learning experience for the next time.
+
+Flare of Duplication — THIS CARD IS PERFECT! With our commander being Rograkh, Son of Rohgahh, you can sacrifice it to the alternative cost of Flare of Duplication to copy a Dark Ritual, Fierce Guardianship, or even your opponent's Ad Nauseam — this was a massive gain for RogSi.
+
+Deflecting Swat — More "free" interaction! Typically used to change the target of an opponent's counterspell to the Deflecting Swat on the stack causing their counterspell to fizzle. Redirecting targets doesn't have to be with counterspells, you can use this deceptively versatile piece of interaction to change the target of a removal spell to a lock piece on the battlefield or the target of a Peer into the Abyss to you. One thing you cannot do is change a mode, what I mean by this is if Red Elemental Blast is going to destroy a blue permanent you may only change it to another blue permanent. You cannot counter a blue spell on the stack — a pretty common misunderstanding.
+
+Fierce Guardianship — Likely the best counterspell in RogSi! Due to Rograkh, Son of Rohgahh enabling Fierce Guardianship for free there's very little drawback outside of the fact that it cannot target creatures. The real value of Fierce Guardianship is not needing to exile another card from hand such as Force of Will or Force of Negation. This means you gain a card that could help you combo off — having more free ways to protect yourself is a theme that will not be going away. The If you control a commander, you may cast this spell without paying its mana cost spells are cornerstones of this deck.
+
+Force of Negation — "Force of Negation doesn't protect your own combo" and? That's such a narrow way to view things. In cEDH it's only your turn 25% of the time, which means this card is active for the majority of the game. Also, most of the people who mimic that phrase are out here trying to cast Ad Nauseam on their opponents turns since their decks are so bad at it! You'd think they'd know that Force of Negation can protect an instant-speed Ad Nauseam. Jokes aside, cards can have different roles even though there are similar versions of it in the deck. Necropotence was a card I really pushed for its inclusion. Part of making it work was ensuring I would be able to untap, Force of Negation is one of these ways.
+
+Mindbreak Trap — Another reactive "free" counterspell, while Mindbreak Trap is primarily used to stop opponents it can also be used proactively if you can escalate the counterwar. If this is the case, you can even leverage Mindbreak Trap to answer multiple spells on the stack such as Flusterstorm copies or simply two counters. Mindbreak Trap was added in around the time that I included Necropotence and Force of Negation as a way to bolster the strategy. What I found was another "free" counterspell elevated Mystic Remora and Rhystic Study to somehow even be better. Charging head-first into card advantage engines against RogSi is very difficult when we have Force of Negation, Mindbreak Trap, and additional zero mana ways to interact.
+
+Force of Will — An iconic blue counterspell at the cost of a single life point and a blue card in hand. The real drawback isn't the life point or the card in hand, but the converted mana value in our Ad Nauseam strategy. Force of Will being versatile enough to be used proactively or reactively is so huge, but there is another thing… it can counter creatures! There's a running joke within the cEDH space that creatures are uncounterable since so many of the conditional counterspells cannot send a creature from the stack directly to the graveyard. Force of Will is truly a relic of the past. A common question is, "how many blue cards do you need to support Force of Will and Force of Negation?" I don't have a definitive number, but in this current list I play 25 blue cards and it's worked just fine.
+
+Pyroblast, Red Elemental Blast — The powerful versatility of removal or interaction! As removal, these red destruction effects stop Kraum, Ludevic's Opus, Lavinia, Azorius Renegade, Mystic Remora, and Rhystic Study. As counterspells, they often answer our opponents' answers for the very efficient cost of . If you're worried about them being narrow in any given pod, there's almost always a blue deck in any cEDH pod and if there isn't, you should be winning that pod anyway. A notable difference between the two is that Pyroblast can be used to create Storm or clear the top of the deck for Bolas's Citadel (Not in current list) since the target doesn't actually need to be blue. With Red Elemental Blast it does check for a valid target, unlike Pyroblast — the silver living here is that it's more difficult to Deflecting Swat.
+
+
+Removal Spells
+
+
+Chain of Vapor — One of the best bounce spells ever printed. It efficiently answers cards like Collector Ouphe, Ranger-Captain of Eos, Dauthi Voidwalker, and many others. The only downside of this card is that it can be copied by the opponents to return another card to its owner's hand — or is this a feature? A "cool trick" with Chain of Vapor is to use it to generate mana and Storm — a pseudo "storm engine" so to speak. With a bunch of artifact mana (Chrome Mox, Mox Amber, and Mana Crypt), target an artifact, sacrifice a land, and then copy it. With enough lands and artifacts, it can be the cause of the opponent's demise. This often happens post-Ad Nauseam in scenarios with low resources. Having a spell that is versatile enough to removal or theoretical mana is highly desirable.
+
+Snap — In most circumstances, Snap is a "free" bounce spell or temporary removal. But is that enough? At one point, I was testing without the card until I realized it can be so much more. In conjunction with Ancient Tomb or City of Traitors, Snap can be both mana and an answer. Having cards with these sorts of upsides is what deckbuilding in cEDH is all about, maximizing every single slot to its fullest potential. Due to Snap's efficient to cast nature, it's often a Demonic Tutor target to answer opposing creatures but sometimes to even return your own Dockside Extortionist to your hand.
+
+Deadly Rollick — Unconditional (hits all creatures, even black ones — take that Slaughter Pact) removal that is free due to our fearless Kobold warrior Rograkh, Son of Rohgahh. It took me a while to come around to Deadly Rollick as it is a four mana spell in our Ad Nauseam deck, but once I tested it, there was no going back. Being free to cast your removal spells without the fear of losing tempo / Time Walk-ing yourself by having to pay mana for an upkeep trigger was remarkable. Many people would say, "just cast Slaughter Pact on your combo turn" which isn't a rational way of looking at a four-player cooperative game. There will be situations in which you need to stop an onboard combo with a creature removal spell or prevent a fast Kraum, Ludevic's Opus from taking over the game. I know that I touched upon it already, but Deadly Rollick answers Opposition Agent in response to a "tutor effect" or exiles Notion Thief with a Windfall on the stack. There's also preventing an opponent from casting an Ad Nauseam for free with Dauthi Voidwalker. Deadly Rollick is just as good as Fierce Guardianship or Deflecting Swat in my eyes and I'm not afraid to say it. If mana value is a concern, I would recommend lowering the value somewhere else within your 98.
+
+
+Time Walks
+
+
+Final Fortune — I was originally very wrong about this card, I thought it was one of those cutesy pet-cards that people play because it's fun. I'm not afraid to admit that I was so completely far off-base. As stated in the Card Advantage vs. Mana Advantage section, I believe that time and mana are the two biggest resources in cEDH, Final Fortune actually provides you with both. By having a deck that is more focused on permanent mana sources, it provides the ability to lean into Final Fortune as a pseudo payoff card. The time aspect is quite literal, you get to take an extra turn — ever hear of Time Walk? Pretty good card. In games with Mystic Remora or Rhystic Study (the same can be said of opponent's draw seven spells), the instant speed nature comes online as you can cast Final Fortune to steal the turn order back to you.
+
+This isn't the only time that being an instant matters, most notably, Final Fortune in conjunction with Necropotence is a broken combination. You have the ability to exile over a third of your deck with Necropotence, the cards are put into your hand on the end step (ideally, Final Fortune is one of these cards), and then cast it to take another turn. Before I get to the mana aspect, there's one more time piece that was discovered later.
+
+Ranger-Captain of Eos is a card that opponents like to sit on against RogSi, we now have a natural way to punish this via our Final Fortune effects — honestly, it's our deck building coming full circle to reward the decisions being made. We built the deck to combo off on consecutive turns, through interaction and disruption. You can cast any of these  Time Walks and then cast your payoff spell that encourages the opponent to sacrifice their Ranger-Captain of Eos. Now you can untap and force your way through on the second turn.
+
+As for mana, I must sound like a broken record but being able to untap with additional mana sources cannot be overstated. Final Fortune is able to act as a Dramatic Reversal so to speak by untapping not only all of your artifact mana, but your Lands as well. This comes up in this list more often than others post-Ad Nauseam because we're electing to have a slightly higher mana curve — Final Fortune can take some of the pressure off of Ad Nauseam needing to reveal enough starting mana to win the game by reducing it to . Against blue midrange decks, this is an easy way to bully their interaction as you'll have more mana to fight back than they will.
+
+Last Chance, Warrior's Oath — How much worse is the next effect? It's a fair question. Final Fortune was over-performing in our testing, at what point does a sorcery speed version become good enough? It's difficult to define. My playtest group asked ourselves this for weeks before we began to track how often the instant-speed nature of Final Fortune came up, while we don't have definitive data. It wasn't as often as you'd expect, a majority of the time Final Fortune was cast at sorcery speed. I added in Warrior's Oath and my game win percentage increased as having access to more of these effects was extremely desirable, I continued to test two for a few weeks and then decided to bite the bullet on the third copy. I'm never looking back, while these effects do not stack, you'd love to see one every game and having a higher density makes it a possibility. (You don't lose if you've already won — Last Chance, Portal)
+
+
+Draw Spells
+
+
+Gitaxian Probe — This card is either banned or restricted in all competitive formats, the information that it provides for the cost of life is not balanced. I would generally recommend targeting a blue player at the table to see what sort of interaction that they may have, although you could do some sort of politics trick with displaying the hand information of another turbo players hand to the rest of the table. It's worth noting that Gitaxian Probe works very well with Mystical Tutor, Imperial Seal, and Vampiric Tutor to draw the top card immediately. The floor on this card is  for a cycle, slightly thinning the deck, and something to Escape away.
+
+Borne Upon a Wind, Valley Floodcaller — I wasn't initially sold on these cards, they felt a little too cute. That said, the real shinning place for these effects is with Necropotence as well as Necrodomimance when Borne Upon a Wind or [Valley FloodcallerNecropotence into a card that's better than Ad Nauseam. Borne Upon a Wind also plays very nicely with Last Chance as well as Warrior's Oath at turning these effects into Final Fortune to help create a window to win the game or pair with Necropotence. Perhaps my favorite use of Borne Upon a Wind, is that you can cast it with a Ranger-Captain of Eos activation on the stack and then win on top of it. Essentially, this card is an unexpected jab against opponents that will catch them off guard and create opportunities — these are the type of effects that we want! They help us capitalize on our "Mana Advantage" and time as a resource in a four-player format.
+
+Mystic Remora — Arguably the best draw spell in the format, some believe it's even stronger than Ancestral Recall. With Mystic Remora opponents either need to stifle their own development or "feed the fish" — either way, it's a win/win situation. When this card isn't successful is typically when you keep a hand with a single land as a mana source and then the opponents wait it out. Keep this in mind in deciding when to play the insanely broken enchantment. I would argue that people don't consider this card enough when casting Demonic Tutor. If Ancestral Recall is on top of the list for targets in Vintage, perhaps we should start making "The Fish" a top priority in cEDH.
+
+Rhystic Study — Very similar to Mystic Remora, except it triggers off of all spells and not just non-creature spells. We pay the mana cost upfront, rather than in our upkeep. As the game progresses players are more likely to pay the , but in the early game much like Mystic Remora, they cannot afford to not advance their own game plan. This means the earlier you can cast it the better, Rhystic Study and Mystic Remora both benefit from being ahead or early in the seat or turn order. The amount of cards that these pesky blue enchantments provide can be very overwhelming for opponents to recover from. This puts many players in a position where they feel as if they cannot last in a longer game against the "turbo player" with card advantage. This makes them more likely to try to force a win into your enchantment, you'll draw cards which is great but there is the risk of death. This is where our deckbuilding begins to come through. Not only do we have Rograkh, Son of Rohgahh to enable Fierce Guardianship, Deflecting Swat, and Deadly Rollick our build also has Daze, Force of Negation, and Mindbreak Trap to ensure your ability to be able to untap. Most turbo lists, even most RogSi lists, don't play all of these but this list chooses to be more interactive and resilient.
+
+
+Tutor Effects
+
+
+Gamble — An unconditional tutor that puts the card directly to your hand (most tutors for this cost put them on top of your library), but there's a twist. A bit of variance or perhaps you could say… a Gamble. There is some chance that you could accidentally discard the card you've searched for, this often results in red Entomb jokes. But sometimes that's exactly what you want for Underworld Breach! Gamble works very well with Underworld Breach for a single  you can find the Underworld Breach and then depending on your available resources find Lion's Eye Diamond as well as the Brain Freeze.
+
+Mystical Tutor — "Ad Nauseam anyone?" This is most player's first thought when casting Mystical Tutor and that's a fine line. But there are other very strong cards that could be even better options based on the situation such as Mnemonic Betrayal or if you need mana Demonic Tutor for Dockside Extortionist. My point here is to not tunnel vision on the obvious thought because there could be something even better. Since RogSi does tend to be on the lighter side for actual removal spells, I often use Mystical Tutor to find either Snap or Deadly Rollick when in pods with dedicated Stax permanents as I want to make sure I can outplay the opponents when the time comes and not be stuck under a permission piece.
+
+Imperial Seal — A sorcery speed Vampiric Tutor. While some people believe this card should be on the chopping block, I firmly disagree. There's a stigma against sorceries in cEDH since you can only cast them 25% of the time. That said, find me an alternative that puts Mystic Remora into play on the second turn. I hope you see my point here — for what the card does, it's very difficult to match. I personally do not buy into a lot of the cEDH hivemind talking points like this sorcery example. In our proactive strategy, I just want to play the best cards consistently and efficient tutors like Imperial Seal make that a possibility.
+
+Vampiric Tutor — The ability to get any card at instant speed is obviously very powerful. If you need the card immediately, it would require a draw effect whether its Gitaxian Probe or Windfall. Some players focus too much on the life-loss aspect in our Ad Nauseam deck, I would point them back to the introduction where we say that we're really just a Storm strategy. Don't stunt your own growth due to fear of life-loss!
+
+Demonic Consultation — Making a deal with the devil? It can sometimes bite you. This forbidden tutor can be riskier than even the card Gamble if you cast it looking for a specific card such as Underworld Breach. You run the risk of Underworld Breach being in the top six cards of your library or in the bottom few. I believe that players are too conservative with this card and shouldn't be afraid to seize the moment to attempt a win. If you happen to exile both Thassa's Oracle and Brain Freeze there's still Praetor's Grasp and Mnemonic Betrayal to win the game with. More often than not, Demonic Consultation is played alongside Thassa's Oracle to exile your entire library with the Thassa's Oracle trigger on the stack. Make sure to check out the How to Play section above.
+
+Tainted Pact — Like Demonic Consultation, it can be used in conjunction with Thassa's Oracle to win the game. Read more about this in the Thassa's Oracle Combo section above. Unlike Demonic Consultation, you can choose when to stop exiling cards. Due to cEDH's single nature revealing two cards with the same name is extremely rare (outside of basic lands, but that can also be avoided in deck construction). This means that Tainted Pact is often the better forbidden tutor when compared to Demonic Consultation for the  mana. Being an instant is also very helpful because you have the option to sit with it in your hand as a combo piece or in a pinch, use Tainted Pact to find an interaction piece in a pinch. The same theory applies to Tainted Pact when exiling cards, if you happen to exile both Thassa's Oracle and Brain Freeze there's still Praetor's Grasp and Mnemonic Betrayal to win the game with.
+
+Diabolic Intent — RogSi is the best Diabolic Intent deck in cEDH, hands down — I will not listen to any rebuttals at this time. Having access to Rograkh, Son of Rohgahh in the command zone means that the drawback of "sacrifice a creature" is very minimal. Essentially, making Diabolic Intent into an additional copy of one of the most broken cards of all-time Demonic Tutor. Having more ways to access specific cards or the best cards in any situation goes a very long way. The downside occurs when you need to sacrifice Rograkh, Son of Rohgahh when holding Fierce Guardianship or Deflecting Swat in hand. Do not forget to replay Rograkh, Son of Rohgahh before casting the card you tutored for! This way it's protected by the free interaction.
+
+Demonic Tutor — A legendary (not literally) card from Magic: the Gathering's history, as long as you've played this game you've likely known what this card does. The rare ability to be unrestricted for what you search for AND it goes directly for your hand for a mere two mana. Earlier, we spoke about the best cards in cEDH being within the Grixis color scheme. With Demonic Tutor you can pick and choose based on the context of the game which one you'd like. It's worth noting, I generally have a plan when I cast Demonic Tutor — use it with purpose. If you don't know what you're getting there's a reasonable chance that maybe you shouldn't have cast it.
+
+Wishclaw Talisman — If you're familiar with our Legacy content, you know all about Wishclaw Talisman. Many people believe that this powerful monkey's paw can only be activated at sorcery speed, which is not true. It can be used at any point on your turn, which means you can leave it unassuming on the battlefield while you put Demonic Tutor for Underworld Breach on the stack while representing a Pact of Negation or Fierce Guardianship. Wishclaw Talisman is an artifact, which is both a pro and a con. Turning on Metalcraft for Mox Opal is always welcome, but it can also be destroyed. If this is the case, you can always return it with Silas Renn, Seeker Adept! A final note, don't be afraid to cast this card and pass the turn. It will save mana on the combo turn which is very impactful —  +  is still easier than .
+
+Grim Tutor — Increased access to the best cards in the format (Ad Nauseam, Dockside Extortionist, Underworld Breach) directly to your hand, unlike Vampiric Tutor or Imperial Seal. While Grim Tutor isn't the most appealing card, it fits the role well. I began to test the card in June of 2022 over Peer into the Abyss and have never really looked back. Unlike Peer into the Abyss, it's much easier to cast to find a desirable payoff, protect, and less nauseating to reveal to a certain five mana instant. I've found when discussing this card people over-estimate the life loss aspect in our Ad Nauseam deck.
+
+Praetor's Grasp — Essentially another tutor, the thing about Praetor's Grasp is that you usually want to target other players with Grixis colors within their deck. The reason why is you want to have access to things such as:
+
+Thassa's Oracle
+Ad Nauseam
+Dockside Extortionist
+Underworld Breach
+It's usually a pretty rare situation that I'm not getting one of these cards from the opponent. You may have noticed that I listed Thassa's Oracle, that's because Praetor's Grasp can act as a backup win condition if your own Thassa's Oracle or Brain Freeze are exiled. To reiterate some of the points I made under Imperial Seal, do not listen to the hivemind about everything. I was told that sorcery speed tutors aren't great (outside of Demonic Tutor) and that a mana value of three was too much for a tutor. I tested for months without Praetor's Grasp or Opposition Agent and when I added these cards back in, the power-level of the deck was noticeably different. Having consistent access to cards such as Dockside Extortionist or Underworld Breach even at  is worthwhile. It's not that three mana tutors are busted, it's that the cards at replacement level aren't as good. Perhaps this changes over time, but a backdoor win condition that also is more copies of two of the best three cards in the format seems very good to me.
+
+
+Payoff Spells
+
+
+Timetwister — Another iconic Alpha/Beta all-star and an actual piece of the power 9! Timetwister is one of four "Wheel" effects but I also believe it's one that people should tutor for more. Timetwister resets the graveyards on the off-chance that you do not win the game so that your opponents don't have additional resources for Underworld Breach, Yawgmoth's Will, or Mnemonic Betrayal. A few times in this primer I've mentioned Praetor's Grasp or Mnemonic Betrayal as backup win conditionals, but it is worth noting that you can use Timetwister to shuffle in a Thassa's Oracle, Brain Freeze, or even Praetor's Grasp back into your library from the graveyard.
+
+Wheel of Fortune — SPIN THAT WHEEL! Wheel of Fortune is the card that created the name for draw sevens (often at three mana). The general goal of "Wheels" is to play as many spells as possible and then cast a draw seven to refuel. If you're just trying to cast spells and refuel, wouldn't you want them to stick around? See where I'm getting at yet? Permanent mana sources such as Talisman of Creativity, etc. In the FAQ, there's a section on Why so few lands?. I won't explain it all but the TL;DR is that lands are a turn-based resource and these "Wheels" help you keep hitting land drops on such a low count. In rare games when you don't have access to Brain Freeze anymore, Wheel of Fortune can be substituted in during an Underworld Breach turn when paired with Lion's Eye Diamond.
+
+Wheel of Misfortune — A secondary Wheel of Fortune. The goal of this card is to not bid the lowest, but also, not the highest. Only the highest bidder pays life! This leads to a lot of direct messages of people asking me how much they should pay and the answer is always, "its contextual". It really depends on the state of the game, early on? Maybe 8-11 life? On a big game ending combo turn? 15-22 life? You just really want to make sure you're someone who draws seven. I'd rather be the one paying all of the life than not drawing seven cards.
+
+Windfall — A conditional "Wheel" based on the number of cards in an opponent’s hand. Many players choose to see this as a negative, I, however, see it as a positive. This means that depending on the game state, there may be a Mystic Remora, Rhystic Study, or Kraum, Ludevic's Opus that had been collecting value. This would be an ideal time to search for Windfall to cast it as a greater than draw 7. Depending on the size, you may be able to convince some opponents to help you protect it as well. Having a high density of payoff spells is really what we’re looking to do without Rograkh, Son of Rohgahh / Silas Renn, Seeker Adept making meaningful card advantage in the deck. You may not see Windfall in other Ad Nauseam decks and that’s just fine. Deck construction shouldn’t be as easy as swapping a commander.
+
+Mnemonic Betrayal — Most Magic players know the insane power behind Yawgmoth’s Will and have plenty of stories to share about it. Now think about this, with Mnemonic Betrayal you get to play cards out of THREE graveyards instead of just your own. This card is often supercharged by RogSi being a deck with Windfall, Wheel of Fortune, and Wheel of Misfortune filling the graveyards. With all of the colorless mana floating around the format, the ability of Mnemonic Betrayal to ignore colored costs just makes it that much stronger. A more traditional way to fill the graveyard would be to target another Grixis player at the table with a non-lethal Brain Freeze before resolving Mnemonic Betrayal. Like Praetor’s Grasp, Mnemonic Betrayal doubles as a backup win condition. As the game progresses, this card becomes better and better. There will become a point in which this is a better target than even Ad Nauseam or Underworld Breach.
+
+Yawgmoth's Will — As mentioned under Mnemonic Betrayal, with Windfall, Wheel of Fortune, and Wheel of Misfortune filling the graveyards this card has the potential to become live very quickly and be powerful. Typically, this is a Demonic Tutor target for me after things haven’t gone according to plan. Ad Nauseam or Underworld Breach might not be options, but this Urza’s Saga all-star is ready to step up and carry Rograkh, Son of Rohgahh home with a win. Players focus too much on how you cannot Underworld Breach combo on the same turn after resolving Yawgmoth's Will when discussing the card and it feels a bit silly to me as if you’ve already resolved Yawgmoth's Will the odds you need Underworld Breach or couldn’t choose another path are so slim. With so few actual win conditions (Thassa’s Oracle and Brain Freeze), the ability to recast them from the graveyard with Yawgmoth’s Will goes a long way. Before casting Yawgmoth’s WIll, if you can sacrifice Rograkh, Son of Rohgahh to Culling the Weak or Phyrexian Tower, you should do so. The reason why is that you can elect to put Rograkh, Son of Rohgahh to the graveyard and then recast our kobold warrior without paying the command zone tax!
+
+Underworld Breach — Honestly, I’m not sure what Wizards of the Coast was thinking — but here we are! Underworld Breach like Yawgmoth’s Will allows you to recast cards from your graveyard, but unlike Yawgmoth’s Will those cards do not go to exile. This means that you can cast the same card over and over again (Please, do not do this with the Final Fortune effects. There’s still a ‘lose the game’ trigger for you to worry about!).
+
+You want to assemble Underworld Breach in conjunction with Brain Freeze and the third piece can be slightly variable, the most common card being Lion's Eye Diamond, but it can also be Lotus Petal. The idea here is to Brain Freeze yourself, then use cards in the graveyard to Escape back Lion's Eye Diamond to generate  and then cast Brain Freeze again. As you do this, you'll mill various protection pieces such as Defense Grid, Pact of Negation, and/or Flusterstorm to further protect yourself. Eventually, your library will be empty and then you can play Thassa's Oracle to win the game.
+
+If your Thassa's Oracle is in exile for one reason or another, you can now begin to Brain Freeze your opponents over and over. Typically, this should win the game but if for some reason it doesn't you can use Mnemonic Betrayal to play a combo out of your opponent's graveyard or perhaps even their own Thassa's Oracle. Similarly, Praetor's Grasp can be used to grab another player's Thassa's Oracle.
+
+A common play pattern is to only have a single tutor such as Demonic Tutor, with enough mana in play as well as cards in graveyard this should result in a win. The idea is to use Demonic Tutor to find Underworld Breach and then Escape Demonic Tutor to search for the Brain Freeze. With RogSi containing a high density of powerful mana, even if you don't mill Lion's Eye Diamond or Lotus Petal, there's often enough mana between cards such as Chrome Mox, Mox Opal, and many others. Use these as a bridge to cast another Brain Freeze to close the gap.
+
+A trick you can do is when you sacrifice Rograkh, Son of Rohgahh, don’t put it back into the command zone. Instead, put it in the graveyard. — this will provide you with another card to Escape. When Rograkh, Son of Rohgahh changes zones from graveyard to exile, you may now return Rograkh, Son of Rohgahh to the command zone!
+
+Necropotence — Believe it or not, when I started playing cEDH most RogSi lists on Moxfield and the cEDH Deck Database didn’t have this card! With cEDH being a format where you have 40 life, not playing one of the most powerful draw engines in the history of the game was suspect to me. Early on I added Phyrexian Tower to use with Rograkh, Son of Rohgahh to accelerate into Necropotence on the second turn. This added some consistency to the Ice Age enchantment. When Necropotence is on the battlefield, you can do some cool tricks with it:
+
+Not pay for Mana Vault since you don’t have a draw step.
+Get around Narset, Parter of Veils, Spirit of the Labyrinth, or Notion Thief since Necropotence doesn’t actually draw cards.
+Exile the top card of your library for Bolas’s Citadel. (Not in current list)
+Use Lion’s Eye Diamond to cast spells in your end step!
+Cast Final Fortune on your end step to then use your new seven card hand without passing the turn.
+Win the game on the same turn with Borne Upon a Wind or Valley Floodcaller
+When discussing Necropotence you’ll hear some popular talking points such as, "Underworld Breach combo doesn’t work because Lion’s Eye Diamond exiles your hand." You can always use Lotus Petal, Dockside Exortionist, or other chain other artifacts that can generate  mana such as Chrome Mox or Mox Opal. Another common rebuttal is, "Necropotence isn’t good because your opponent just Wheel of Fortunes you." Let’s pretend that our opponents are playing either blue or red. What are the odds they’re even playing Wheel of Fortune or Timetwister? These cards don’t go into every strategy within those colors. But even if they did and let’s say that our opponent had one of these effects and put it on the stack. We’re playing blue! We have access to the typical Force of Will, Fierce Guardianship, and then the one mana counters such as Flusterstorm after having the option to draw roughly a third of our library. On top of that, this specific primer list plays Daze, Force of Negation, and Mindbreak Trap compared to other lists with the same commanders. The key is to build your deck with a coherent strategy, if you’re planning on passing the turn — be prepared for it! Or… don’t pass the turn at all with Final Fortune, Last Chance, or Warrior’s Oath. How much life you pay is always contextual, but in my experience watching new RogSi players is that they’re too conservative with their numbers. Ten life isn’t usually enough on the first turn, I’m usually somewhere between 15-20 life. If you believe you’re going to lose the game on that turn cycle, you can always do the "hail mary" play of trying to find both Final Fortune and Simian Spirit Guide or Borne Upon a Wind to attempt a win. There’s always a reason to not do something — but sometimes breaking free of old thought-patterns or previous standards can do you a lot of good with fresh eyes.
+
+Harnfel, Horn of Bounty — The back-half of Birgi, God of Storytelling. My friends must hate this, but I constantly just refer to both sides as "Birgi" and just assume they know which half I’m talking about based on context — I am truly the worst. That said, Harnfel, Horn of Bounty has continually over-performed for me in our deck with Mystical Tutor, Imperial Seal, and Vampiric Tutor. Harnfel, Horn of Bounty provides a way to quickly access the tutor targets on the combo turn. An interesting aspect of Harnfel, Horn of Bounty is to use mana from Lion’s Eye Diamond to pay for spells in exile since they aren’t in your hand — pretty much turning Lion’s Eye Diamond into Black Lotus. It’s been stated several times how good the four "Wheels" (Windfall, Timetwister, Wheel of Fortune, & Wheel of Misfortune) are in RogSi, but they’re even better when you have Harnfel, Horn of Bounty on the battlefield since those seven cards in hand actually represent fourteen cards in exile. In games in which you resolve Ad Nauseam but get bottle-necked on colorless or red mana, you can cast Harnfel, Horn of Bounty! Now instead of having seven cards off of a Wheel of Fortune you have 30+ cards which should be enough to exile the rest of your library with Harnfel, Horn of Bounty. Who needs Demonic Consultation?
+
+Necrodominance — Ever wish you could play two copies of Necropotence? Now you can, but this one is slightly worse due to the maximum hand-size restriction. That said, it's still a very powerful win-enabler. Don't sleep on this card!
+
+Ad Nauseam — This RogSi list is a Storm Combo deck, not a Turbo Ad Nauseam deck! That said, it's still a deck that leverages this broken combo engine very well between the high density of acceleration between both rituals and artifacts. Other RogSi lists tend to focus more on Ad Nauseam itself and restrict the possible cards they play for this reason. Those lists tend to look at overall mana values a lot more closely than our list. But why is that? When I entered this format, it was the norm and I wish I had a better answer other than, "we've always done this." It's not that Ad Nauseam isn't great, quite the contrary, but we've figured out a better way to maximize our win percentage while keeping the card very effective:
+
+Final Fortune
+Last Chance
+Warrior's Oath
+When I started playing RogSi in late 2021, a common complaint or knock against the deck was that while it was very good at making  mana post-Ad Nauseam, it was very bad at making other colors. It's easy to see why when you look at the mana from Simian Spirit Guide, Mox Amber, Rite of Flame, Jeska's Will, and Infernal Plunge. This was an issue because of the increased difficulty in generating  for Thassa's Oracle without a Dockside Exortionist. In order to get around this, many players (including myself) played Strike It Rich. An easy solution were these red Time Walk effects, allowing RogSi to untap all of its colored mana sources including Talismans. While the two mana artifacts aren't anything special or unique, common stock lists of RogSi play very few of them, which makes winning off post-Ad Nauseam not the easiest task.
+
+As a deck that uses its life-total for a resource, you should expect opponents to target you when it comes time to declare combat. This is a way of making Ad Nauseam less effective but, there isn't a definitive point where I would recommend not casting the spell. Most games of cEDH are complex, but I would suggest reviewing the amount of initial mana sources (IMS) that are left within your library.
+
+A reminder, Ad Nauseam is an instant. You are able to cast it on the opponents' turns when there is a window, you do not need to recklessly jam into open mana.
+
+
+Win Conditions
+
+
+Brain Freeze — A secondary win condition to Thassa’s Oracle. In order to win the game with Brain Freeze, you want to assemble Underworld Breach in conjunction with Brain Freeze and the third piece can be slightly variable — the most common card being Lion's Eye Diamond, but it can also be Lotus Petal. The idea here is to Brain Freeze yourself, then use cards in the graveyard to Escape back Lion's Eye Diamond to generate  and then cast Brain Freeze again. As you do this, you'll mill various protection pieces such as Defense Grid, Pact of Negation, and/or Flusterstorm to further protect yourself. With a deck that is mostly empty, you can now start using the extra mana, cards in graveyard, and Storm to start decking each opponent one by one. It’s worth noting that you could really find another way to finish the game if you’ve played a Final Fortune, Last Chance, or Warrior’s Oath previously as you’ll lose the game on the end step. Something to keep in the back of your head is that Brain Freeze can be used as an interaction piece against any of the "top deck" tutors such as Enlightened Tutor, Worldly Tutor, Imperial Seal, and so on.
+
+Thassa's Oracle — How most games end (assuming that your opponents make you play it out)! Thassa's Oracle is the most efficient and compact win in the format for combo decks. Most wins consist of a total mana value of three () between Thassa's Oracle and Demonic Consultation or add in  for Tainted Pact. For this low cost you can see why this is the most common win pattern there is in cEDH. It's also worth noting, this win condition ignores infinite life, library size, and so many other possible nuances — it's just incredibly clean.
+
+If you're unfamiliar with the combo, the idea is to remove your own library from the game using either of the powerful black instants — Demonic Consultation or Tainted Pact before resolving the Thassa's Oracle trigger. This means that creature removal on the Merfolk Wizard won't matter as your library count will still be zero. A tip for executing this pairing is to play Thassa's Oracle first to see if it resolves (in a format where Pyroblast/Red Elemental Blast is popular), making it safe to exile your library. At this point, cast either Demonic Consultation or Tainted Pact.
+
+It’s possible that your Thassa’s Oracle may become exiled over the course of a game. Do not forget that it’s possible to use your opponent’s Thassa’s Oracle with Praetor’s Grasp or Mnemonic Betrayal!
+
+
+Orcish Bowmasters — While Orcish Bowmasters can be a win condition, it's more often a removal spell — just to set the record straight. Orcish Bowmasters is able to win the game though! Often in conjunction with a Windfall or Wheel of Fortune plus Underworld Breach to create enough ping triggers to deal lethal damage. It will also Amass a large enough Orc Army to attack for a lot of damage if it's already been on the battlefield. More commonly, Orcish Bowmasters will remove creatures that are stopping us from winning the game from the battlefield. Just be realistic with your expectations! This is a flexible removal spell that can also backdoor to win a game, it's also great at punishing Mystic Remora and Rhystic Study players.
+
+
+Lands
+
+
+Arid Mesa, Bloodstained Mire, Flooded Strand, Marsh Flats, Misty Rainforest, Polluted Delta, Scalding Tarn, Verdant Catacombs, Wooded Foothills — Typically known as "fetchlands", these lands originally from Onslaught and Zendikar are known for their thinning in 60-card formats. That’s less important in cEDH as the deck sizes are so larger. More often than not, the reason we play these lands is to have consistent mana with our "dual lands" such as Underground Sea, Badlands, and Volcanic Island. Fetchlands do have other value though!
+
+When paired with Brainstorm (Not in current list), you can shuffle your library to not be required to redraw cards you may not need at the moment.
+These lands provide Escape fuel for Underworld Breach.
+Allows you to shuffle your library with a Bolas’s Citadel on the battlefield.
+Can be played from the graveyard off of Yawgmoth’s Will.
+Helps reach Threshold for Cabal Ritual!
+Provides Island consistency for Daze.
+Playing these lands is essentially a no-brainer. The downside of your opponents possibly having Opposition Agent doesn’t outweigh their benefits in the slightest.
+
+Badlands, Underground Sea, Volcanic Island — Often referred to as "dual lands", these lands from the beginning of Magic get their name because they tap for two mana. The reason these lands have been so sought after for decades is that they have a basic land type (Island, Swamp, Mountain, etc.)! It’s worth mentioning that you can return a Volcanic Island to pay for Daze’s alternative casting cost since it is an Island. Unlike other lands printed in years after Alpha/Beta, there are no drawbacks to dual lands. They simply enter the battlefield untapped and do their thing. The only drawback to these lands is that they are non-basic, which means that if your opponents have dedicated hate such as Blood Moon or Back to Basics that could matter. Once again, the pros far outweigh the cons for these iconic mana sources.
+
+Blood Crypt, Steam Vents, Watery Grave — An attempt from Wizards of the Coast to print a "fixed" version of the dual lands. These lands from Ravnica block are called "shock lands". As you can imagine, they received their name because they cost you two life as they enter the battlefield untapped — similar to the card Shock. Other than the life-loss, these are just as good as dual lands. There’s no good reason that you shouldn’t be playing these! They’re also very affordable as they’ve been reprinted a handful of times. I would typically search out dual lands before reaching for one of these lands, unless it’s on an end-step to put it onto the battlefield tapped to save some life. One of the few exceptions for searching out a "shock land" instead of a dual is providing the right colors to cast a double-color intensive spell such as Final Fortune or Grim Tutor.
+
+Command Tower — A simple land, it taps for Grixis colors (not all five colors, this matters for Ragavan, Nimble Pilferer or Praetor’s Grasp). Command Tower is not searchable via a fetchland as it has no basic land types. This land is essentially a must-play as it has so few drawbacks.
+
+City of Brass, Mana Confluence (Not in current list) — Our "pain lands" and as you guessed it, they received their name based on doing a damage each use. These actually tap for all five colors, unlike Command Tower. They’re functionally identical, even if City of Brass is a tap trigger which means that in theory, you could cast a Demonic Consultation in response to the damage trigger. That said, you would still take the damage before any possible Thassa’s Oracle trigger.
+
+Gemstone Mine — RogSi is a "turbo" deck by definition, we’re really looking to do something meaningful before Gemstone Mine losing its final counter would matter. If you have the option, I would play other lands first as it will allow Gemstone Mine to live a bit longer. It’s worth noting, Gemstone Mine losing its last counter isn’t necessarily a bad thing, another card to the graveyard to provide Escape fuel for Underworld Breach is always welcome.
+
+Gemstone Caverns — When you’re not on the play, this land acts as a second copy of Chrome Mox that you can use as a pre-game action. When in play, Gemstone Caverns is another five-color land assuming that it has a luck counter on it. When it doesn’t have a luck counter on it that means it was drawn later on in the game, which is typically fine enough as your hand should’ve game a gameplan when it was kept. Being a colorless land late in the game is not a huge risk, once again, the upsides outweigh the downsides.
+
+Otawara, Soaring City — While this land only taps for . The real value here is as an uncounterable (it can technically still be redirected via Deflecting Swat) removal spell against Stax pieces. In actual games, a blue midrange player is likely to protect another player’s disruptive permanent. Otawara, Soaring City allows us to break free of this lock that we're in, to then only need to fight the blue midrange deck on the stack. Otawara, Soaring City’s activated ability is another payoff for running Rograkh, Son of Rohgahh. When having Rograkh, Son of Rohgahh on the battlefield, the cost is reduced by . This cost reduction stacks, if you also have Ragavan, Nimble Pilferer and a Birgi, God of Storytelling the cost would be just . A common criticism of RogSi is that it doesn't play enough removal for these match-ups. I believe that people focus too much on dedicated answers rather than cards that can help you win the game along the way. Having cards that only do one thing in your fast combo decks is often a detriment which is why we've selected a card like Otawara, Soaring City.
+
+Mount Doom — Much like Otawara, Soaring City, Mount Doom provides an uncounterable effect (opponent's won't be able to protect a Stax piece or even Deflecting Swat since it doesn't target) that we desire as it doesn't cost us a deck slot since it's tied to a mana source (this effect has been so good that we've cut Cyclonic Rift for this reason). This pseudo-"Wrath" effect does come with a cost, we have to sacrifice a Legendary Artifact. That said, we do have Silas Renn, Seeker Adept in the command zone! There's also Mox Amber, Mox Opal, and in some lists Bolas's Citadel. Unlike Otawara, Soaring City, this land provides mana fixing as it taps for both  +  which is often a criticism of Otawara, Soaring City. While the activation of Mount Doom can be costly, in the board states that we often want such an effect, they're often bogged down by Stax permanents bringing the game to a halt. You will have time to build up to the  cost.
+
+Phyrexian Tower — I’ll admit, tapping for  isn’t great. But Phyrexian Tower isn’t here to do that! When constructing a deck with a free commander, you need to find ways to make use of the free piece of cardboard. Sacrificing Rograkh, Son of Rohgahh to accelerate into Necropotence or Ad Nauseam is certainly helpful. Players often forget about the color-fixing it does by generating   in a deck that is traditionally very good at making colorless and red mana. A friendly reminder, some people tend to forget that you can sacrifice other creatures to Phyrexian Tower such a Spirit token from Forbidden Orchard or a Swan from Swan Song — don’t tunnel vision on murdering our Kobold friend.
+
+Ancient Tomb, City of Traitors — These two "sol lands" get their name from none other than Sol Ring and its ability to tap for  mana. While Ancient Tomb costs two life and City of Traitors is often temporary, what they offer is explosive starts in our Storm combo deck. Being able to accelerate into a Talisman of Creativity on the first turn to essentially break free of the one mana source per turn rule from a land drop is very important. But when you think about what our deck is trying to do, we want to aggressively cast "Wheels" quickly every game. Ancient Tomb and City of Traitors allow us to do that with ease! Have you ever noticed that all four wheels cost  and then one colored mana? It’s actually perfect for what we’re trying to do. Everyone loves to talk about how great a quick Rhystic Study is no matter what deck you’re playing, it has the same cost as a "Wheel" which means that Ancient Tomb and City of Traitors are what you’re looking for. These Sol lands also help cast expensive spells such as Ad Nauseam, Bolas’s Citadel, or Harnfel, Horn of Bounty on fewer resources which in return gets us there faster. One last note is a pretty cool trick that you can do with City of Traitors! Play another land that taps for . With the City of Traitors sacrifice trigger on the stack, tap it and the new land for . Now cast Snap and untap these two lands! You can now make another  effectively generating more mana.
+
+
+FAQ
+
+
+
+How to keep track of Storm & Mana?
+There's really only one way! (This is technically a lie) I would recommend The EPIC Storm Mini-Token pack, it's perfect for cEDH gameplay and even better for Spelltable games for increased clarity. Want to see them in action? Check out The EPIC Storm on Play to Win!
+
+RogSi or Tymna/Kraum?
+Now would be a good time to redirect back up to the, "is RogSi for you?" section. If you're someone who prefers blue midrange decks, there's a chance that you would prefer Tymna/Kraum (also known as Blue Farm). That said, I do believe that long-term that RogSi is a better deck and would provide a better game win percentage overall.
+
+A lot can be said on this topic, but a fundamental point on both sides of the discussion can be found in Card Advantage vs. Mana Advantage. People who prefer Blue Farm really value the slow card advantage engines in the command zone — Tymna the Weaver and Kraum, Ludevic's Opus. While having these engines can be desirable, I do believe that they're over-valued. They often take time to come online to be truly effective, in those early stages of the game you will not have access to Fierce Guardianship, Deflecting Swat, or Deadly Rollick. If Blue Farm does accelerate into their commanders, they're leaving themselves with their shields down for the other aggressive decks at the table. This ultimately leaves them vulnerable, which is not something RogSi has to consider.
+
+As stated previously in the primer, time and mana are the two most valuable assets in the format. Tymna and Kraum both require those things initially to be effective, while often providing a small continuous advantage as the game progresses. If Tyma or Kraum are going to be truly good in any given game, you would want them to live for the long-haul which would mean needing to spend additional resources to protect them.
+
+It's not that Tymna or Kraum are bad, it's just that having a zero mana value commander is insanely powerful. Of the commanders that you have to spend mana on, they're near the top of the list. Many Blue Farm players have converted to RogSi in the last year after testing the primer list to strong results after coming to the realization that mana is a more valuable resource in the command zone rather than a few cards per turn cycle.
+
+Is RogSi the fastest deck in the format?
+Not likely. Decks such as Codie Nauz or K'rrik, Son of Yawgmoth are probably faster (difficult to definitively prove without hard data, but I believe this to be true) but I do believe that RogSi is among the faster decks in the format. The real difference is that RogSi tends to be much more resilient and interactive than these decks, for a slight decrease in speed you gain more in being able to attempt to win multiple times.
+
+Is RogSi Resilient?
+Definitely! The community talks about RogSi lists based on older versions of the deck before some of the innovations that drastically improved the deck over the last year. You may hear that the deck is a glass cannon but that's just untrue.
+
+As mentioned previously in the primer, RogSi has additional free interaction spells in Fierce Guardianship, Deflecting Swat, and Deadly Rollick that come online on the first turn. Which allows the deck to stop the opponent's interaction when comboing off.
+
+A change in deck-building philosophy happened early on in my testing, the deck was focused on mana acceleration that allowed you to go from one to three mana on the first to the second turn. These effects were things such as Strike It Rich, Infernal Plunge, and a few others. I made a conscious effort to switch these effects into permanent mana sources such as Talisman of Indulgence, Talisman of Dominance, Ancient Tomb, and others. This allows you to recover from failed combo attempts more easily as well as allowing you to combo off on consecutive turn cycles. Having permanent mana sources really shined when testing Final Fortune effects.
+
+Taking extra turns and being able to combo on consecutive turns elevated RogSi from a fringe Ad Nauseam deck to a format powerhouse.
+
+Why so few lands?
+Lands are a turn-based resource, meaning in a typical game of Magic: The Gathering you can only play one per turn. With Talismans, they act similarly but you can break the rules on accelerating your available mana, especially in a deck with Ancient Tomb, City of Traitors, Mana Crypt, and Sol Ring. When adding in the Talisman effects originally, I cut spells and then slowly over time I found myself flooded on mana sources. This is when I began to cut down on lands slowly to the point where we are today. With RogSi, we are often drawing multiple cards in a turn cycle (or have access to additional cards) whether it's Mystic Remora, Rhystic Study, Windfall, Timetwister, Wheel of Fortune, Wheel of Misfortune, Ad Nauseam, Necropotence, Harnfel, Horn of Bounty, and I'm sure there's more that I'm missing. Any lands that go unused or are discarded to a draw seven are wasted resources, this is relevant to the deck that is looking to limit the number of turns in any given game. For these reasons, we choose to be on the lighter side of land counts but it's a calculated decision.
+
+What about Stax?
+There's this myth that RogSi can't beat Stax, clearly those people haven't seen it beat a pair of prison decks on Iron Deck or on Play to Win. While these are just a handful of games, you can gain a general idea of how these matches can play out. It may not be painfully obvious, but RogSi has eight removal spells in it!
+
+Chain of Vapor — I cannot say enough about versatile removal, Chain of Vapor is exactly that. Being able to answer a Deafening Silence, Null Rod, or Collector Ouphe cannot be understated. That said, it can also be used for some sweet tricks to generate mana. Make sure to read more about Chain of Vapor in the Card Choices section.
+Snap — A "free" creature answer! With Ancient Tomb and City of Traitors in your deck, Snap can often be a Pyretic Ritual as well. Not to mention, you can use it to color fix as well as you do not need to untap the lands used to pay for the spell.
+Dress Down (Not in current list) — This is really the only "mass-sweeper" so to speak, but it does answer multiple creatures. It's a highly-valued "tutor" target in pods with Stax/Prison decks in them. A trick for you to remember is if you play it on an end-step, the effect will carry over to the following turn.
+Orcish Bowmasters — Combine with a draw-7 effect and machine gun down their creature-lock pieces.
+Deadly Rollick — An unconditional removal spell with no tempo loss can often swing games unexpectedly as the table expects you to take a turn off to answer the creature only to have it be a free effect.
+Otawara, Soaring City, Moonsnare Prototype (Not in current list) — In pods with prison decks in them, I tend to highly value Otawara, Soaring City as well as Moonsnare Prototype. A prisoner's dilemma that is created is that the Stax player will play a lock piece and then the blue decks at the table will protect the prison piece when you try to answer it. These wonderful Channel cards from Kamigawa: Neon Dynasty break the rules by bypassing countermagic.
+Mount Doom — A bit expensive, but it cannot be countered.
+Pyroblast, Red Elemental Blast — These are less effective against the average prison deck, but this is mainly just a reminder that these powerful red spells can kill blue lock pieces such as Counterbalance, Arcane Laboratory, or Lavinia, Azorius Renegade among many others.
+A common criticism of RogSi is that it doesn't play enough removal for these match-ups, above we have 8 very versatile effects that are uniquely powerful in their own ways. I believe that people focus too much on dedicated answers rather than cards that can help you win the game along the way. Having cards that only do one thing in your fast combo decks is often a detriment which is why we've selected these cards. Not to mention, RogSi has a high-density of powerful tutors — we're never too far away from having access to one of these effects.
+
+How do you beat Counterspells?
+There are a few ways, the easiest is with your own. RogSi has a high density of very efficient answers ranging from things such as Pact of Negation or Deflecting Swat to redirect the opposing spells. RogSi also has protection pieces such as Defense Grid to stop the opponent from ever casting any spells.
+
+Another way to beat counterspells is simply to throw multiple haymakers until the opponents run out of ways to stop you. Sequencing becomes very important here as the way you cast your spells can create a narrative, and allow your opponents the opportunity to slip up on their own. Casting multiple ways to win the game is most effective in a single turn but can be done over a few turns as well.
+
+What happens after Ad Nauseam is countered?
+For starters, make sure to check out the How to Play section. When it comes down to it, our RogSi list is fairly different from a lot of the others out there — we're playing more payoff spells that aren't Ad Nauseam. One of the beautiful things about playing so many card advantage engines means that you're able to bounce back quickly. Search up Necropotence or Rhystic Study depending on your mana situation, maybe even a Timetwister! Shuffle that Ad Nauseam right back into your library, there's also Yawgmoth's Will or Underworld Breach to cast it from the graveyard. The deck is built with backdoor resiliency in mind, do not tunnel vision on this singular card!
+
+Is your list built for a specific metagame?
+Absolutely not. I would register this list in any cEDH tournament tomorrow. If you're new to my cEDH content, you may not be aware of my other various content across formats, but I don't believe in tuning your deck to a local or personal metagame. This doesn't mean I don't change my decks for the larger format metagames, I certainly do. Changing your deck(s) to beat a small number of people only hinders you in the long-term and it provides you with a false sense of intuition, tactics, play patterns, and match-ups. I'd rather know how to use my decks inside-and-out with the resources I would have for any given tournament setting. Does this mean that you shouldn't adjust it for your own personal taste? My answer will always be the same thing, "do whatever makes you happy" or "live your best life". I'm not here to police decklists or changes, only to provide insight on what I believe to be the most competitive deck. The truth is that players have different goals or objectives and I only care about winning large events, meanwhile, others may only want to beat their friend-group at FNM. Just do whatever is best for you, truthfully.
+
+Can I view Bryant's RogSi deck?
+Absolutely! Check out Japanese, foil, and signed RogSi.
+
+Deck Updates
+
+
+
+08/18/24
+Bloomburrow Update
++ Valley Floodcaller, - Dress Down
+
+With the addition of Necrodominance, RogSi has been more "Necro"-based than ever before to the point where it might be a better "Necro" deck than an Ad Nauseam strategy due to Borne Upon a Wind, Final Fortune, Last Chance, and Warrior's Oath. Because of this, I am looking at Valley Floodcaller as a secondary Borne Upon a Wind — I understand that you're unable to cast Thassa's Oracle or Dockside Extortionist but you can always win via Underworld Breach and Brainfreeze into Borne Upon a Wind or just cast one of the aforementioned red Time Walk cards.
+
+The cut is more controversial, I was holding onto Dress Down for maybe longer than I should have because I believe in building my decks for a wide-open field or metagame. Many other RogSi pilots cut theirs months ago, that said, I felt at the time it was due to facing more "Turbo" mirrors among friend groups. After a longer time period, it's somewhat easy to say that the cEDH metagame shifted away from Prison strategies. Why I'm comfortable with this change is that I still opt to play Mount Doom and Orcish Bowmasters which are cards that other players have removed. These cards are next to free back-door creature answers.
+
+06/16/24
+Modern Horizons III Update
++ Flare of Duplication, + Necrodominance, + Gitaxian Probe, - The One Ring, - Conqueror's Flail, -1 Infernal Plunge
+
+I'll be honest with you, I have not been playing much cEDH and these changes are all theory-crafted. If you disagree with them, feel free to leave a comment explaining why.
+
+As much of a fan as I am of The One Ring, Necrodominance is a natural inclusion as a secondary copy of Necropotence and something has to be cut. Naturally, it's best to cut the worst action spell. I was never a tremendous fan of Conqueror's Flail as a colorless Grand Abolisher, it felt a little too clunky. I managed to make it work a handful of times on occasion, but the cost always seemed slightly too step. Now with Modern Horizons 3, we gain Flare of Duplication which is PERFECT! With our commander being Rograkh, Son of Rohgahh, you can sacrifice it to the alternative cost of Flare of Duplication to copy a Dark Ritual, Fierce Guardianship, or even your opponent's Ad Nauseam — this was a massive gain for RogSi. These changes have lead me to cut Infernal Plunge, which may seem odd but we picked up another way of sacrificing Rograkh, Son of Rohgahh while running very few creatures. On top of that, Infernal Plunge lost a card it could accelerate into with The One Ring leaving basically only Wheel of Fortune or Wheel of Misfortune as ways to effectively use the mana. I don't love Gitaxian Probe, but my rationale was I wanted a card to lower the mana value a bit as we were adding two more three mana value spells to the deck. If I lived without fear of Ad Nauseam failing me every single time, I would play Grim tutor.
+
+04/19/24
+Murders at Karlov Manor Update
++ Undercity Sewers, - Gemstone Mine
+
+Alex McKinley of The EPIC Storm team wrote a wonderful article on Opportunity Cost that I would recommend reading. In the article, Alex explains the odds of drawing a tapped land and how that may effect your game(s). Essentially, the probability of Undercity Sewers in an opening hand is slightly over 7%, there are several cards (Polluted Delta, Scalding Tarn, etc.) that search it directly into play due to having basic land types. We're creating situations where having a meaningful decision on a draw is a choice that RogSi has available at a greater percentage than 7%. There will be games where holding open Flusterstorm, Swan Song, Pyroblast or some other piece of countermagic is the correct decision. On the end step before your turn, searching out the Undercity Sewers is now equity that RogSi is no longer leaving on the table. There will also be games where you don't use all of the available mana on any given turn, these are the applications of Misty Rainforest into Undercity Sewers makes sense. Some small percentage of the time, Undercity Sewers could be awkward — I believe there will be more games in which card selection from the Surveil trigger will be more impactful.
+
+I have loved Undercity Sewers in my testing. There have been a lot of non-believers of Undercity Sewers commenting or messaging me directly about the card, most of which come with the same parroted phrase, "tap lands are bad in cEDH."
+
+In a vacuum, this could be true but I'm not even sure if it is. Why are tap lands bad? They're a play that loses you tempo in a fast format (essentially putting you a turn behind). I could see that as a valid argument. That said, when I started playing cEDH again I was repeatedly told that "Codie is the better Ad Nauseam deck!" Codie has very few results in the current era of tournament play. My point here is that the hivemind or collective community of commander players don't know everything and sometimes, even a large amount of people are wrong — and that's okay. We want to take these experiences and learn from them.
+
+Codie, Vociferous Codex played three to four tap lands such as Saprazzan Skerry, Peat Bog, and Sandstone Needle. These lands are not why that deck has fallen off, in fact, they were a good acceleration tool for playing their commander. While I don't believe they're applicable to RogSi, they show that lands that enter the battlefield tapped aren't always bad. If you look at some 60 card formats, there are tapped lands that see competitive play such as Field of the Dead, Bojuka Bog, Cloudpost, Xander's Lounge, Lotus Field, and the list goes on. These lands are played because they provide a unique ability, utility, or acceleration that typical options do not deliver. cEDH is on a similar power level to Modern and Legacy, the aforementioned 60-card lands that see competitive play all come with an opportunity cost.
+
+The Surveil lands from Murders at Karlov Manor allow us card selection at the cost of speed, which is utility that Gemstone Mine (our worst land) does not offer. I would like to state that there is nothing wrong with Gemstone Mine, it's a great card but there are only so many land slots and I value City of Brass being a permanent mana source over our land depleting away while saving life. Having choices when looking for a specific type of card is powerful. The sculpting of a draw step is typically the difference in a game of cEDH, where Undercity Sewers can be the game-changer.
+
+Drawing Undercity Sewers isn't even always bad! There are times when you can just play a different land or even discard Undercity Sewers to Mox Diamond or Birgi, God of Storytelling!
+
+Play it for yourself and remember that options are good, rather than just repeating, "tap lands are bad in cEDH!"
+
+09/08/23
+Wilds of Eldraine Update
++ Beseech the Mirror, - Grim Tutor
+
+Poor Grim Tutor, the forever 101st card. That said, Beseech the Mirror is showing how powerful it really is in every single format — cEDH is no different. From getting Underworld Breach, The One Ring, to Dockside Extortionist this card is the real deal.
+
+08/09/23
+Post-The Cookout & Surfside Showdown
++ Conqueror's Flail, + Mount Doom, + Infernal Plunge, + Borne Upon a Wind, + The One Ring, + Grim Tutor
+- Dispel, - Mana Confluence, - Cyclonic Rift, - Narset, Parter of Veils, - Notion Thief, - Opposition Agent
+
+I'd like to start off by saying, you should never be ashamed to admit when you've been wrong. I (and to a lesser extent my testing team) was wrong about some of the newer The Lord of the Rings: Tales of Middle-earth cards, but there was one card that really made it all click together — Infernal Plunge.
+
+I had moved off of Infernal Plunge in the past when switching to the Ancient Tomb/City of Traitors plus Talisman package as permanent mana sources rewarded effects such as Final Fortune, Warrior's Oath, and Last Chance the most. I still believe that was the correct choice up until now. With MTG LTR, RogSi gained Orcish Bowmasters as a powerful tool against creature strategies as well as a back-up win condition. With Orcish Bowmasters and then the Orc Army, we immediately saw the gains with Phyrexian Tower which made me question if we should re-add in Infernal Plunge. I decided to not pull the trigger pre-The Cookout (where I missed top 16 on tiebreakers), but throughout the event wished I had it. The metagame shifted a lot since Punt City 2 and became overly aggressive against creature strategies, which made clunkier cards such as Notion Thief or Opposition Agent more of a liability for their mana values. I would've preferred a more lean list.
+
+While I was at the event, I was paired against another RogSi player who said something that made me question if I was wrong about Borne Upon a Wind. "You were willing to play Bolas's Citadel as a back-up to Ad Nauseam, but you could instead play Borne Upon a Wind to make Necropotence just as good." That weekend, half of the RogSi team I work with was still on Bolas's Citadel and that really got my mind moving.
+
+The days following The Cookout, I played somewhere between 15-20 games as my mind was very focused on updates to RogSi.
+
+What I found was that Infernal Plunge was the glue to really sell me on Borne Upon a Wind as well as The One Ring. RogSi was now the best deck in cEDH at accelerating into The One Ring early, which isn't nothing. The earlier you can have The One Ring, the more effective the card is, which was a reason I initially dismissed it. I found that having it early wasn't likely, as our sample size grew and the additional testing with Infernal Plunge happened. It was clear that The One Ring was good enough to make the cut.
+
+Infernal Plunge off of a Borne Upon a Wind creates the necessary red mana in order to Final Fortune, Warrior's Oath, and Last Chance. Which would mean that you aren't required to win on the end step, you can untap all of your lands and mana sources to make life easier. These change really happened because Narset, Parter of Veils and Notion Thief weren't reliable based on the latest metagame shift at highly competitive tables.
+
+The issue here is that it makes RogSi weaker against opposing copies of Rhystic Study and Mystic Remora — incoming Conqueror's Flail! I played this card for over a month privately before Punt City 2 but was bullied off of it by my peers. Since re-adding it, Conqueror's Flail has over-performed for me as a colorless Silence effect alongside my Rograkh, Son of Rohgahh in the command zone. cEDH players are terrified of Grand Abolisher and Conqueror's Flail allows you to continually threaten that effect after it's resolved.
+
+Speaking of the command zone, I have an embarrassing over-sight to share with you. For some reason, my mind couldn't escape the hurdle of Mount Doom needing a legendary artifact and RogSi only having Mox Amber and Mox Opal. I completely forgot about our Silas Renn, Seeker Adept sitting on the side of the table. Mount Doom has been great in my games in a similar manner that Otawara, Soaring City has been for the deck. An uncounterable effect that we desire while not requiring a deck slot as it's tied to a land. For this reason, we have cut Cyclonic Rift. Not to mention, with Orcish Bowmasters and the hostile metagame to creatures I felt that Cyclonic Rift was not what I wanted to be doing at this point in time.
+
+The last change would be Grim Tutor, a card that I've always been a huge fan of but it's constantly my 100th or 101st card. With Opposition Agent leaving, I knew that this was the card I wanted back. I wanted more tutor effects throughout The Cookout.
+
+A few days ago, I recorded a Member's Exclusive post-Cookout video with the changes. You can see that video here. Zain Nayer then took that list and won Surfside Showdown with one change of cutting Daze for Grinding Station — I am super happy for Zain and congrats to them! That said, I am not a big fan of cards that have little purpose until you're already in a winning game state. I understand that you can "counter" a top-deck tutor such as Imperial Seal but that doesn't clear the bar of playable for me.
+
+07/12/23
+The Lord of the Rings: Tales of Middle-earth Update
++ Orcish Bowmasters, - Gitaxian Probe
+
+When I began to test out cards from The Lord of the Rings: Tales of Middle-earth, I had my eyes set on more cards than only Orcish Bowmasters:
+
+Nasty End
+Borne Upon a Wind
+The One Ring
+Ringsight
+Rivendell
+Stern Scolding
+Display of Power
+Mount Doom
+I'd like to begin by saying that none of these cards are bad, they're all likely fine enough, but they aren't better than existing cards within the 100. I'm only going to discuss the more playable of these options:
+
+Nasty End — While a two mana Ancestral Recall is nothing to scoff at, the real problem with this card is that our deck often needs Rograkh, Son of Rohgahh to function for cards such as Fierce Guardianship, Deflecting Swat, Paradise Mantle, and so on. Being forced to repay  afterwards to recast Rograkh, Son of Rohgahh (making the draw spell actually ) was not worth it.
+
+Borne Upon a Wind — A more contentious choice as it is a higher variance card. Players tend to remember the peaks of winning on top of their opponent's Ad Nauseam on the stack rather than the several times the card rotted in their hands. I tend to look for the median when examining cards, not the floor or ceiling. Borne Upon a Wind is typically a gloried Quicken, which you would've struggled to find in many competitive lists pre-The Lord of the Rings: Tales of Middle-earth.
+
+The most common occurrence with Borne Upon a Wind is that you use it to give Last Chance or Warrior's Oath flash, which is sweet. But this would also mean that you passed the turn with  available. How often does that truly happen? The reality is, you're rarely going to cast more than 1-2 spells off of Borne Upon a Wind making it a questionable choice. The most ideal scenario for Borne Upon a Wind is in conjunction with Necropotence, here Borne Upon a Wind would act as a super-charged Final Fortune. That said, unlike Final Fortune, Borne Upon a Wind is less impressive when played on it's own. Once again, look at the typical situations and not the best case scenarios. How often does a resolved Necropotence require a dedicated card attached to it? Not very often.
+
+If RogSi wanted this sort of effect, we would've been playing Emergent Zone previously. The last thing to note would be that Borne Upon a Wind does draw into top-deck tutors such as Imperial Seal, Mystical Tutor, or Vampiric Tutor — sure, the card does say "Draw a card." on it. Now consider the fact that we're cutting Gitaxian Probe and how little those effects are valued.
+
+The One Ring — This card is good, it's just the wrong fit for this deck. RogSi by nature doesn't want to play incredibly long games, but long games are what The One Ring rewards. Sure, you could accelerate into The One Ring early off of colorless mana, draw a card, untap, draw two, and then play a copy of Final Fortune, Last Chance, or Warrior's Oath. This would give you a hypothetical turn 3 win, while costing  just to provide the opportunity. After that, you would require the perfect resources in order to win on no-setup as you've spend the first two turns preparing for your final turn. In this example, the fastest possible usage was a turn three. In more realistic games, The One Ring is a card that really shines on turns five-seven. That is not what RogSi should be doing. The protection aspect is also fairly useless in a format that is often defined by Thassa's Oracle. There's obviously some life loss concerns in a deck featuring Ad Nauseam, but as an Ancient Tomb deck those are often negligible.
+
+Orcish Bowmasters — From the time it was spoiled, Orcish Bowmasters had a target on it's head — people wanted it banned without having ever tested the card. How quickly those cries dimmed! In our testing of Orcish Bowmasters, it was always slightly better than fine. In reality, without the Magic community hype train, the card is about a 6.5-7 on a scale of 1-10. When viewing Orcish Bowmasters, don't look at it as a "I win the game" button, but rather an effective piece for removing creatures such as Esper Sentinel that then puts a limitation on the board. Now, Tymna/Kraum players have to make decisions about drawing cards and that's ultimately the goal. Where Orcish Bowmasters actually shines is in prison pods as it removes hatebears, you can work with other players at the table to stop the snowball effect that those archetypes create. Additionally, we are a deck that plays Windfall, Timetwister, Wheel of Fortune, and Wheel of Misfortune. You can also just machine gun down the table and create a huge Orc Army. Speaking of which, RogSi is a deck that often features these cards:
+
+Phyrexian Tower
+Paradise Mantle
+Springleaf Drum
+Moonsnare Prototype (Not in current list)
+Culling the Weak
+Infernal Plunge
+Diabolic Intent
+These are amazing outlets for the Orc Army to keep accruing value. Orcish Bowmasters can be a back-up win condition as well, but requires some work such as a massive Windfall post-Ad Nauseam or in a game in which Underworld Breach has resolved and then you can tutor for Wheel of Fortune. These lines assume that Thassa's Oracle has been exiled to a card such as Tainted Pact, Diabolic Intent, or some other situation. In general, the expectation around Orcish Bowmasters is so high that it disappoints players when testing it, but it's still much better than other selections such as Toxic Deluge or Fire Covenant.
+
+Ringsight, Rivendell, Stern Scolding, Display of Power, and Mount Doom just ultimately were not nearly competitive enough or were too niche in their applications.
+
+Let's talk about Gitaxian Probe — a card so good that it's banned in Modern, Legacy, and restricted in Vintage. I had some choices for this cut, which included Narset, Parter of Veils, Notion Thief, Opposition Agent, and Warrior's Oath. All of these cards have situations in which they are high-impact cards regularly, which to some extent, they should be as they're more expensive and you get what you pay for. The issue with Gitaxian Probe is that even for zero mana and two life, is it really worth it? The greatest cost in my opinion is actually the deck slot. Is that effect worth a slot in my 100? Looking at that Gitaxian Probe actually does is interesting, you get a one-time look at an opponent's hand. How useful this is varies, but in my experiences have been somewhat lackluster as there are still two players with unknown information. Should you go for it? Who knows. The other valuable aspect is drawing a card after Imperial Seal, Mystical Tutor, or Vampiric Tutor. Sure, this can happen but is it frequent enough to dedicate a slot in my deck to it? Not likely. For these reasons, Gitaxian Probe has been cut.
+
+03/28/23
+Punt City 2 Updates
++ Dispel, + Cyclonic Rift, + Narset, Parter of Veils, + Notion Thief, + Opposition Agent
+- Moonsnare Prototype, - Brainstorm, - Transmute Artifact, - Grim Tutor, - Bolas's Citadel
+
+A pretty major update! You could look at these changes and say, "Bryant made the list more midrange." You wouldn't necessarily be wrong, but it wasn't the intention. In my testing leading up to Punt City 2, there were a few things I was consistently experiencing in my games:
+
+More permanent-based disruption than I've experienced in the past.
+Players valuing Mystic Remora and Rhystic Study more highly.
+Players across archetypes realized that it was difficult to defeat RogSi primarily on the stack as RogSi often has more counterspells, but also has more "free" interaction online early due to Rograkh, Son of Rohgahh. There was a shift from the midrange strategies to include more hatebears such as Lavinia, Azorius Renegade, Dauthi Voidwalker, Tithe Taker, and then returning to some classics like Opposition Agent. On top of these creatures, I experienced Deafening Silence and Trinisphere out of fairer blue decks. This is where the shift from Moonsnare Prototype to Cyclonic Rift comes in. As I played more games, I wanted a card that scaled with where we were in the game as Moonsnare Prototype isn't effective in the early game to create a quick win while the opponents believe their shields are up — it's more of a mid-to-late game card. If we're going to play a card that's better later on in the game, Cyclonic Rift provides being able to deal with multiple disruptive permanents albeit it is not uncounterable like a Channel.
+
+I began to wonder back to something I had mentioned previously, which was, "would you rather run the worst version of an effect or a better card of a different effect?" This thought logic transcends most of the changes in this update. When you look at Moonsnare Prototype it's a hybrid of Springleaf Drum and Otawara, Soaring City for us. That said, it's really not quite either — it's a middle of the road card at both things. It only provides a single  while not cheapening it's activation cost or providing blue like Otawara, Soaring City. Meanwhile, Cyclonic Rift is the best thing at what it does for our strategy — it can answer multiple permanents, it scales to the game state, and can handle different permanent types unlike Snap, Dress Down, or Deadly Rollick.
+
+A large theme in my games was also the prioritization of Mystic Remora and Rhystic Study — while you may be saying that this is nothing new, hear me out. While players have always loved to mulligan to these powerful blue enchantments, it seems as if something I wrote above months ago when I created this primer became true. 
+That line in bold. I saw people playing a much "fairer" game with their copies of Vampiric Tutor, Demonic Tutor, and so on. Instead of going for a win attempt and being stopped, there were more people just trying to resolve a broken blue enchantment. "I'm getting this so I can help stop the real problem at the table, save your countermagic." Meanwhile, the card advantage from these engines would later allow them to pull far ahead after looking so innocent. This is where Narset, Parter of Veils and Notion Thief enter, I wanted to be able to punish this thought logic that was being spread across various highly-competitive cEDH Discords. I would read things like, "RogSi just can't beat a resolved Fish" or "just play a Tymna, the Weaver early when you have a window and then pull away". You could argue how true these statements are, there's likely some truth in there but I try to not dwell on what people say. Instead, I want to find solutions to the problem.
+
+When you're playing RogSi you can often go for multiple win attempts, it's partially why our three Final Fortune effects have been so good for the archetype. When you can go back-to-back with a Last Chance or Warrior's Oath without allowing people to untap or gain new cards, it really puts you in the driver's seat. In games where I was the target due to having a Rograkh, Son of Rohgahh in the command zone, I was finding that when I didn't have one of these powerful red Time Walk effects the opponents can pull away with their own copies of Mystic Remora, Rhystic Study, Tymna, the Weaver, or Kraum, Ludevic's Opus to gain enough of an advantage to stop my next win attempt despite RogSi being the better stack-based blue deck. Both Narset, Parter of Veils and Notion Thief fix this issue, you can just put them into play and wait a turn cycle or you can play them and win on the same turn in the face of a Mystic Remora. There's obviously other advantages such as the synergies with Wheel of Fortune effects — I went in depth on these individual card write ups above, go check them out!
+
+Similarly to Narset, Parter of Veils and Notion Thief, Opposition Agent can be both a combo piece and disruption. What I mean by this is that Opposition Agent much like a counterspell, stops our opponent from winning the game. The difference is that Opposition Agent then limits other potential win attempts from the following players which means additional untap steps or opportunities to win the game. You could almost look it as a Final Fortune effect as they both maximize time and mana. Both Notion Thief and Opposition Agent have Flash which creates surprise blockers to clear the board of Opposition Agent, Drannith Magistrate, and Collector Ouphe. I mentioned above how these effects were becoming more and more prevalent, these Flash creatures are pseudo-removal spells.
+
+I'd like to state that none of the cards that were cut are bad. I could see myself playing each and every one again in the future, especially Grim Tutor. Trimming that card wasn't easy as I do value having extra paths to Underworld Breach or Dockside Extortionist very highly. But the reality of the situation is that Opposition Agent is like a tutor effect in some ways as well and we need to keep the mana curve of the deck in mind. If you're like me and love Grim Tutor, I do think it would be acceptable to try cutting one of the sorcery speed extra turn effects in Last Chance or Warrior's Oath.
+
+One thing I found in my time testing Transmute Artifact as well as Bolas's Citadel was that the casting cost of Transmute Artifact was a bigger limitation than I expected. I discovered that most of our payoffs either require multiple  or  mana symbols. This makes them easy to protect with our  mana sources for things like Flusterstorm, Swan Song, Dispel (Not in current list), etc. With Transmute Artifact that meant  on the combo turn. I was actually a big fan of the Bolas's Citadel and kept Transmute Artifact around to justify its existence. Deep down, I knew I needed to start testing without the Transmute Artifact and when I did there was little justification for keeping the Bolas's Citadel as a secondary Ad Nauseam on it's own. With cutting the Bolas's Citadel it balanced the additions of Narset, Parter of Veils, Notion Thief, and Opposition Agent in terms of mana value.
+
+Brainstorm had long been an under-performer that found new life with the addition of Bolas's Citadel. In these singleton 100-card formats, the likelihood of a "perfect-Brainstorm" is less likely as you're just under 10% to have a fetchland. On top of that, your deck is a collection of chaos so the consistency aspect doesn't really exist. I clung onto how good Brainstorm is in Legacy for awhile, but it's just too low impact for what we're trying to do here. We don't want an incremental advantage — we want impactful cards in as many slots as possible.
+
+01/16/23
+Return of Grim Tutor
++ Grim Tutor, - An Offer You Can't Refuse
+
+The testing team that I am apart of grew tired of An Offer You Can't Refuse. It's not a card that you want to cast to defend your own combo because providing a player with a pair of Treasure tokens can be damning if they're holding additional interaction, which means you ideally want to use it reactively. The idea was that An Offer You Can't Refuse could hit Underworld Breach or Ad Nauseam, but in practice you don't want another reactive counterspell. This is why I am not a big fan of Hydroblast or Blue Elemental Blast in RogSi. Other alternatives include things like Spell Pierce or Miscast, but I've played these cards enough to know how they perform — mediocrely.
+
+When discussing what to play, there came a point when I asked the question, "would you rather play the worst one-mana counterspell or the best two-mana counterspell?" in regards to Mana Drain. I didn't win that discussion, but I do think it's a card that I could be sleeping on — I do not have infinite time to test everything. This leads us back to, "would you rather play the worst one-mana counterspell or the next best card?" Enter Grim Tutor.
+
+Grim Tutor increases the odds that you will be able to find Dockside Extortionist or Underworld Breach consistently, which is what we're really looking to do. Back in June of 2022, I was testing this card a lot over Peer into the Abyss and lead a charge in a few cEDH discords that lead to its breakout at Punt City (an event hosted by Eminence Gaming). Unlike Peer into the Abyss, Grim Tutor is easy to cast, protect, and a much better card to reveal to Ad Nauseam. I've found when discussing this card people over-estimate the life loss aspect in our Ad Nauseam deck.
+
+Grim Tutor isn't exactly a sexy card, but it does its job so well. I'm personally very glads that it found its way back into RogSi.
+
+11/20/22
+Bolas's Citadel Package
++ Bolas's Citadel, + Transmute Artifact, + An Offer You Can't Refuse, - Dramatic Reversal, - Grim Tutor, - Dispel
+
+The inspiration for this change originally came from Matt Sperling, while playing games he began to regularly point out how Dramatic Reversal was underperforming. At the time, I tried to justify it by saying that it was a mid-game card much like Mnemonic Betrayal. Matt's argument here resonated with me, "why does your deck need mid-game mana payoffs when you have Rograkh, Son of Rohgahh?" He was right, with the mana advantage it doesn't necessarily make sense.
+
+That night I was going through possible cards to play again when Matt suggested Transmute Artifact as a way to get Wishclaw Talisman or Defense Grid. While both of those are wonderful targets for Transmute Artifact, I had my eyes on Bolas's Citadel. I couldn't sleep out of excitement, do we play Sensei's Divining Top? (Answer: No) and if we're going to play Bolas's Citadel what is the second cut from the deck? I was happy with the other 97 slots. Ultimately, we settled on Grim Tutor a card I actually liked. The deciding decision was that Transmute Artifact for Wishclaw Talisman is essentially the same thing with a different mana requirement and no life loss. I've really enjoyed Grim Tutor and would easily consider it to be the 101st card in the deck, but I do not believe that there's a more appropriate cut at this time.
+
+As I publish this change, I have won eight games with Bola's Citadel after it's hit the battlefield and have lost literal zero. "How can this be?" A few things:
+
+We're playing 24 lands. With the focus on permanent mana sources and the shift to Arcane Signet/Talisman of Indulgence effects off of Ancient Tomb or City of Traitors we're playing 5 less lands than the lists I originally began with.
+Final Fortune, Last Chance, and Warrior's Oath to take an additional turn. This allows you to effectively play through land drops.
+We're running more impactful cards and less one mana interaction such as Concerted Defense, Miscast, Spell Pierce, Dispel, etc. Basically, less situational spells and more cards such as Defense Grid (I've even tried Conqueror's Flail recently).
+Necropotence when paired with Bolas's Citadel is essentially Sensei's Divining Top as you pay one life to exile the top card of your library that's stopping the Bolas's Citadel.
+As for Transmute Artifact, I've cast it five times and it's been countered three of them. (I just don't draw it as often) the fact that Transmute Artifact warrants a counterspell where Grim Tutor didn't is huge. The threat of Defense Grid or Bolas's Citadel to the table has been scary for opponents. I choose to look at this as a positive rather than my new toy not getting to do its thing. But why would Bolas's Citadel resolve more often than Transmute Artifact? There's actually a few reasons:
+
+Artifacts are difficult to counterspell. When you look at commonly played interaction pieces, a number of them don't hit Bolas's Citadel that would counter Ad Nauseam: Dispel, Miscast, Flusterstorm, and Swan Song come to mind.
+Pyroblast/Red Elemental Blast can counter Transmute Artifact where they cannot counter Grim Tutor. While this is true, I wouldn't play Bolas's Citadel on its own without Transmute Artifact. There's a strategy when it comes to certain format warping cards used in other formats and the solution is to overload them. They can't possibly have Pyroblast for everything, so if someone uses theirs on Transmute Artifact maybe your Mystic Remora is able to live or you win the counterwar. I'm not concerned about this.
+As for the swap between Dispel and An Offer You Can't Refuse, I have had issues with Dispel resting in my hand as my opponent's try to win the game via Underworld Breach or Mnemonic Betrayal. I wanted a card that would be able to target more things, I've had issues with soft counters in the past such as Spell Pierce or Miscast not being effective in a format full of Sol Ring, Mana Crypt, and Mana Vault. There aren't too many other viable alternatives than An Offer You Can't Refuse — a card that I am not crazy about. It's best when stopping an opponent from winning the game and less so when protecting yourself as it provides the necessary mana for the opponent to cast another counterspell. This was the slot that I briefly played a game with Conqueror's Flail in and to Conqueror's Flail's credit, it did win the game on its own.
+
+Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. © 1993-2026 Wizards. All Rights Reserved.
+
+Moxfield LLC is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. Moxfield LLC may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under Wizards' Fan Site Policy. MAGIC: THE GATHERING® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards' trademarks or other intellectual property, please visit their website at https://company.wizards.com/.
+
+Some card prices and other card data are provided by Scryfall. Scryfall makes no guarantee about its price information and recommends you see stores for final prices and details.
+
+Discord
+Facebook
+YouTube
+TikTok
+Instagram
+Threads
+Bluesky
+Reddit
+Patreon
+
+Moxfield just announced a new search engine for Sorcery: Contested Realm: sorcery.moxfield.com
+© 2026 Moxfield LLC·Terms of Service·Privacy Policy·Affiliate Disclosures·Version 2026.10.09.1
+
+🤖Copied to clipboard!

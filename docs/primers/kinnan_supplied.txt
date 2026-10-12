@@ -1,0 +1,450 @@
+🕵️Moxfield is taking longer than expected...Skip to main content
+Moxfield Logo
+caagendaz's Profile
+Home
+Explore
+Moxle
+Help
+Your Decks
+Collection
+Wish List
+🕵️Moxfield is taking longer than expected...
+Kinnan, Bonder Prodigy
+FreedomWaffle's Profile Picture
+FreedomWaffle
+Primer[cEDH] Kinnan NBC (No Bad Cards)
+Support us on Patreon to remove ads and more!
+Table of Contents
+Back to Top
+Overview
+FAQ
+Strategy
+Combos & Wincons
+Win Conditions
+Infinite Colorless Mana Outlets
+Mulligans
+Card Choices
+Videos
+Memes
+Other Decks by FreedomWaffle
+Primer
+Kinnan NBC (No Bad Cards [Except Endurance])
+Kinnan, Bonder Prodigy is a midrange list that produces tons of mana and goes infinite to win the game.
+Shoutout to _Punchy_ for the meme ideas!
+Primer updated 1/14/2026
+
+Kinnan Banner Join the Kinnan Discord
+
+Looking for cEDH coaching? Visit my website or contact me on Discord: freedomwaffle
+
+
+
+Overview
+Kinnan NBC is an alternative approach to Kinnan, Bonder Prodigy. This list runs much fewer disruption creatures / “big flips“ and instead focuses on drawing cards more consistently. Copy Enchantment, Mirrormade and Clever Impersonator are considered additional copies of Rhystic Study / Mystic Remora, increasing our access to the most powerful draw engines in the game. If you like layered combos, big mana, and drawing cards, this list might be right for you.
+
+Pros 👍
+Powerful commander synergies
+Deck creates tons of mana
+Resilient to stax and good in most metas
+Cons 👎
+Lack of good tutors
+Weak to removal
+Runs mediocre cards to enable the gameplan
+My Body Is A Machine
+FAQ
+How Do We Win?
+Why Copy Enchantment and Mirrormade?
+Why No Void Winnower / Perplexing Chimera / Trinisphere?
+Why Hidden Strings?
+Why Dizzy Spell?
+Main Phase Spin
+Strategy
+This list is built with an larger emphasis on card advantage engines through enchantment clones like Mirrormade, Copy Enchantment, Clever Impersonator, and Astral Dragon. These cards allow us to get Mystic Remora and Rhystic Study into play more consistently even without unconditional tutors. Our other primary focus is to leverage Kinnan's mana-doubling ability to establish early big mana sources to provide early explosive turns.
+
+While the deck is capable of executing fast combos, it thrives on patience and timing. We want to draw cards until the ideal window presents itself. Spinning Kinnan’s ability to cheat high-value permanents into play serves as a backup plan (unless we have Seedborn Muse, which allows us to repeatedly activate Kinnan on every opponent’s turn for overwhelming advantage). By focusing on resource accumulation and carefully picking our window, the deck balances resilience and explosiveness, ensuring we can pivot smoothly from card advantage to a decisive win when the opportunity arises.
+
+Spin Into Elf
+Combos & Wincons
+Combos At A Glance
+Kinnan, Bonder Prodigy + Basalt Monolith = .
+
+Nyxbloom Ancient + Grim Monolith or Basalt Monolith = .
+
+Hullbreaker Horror + 2 mana positive rocks or 1 mana positive rock + 1 mana neutral rock = .
+
+Combo Lines
+Kinnan + Basalt Monolith
+Kinnan + Basalt
+Requirements: Kinnan, Bonder Prodigy in play,  to cast Basalt Monolith or the ability to tutor it into play.
+
+Cast Basalt Monolith.
+Tap Basalt Monolith for .
+Activate Basalt Monolith's second ability to untap it, leaving  floating.
+Repeat steps 2 - 3 to create .
+See "Infinite Mana Outlets" section below to win the game.
+Nyxbloom Ancient + Grim Monolith
+Nyxbloom + Grim Monolith
+Requirements: Nyxbloom Ancient in play,  to cast Grim Monolith or the ability to tutor it into play.
+
+Cast Grim Monolith.
+Tap Grim Monolith for .
+Activate Grim Monolith's second ability to untap it, leaving  floating.
+Repeat steps 2 - 3 to create .
+See "Infinite Mana Outlets" section below to win the game.
+Hullbreaker Horror
+Hullbreaker
+Requirements: Hullbreaker Horror in play + 2 mana rocks that go mana positive when casting between them. Combinations listed below:
+
+Without Kinnan:
+Any of the following mana positive rocks with each other: Mox Opal, Mox Amber, Sol Ring, Grim Monolith, Mana Vault
+Any of the aforementioned mana positive rocks with the following: Basalt Monolith, Chrome Mox, Lotus Petal
+Mana Vault + any of the following: Fellwar Stone, Arcane Signet, Simic Signet, Talisman of Curiosity
+With Kinnan:
+Any of the previously mentioned combinations
+Sol Ring or Grim Monolith or Mox Amber or Mox Opal or Mana Vault with any of the following: Fellwar Stone, Arcane Signet, Simic Signet, Talisman of Curiosity
+Note: We'll assume Kinnan, Bonder Prodigy, Hullbreaker Horror, and Sol Ring are in play and Mox Amber is in hand.
+
+Cast Mox Amber, returning Sol Ring to hand with the Hullbreaker Horror trigger.
+Tap Mox Amber for  or .
+Cast Sol Ring, returning Mox Amber to hand with the Hullbreaker Horror trigger.
+Tap Sol Ring for .
+Repeat steps 1 - 4 to make .
+See Infinite Mana Outlets below to win the game.
+Faerie Mastermind +Smothering Tithe
+Faerie Mastermind Smothering Tithe
+Requirements: Faerie Mastermind, Smothering Tithe, and Kinnan, Bonder Prodigy in play + .
+You can copy an opponent's Smothering Tithe with Clever Impersonator, Copy Enchantment, or Mirrormade.
+
+Use 2 treasure tokens to activate Faerie Mastermind (Kinnan, Bonder Prodigy makes them each produce an additional ).
+Resolve your Smothering Tithe triggers, creating 3 treasure tokens.
+Repeat steps 1 and 2 (netting an additional treasure token each time) to draw cards until each player has drawn most of their deck.
+Resolve Endurance or continuously cast Green Sun's Zenith to refill your library while decking your opponents.
+Timing:
+
+This line is best used at instant speed when your Smothering Tithe triggers will resolve before your opponents' Smothering Tithe triggers. You can guarantee this by starting the combo on the turn of the player to your left.
+You should do this went your opponents do not have a large amount of mana available. This is so their interaction will be limited by mana and you will be able to interact with every spell in your deck.
+Execution:
+
+This line is very hard to interrupt once you have the mana available to activate Faerie Mastermind multiple times. This is because you can respond to removal spells with more activations, never letting the removal spells resolve.
+Once you've created a large amount of mana, you can begin spinning Kinnan, Bonder Prodigy to put some important creatures into play. These include Valley Floodcaller, High Fae Trickster, Hullbreaker Horror, Endurance. Make sure to check which creatures are still in your deck before activating.
+Before trying to resolve Endurance or Green Sun's Zenith, it is best to make your opponents fight over other important cards like Hullbreaker Horror, High Fae Trickster, Valley Floodcaller, Crop Rotation, Chord of Calling, etc. This will help you fight through all their interaction by trading payoff spells for their counterspells. It is easy to win this battle if you have the mana advantage, and even easier if you have an instant speed enabler in play.
+Surprise Pikachu
+Win Conditions
+Win Conditions At A Glance
+Finale of Devastation +  = Kill your opponents with combat damage.
+
+Faerie Mastermind +  + Endurance + Pongify or Chain of Vapor or Otawara = Infinitely force your opponents to draw cards until they draw from an empty library.
+
+Cephalid Coliseum: Use Endurance + Mirage Mirror, Hidden Strings or Flash Photography to loop Cephalid Coliseum to force your opponents to draw until they draw from an empty library.
+
+Full Win Lines
+Finale of Devastation
+Finale of Devastation
+Requirements: , in a phase on your turn before declare attackers, and creatures in play equal to the amount of blockers your opponents have + 3.
+
+Cast Finale of Devastation spending  to pump your creatures.
+Move to combat.
+Swing enough creatures at each opponent that at least 1 will get through their blockers to win the game.
+Faerie Mastermind
+Faerie Mastermind
+Requirements: , access to Endurance.
+
+Note: We will assume we have access to all the cards in our deck with another infinite combo. Ensure you have access to the majority of your counterspells before starting this loop.
+
+Optional Setup
+Cast Veil of Summer to mitigate your opponents' interaction.
+Bounce all non-land permanents with Hullbreaker Horror and loop Hidden Strings to tap down all their lands.
+Cast Borne Upon a Wind or Valley Floodcaller to enable enable flash speed.
+Move to the next phase to clear opponents' floating mana.
+Clone Endurance with Phyrexian Metamorph to make an artifact copy of it. Then, clone the Phyrexian Metamorph copy of Endurance with Copy Artifact to make an artifact enchantment clone of it. Bounce Endurance and Phyrexian Metamorph to hand. This will allow you to use Mirrormade and Copy Enchantment as extra copies of Endurance to beat stack interaction.
+Cast Endurance to put more cards in your library than your opponents. You can discard cards using Nezahal, Primal Tide or cast spells to fill your graveyard if needed.
+Activate Faerie Mastermind to force each player to draw a card.
+If you do not have access to Endurance, you can cast Green Sun's Zenith before each draw trigger resolves to refill your library.
+If an opponent responds to Faerie Mastermind activations, just activate again on top. If they attempt to interact with Green Sun's Zenith or Endurance, you'll need to protect it with counterspells or using another way to refill your library to start the loop over top.
+You can always bounce and recast Endurance as many times as necessary to refill your library and reuse counterspells.
+
+Cephalid Coliseum
+Cephalid Coliseum
+Optional Setup
+Cast Veil of Summer to mitigate your opponents' interaction.
+Bounce all non-land permanents with Hullbreaker Horror and loop Hidden Strings to tap down all their lands. Alternatively, you can loop Boseiju who Endures and Otawara Soaring City to destroy all opponents' non basic lands and bounce their nonland permanents. When doing this loop you need to use Wan Shi Tong, Librarian or another draw engine to draw the lands instead of Thrasios, Triton Hero because Thrasios cannot draw lands.
+Cast Borne Upon a Wind or Valley Floodcaller to enable enable flash speed.
+Move to the next phase to clear opponents' floating mana.
+Clone Endurance with Phyrexian Metamorph to make an artifact copy of it. Then, clone the Phyrexian Metamorph copy of Endurance with Copy Artifact to make an artifact enchantment clone of it. Bounce Endurance and Phyrexian Metamorph to hand. This will allow you to use Mirrormade and Copy Enchantment as extra copies of Endurance to beat stack interaction.
+Option A
+Cephalid ColiseumEnduranceMirage MirrorThrasios
+
+Requirements: , Cephalid Coliseum in play or in your graveyard.
+
+Note: We will assume we have access to all the cards in our deck with another infinite combo. See optional setup above for optimal protection.
+
+Enable flash speed by casting Borne Upon a Wind, Valley Floodcaller, or High Fae Trickster.
+If Cephalid Coliseum is in your graveyard, use Endurance and Thrasios, Triton Hero put it into play. If it is in your hand, cast Mox Diamond to discard it then use Endurance and Thrasios, Triton Hero put it into play.
+Cast Mirage Mirror.
+Activate Mirage Mirror targeting Cephalid Coliseum.
+Ensure you have Threshold by casting spells (easiest options are tutors) or using Chain of Vapor to sacrifice lands to fill your graveyard.
+Activate and sacrifice Mirage Mirror (currently a Cephalid Coliseum) targeting an opponent, holding priority.
+Cast Endurance. Target yourself with the ETB trigger, holding priority.
+Cast Chain of Vapor targeting Endurance. You can also cast any spell to bounce Endurance with Hullbreaker Horror.
+Let the Endurance ETB trigger resolve, shuffling Mirage Mirror, Chain of Vapor and the rest of your graveyard onto the bottom of your library.
+Activate Thrasios, Triton Hero to draw until you find Mirage Mirror, Endurance, and Chain of Vapor. The original Cephalid Coliseum activation should still be on the stack.
+Repeat steps 3 - 10 to put infinite draw triggers on the stack targeting a single opponent.
+Pass priority on the draw triggers to force them to draw from an empty library. If they take any game actions, you can counter them or repeat the loop on top.
+Repeat steps 11 - 12 to kill your other 2 opponents.
+Option B
+Cephalid ColiseumEnduranceHidden StringsThrasios
+
+Requirements: , Cephalid Coliseum in play or in your graveyard.
+
+Note: We will assume we have access to all the cards in our deck with another infinite combo. See optional setup above for optimal protection.
+
+Enable flash speed by casting Borne Upon a Wind, Valley Floodcaller, or High Fae Trickster.
+If Cephalid Coliseum is in your graveyard, use Endurance and Thrasios, Triton Hero put it into play. If it is in your hand, cast Mox Diamond to discard it then use Endurance and Thrasios, Triton Hero put it into play.
+Cast Hidden Strings targeting Cephalid Coliseum and another permanent to untap it. Do not Cipher.
+Ensure you have Threshold by casting spells (easiest options are tutors) or using Chain of Vapor to sacrifice lands to fill your graveyard.
+Activate and sacrifice Cephalid Coliseum targeting an opponent, holding priority.
+Cast Endurance. Target yourself with the ETB trigger, holding priority.
+Cast Chain of Vapor targeting Endurance. You can also cast any spell to bounce Endurance with Hullbreaker Horror.
+Let the Endurance ETB trigger resolve, shuffling Hidden Strings, Chain of Vapor, Cephalid Coliseum and the rest of your graveyard onto the bottom of your library.
+Activate Thrasios, Triton Hero drawing Endurance and Chain of Vapor, and putting Cephalid Coliseum into play tapped. The original Cephalid Coliseum activation should still be on the stack.
+Repeat steps 3 - 9 to put infinite draw triggers on the stack targeting a single opponent.
+Pass priority on the draw triggers to force them to draw from an empty library. If they take any game actions, you can counter them or repeat the loop on top.
+Repeat steps 10 - 11 to kill your other 2 opponents.
+Option C
+Cephalid ColiseumEnduranceFlash PhotographyThrasios
+
+Requirements: , Cephalid Coliseum in play or in your graveyard.
+
+Note: We will assume we have access to all the cards in our deck with another infinite combo. See optional setup above for optimal protection.
+
+Enable flash speed by casting Borne Upon a Wind, Valley Floodcaller, or High Fae Trickster.
+If Cephalid Coliseum is in your graveyard, use Endurance and Thrasios, Triton Hero put it into play. If it is in your hand, cast Mox Diamond to discard it then use Endurance and Thrasios, Triton Hero put it into play.
+Cast Flash Photography targeting Cephalid Coliseum (from hand, not with Flashback) to make a copy of it.
+Ensure you have Threshold by casting spells (easiest options are tutors) or using Chain of Vapor to sacrifice lands to fill your graveyard.
+Activate and sacrifice the copy of Cephalid Coliseum targeting an opponent, holding priority.
+Cast Endurance. Target yourself with the ETB trigger, holding priority.
+Cast Chain of Vapor targeting Endurance. You can also cast any spell to bounce Endurance with Hullbreaker Horror.
+Let the Endurance ETB trigger resolve, shuffling Flash Photography, Chain of Vapor, and the rest of your graveyard onto the bottom of your library.
+Activate Thrasios, Triton Hero drawing Endurance, Chain of Vapor, and Flash Photography. The original Cephalid Coliseum activation should still be on the stack.
+Repeat steps 3 - 9 to put infinite draw triggers on the stack targeting a single opponent.
+Pass priority on the draw triggers to force them to draw from an empty library. If they take any game actions, you can counter them or repeat the loop on top.
+Repeat steps 10 - 11 to kill your other 2 opponents.
+Bribery
+Not in current list.
+Bribery
+Requirements: , access to Thrasios, Triton Hero and/or Hullbreaker Horror.
+
+Creature win conditions to look for:
+
+Thassa's Oracle - Win by drawing your deck with Thrasios, Triton Hero
+Orcish Bowmasters - Clone it and loop the clone with Hullbreaker Horror to kill the table
+Mayhem Devil - Loop Chain of Vapor and a land with Endurance + Thrasios, Triton Hero for infinite triggers
+Niv-Mizzet, Parun - Loop instances and sorceries to kill the table with Niv triggers using Endurance to refill your library
+Twinshot Sniper - Clone it and loop the clone with Hullbreaker Horror to kill the table
+Ashling, Flame Dancer - Cast 2 instants and/or sorceries to deal 2 damage to each opponent, clone it and keep the clone to legend rule, repeat.
+Faerie Mastermind - If your Faerie Mastermind is exiled you can take one of your opponents' to execute the loop.
+Glint-Horn Buccaneer - Loop Mox Diamond with Hullbreaker Horror to discard a land to trigger Glint-Horn, then use Endurance to refill your library with lands and Wan Shi Tong, Librarian to draw them.
+Note: You can loop Bribery to target other opponents with Endurance and Thrasios, Triton Hero. You can also use Endurance to put an important creature from an opponent's graveyard back into their library so you can steal it with Bribery.
+
+Count to 7
+Infinite Colorless Mana Outlets
+Infinite Mana Outlets
+Infinite Blue & Green Mana
+Kinnan, Bonder Prodigy
+Kinnan, Bonder Prodigy
+Requirements: 
+
+Activate Kinnan, Bonder Prodigy infinite times to put all non-human creatures into play.
+Activate Thrasios, Triton Hero to draw your deck.
+Assemble a win condition (see "Win Conditions" above) to win the game.
+Infinite Colorless Mana
+Mirage Mirror
+Mirage Mirror
+Requirements: , Basalt Monolith in play.
+
+Cast Mirage Mirror.
+Activate Mirage Mirror targeting a land or mana rock that taps for  and  (we'll assume it is Tropical Island for this example), holding priority.
+Activate Mirage Mirror targeting Basalt Monolith, holding priority.
+Repeat steps 2 - 3 to put infinite Mirage Mirror activations on the stack.
+Pass priority on a Mirage Mirror activation, letting it become Tropical Island.
+Tap Mirage Mirror (Currently a Tropical Island) for  or .
+Pass priority on a Mirage Mirror activation, letting it become Basalt Monolith.
+Activate Mirage Mirror (Currently a Basalt Monolith) to untap it.
+Repeat steps 5 - 8 to create .
+Use Kinnan, Bonder Prodigy put every creature in your deck into play then use Thrasios, Triton Hero to draw until you find a win condition.
+Thrasios, Triton Hero
+Thrasios
+Requirements: 
+
+Activate Thrasios, Triton Hero to Scry 1 and draw a card.
+Repeat step 1 until you draw most of your deck.
+Assemble a win condition to win the game.
+Creature Tutors
+Creature Tutors
+The following creature tutors can convert  into a win.
+
+Finale of Devastation
+Requirements: 
+
+Find Thrasios, Triton Hero and activate it to draw your deck.
+Invasion of Ikoria
+Requirements: 
+
+Find Thrasios, Triton Hero and activate it to draw your deck.
+Nature's Rhythm
+Requirements: 
+
+Find Thrasios, Triton Hero and activate it to draw your deck.
+Green Sun's Zenith
+Requirements: 
+
+Find Thrasios, Triton Hero and activate it to draw your deck.
+Chord of Calling
+Requirements:  (-1  for each untapped green creature in play under your control)
+
+Find Thrasios, Triton Hero and activate it to draw your deck.
+Artifact Tutors
+Artifact Tutors
+The following artifact tutors can convert  into a win.
+
+Trophy Mage
+Requirements: 
+
+Find Mirage Mirror to make . See "Mirage Mirror" line above.
+Transmute Artifact
+Requirements: , an artifact in play to sacrifice
+
+Find Treasure Vault and create infinite Treasure Tokens.
+Find Mirage Mirror to make . See "Mirage Mirror" line above.
+Tezzeret the Seeker
+Requirements: 
+
+Find Treasure Vault and create infinite Treasure Tokens.
+Find Mirage Mirror to make . See "Mirage Mirror" line above.
+Fabricate
+This card has been cut from the list
+Requirements: 
+
+Find Treasure Vault and create infinite Treasure Tokens.
+Find Mirage Mirror to make . See "Mirage Mirror" line above.
+Moonsilver Key
+This card has been cut from the list
+Requirements: Land drop available
+
+Find Treasure Vault and create infinite Treasure Tokens.
+Crop Rotation
+This card has been cut from the list
+Requirements: 
+
+Find Treasure Vault and create infinite Treasure Tokens.
+Mulligans
+Mulligan Guide
+We are looking for 3 primary things in our mulligans:
+
+Draw Engines
+Early Win Attempt
+Mana
+The strength of Kinnan, Bonder Prodigy is it's ability to pivot gameplans easily. If a mulligan has tons of mana, we can activate Kinnan, Bonder Prodigy to find a gameplan. If we have a draw engine, we'll likely draw into mana development. We can also go for early wins with Basalt Monolith that our opponents might not be ready for.
+
+In these mulligan examples we will not choose turn order or pod composition - they will discussed when they are relevant to the mulligan decision.
+
+UPDATE IN PROGRESS
+Hand 1
+Chord of CallingMystic RemoraVeil of SummerSol RingOtawara Talisman of Curiosity Tropical Island
+
+Keep. This hand is an amazing hand in any seat of just about any pod. Turn 1 Sol Ring Talisman of Curiosity into Mystic Remora means you'll not only have card draw on turn 1 but also mana to pay for Mystic Remora while developing your board. This hand is what dreams are made of.
+
+Hand 2
+Mulligan 2
+Turn Order: Rograkh Silas, Tymna Kraum, Tymna Thrasios, Kinnan
+Cephalid Coliseum, Mystic Remora, Valley Floodcaller, Commandeer, Gemstone Caverns, Boseiju, Who Endures, The One Ring
+
+Keep. Mystic Remora is exactly what we want to see, especially with any mana acceleration like Gemstone Caverns. Pitch The One Ring to Gemstone Caverns so you can guarantee land drops and hold up Commandeer after drawing more blue cards from Mystic Remora. We'll aim to take a Rhystic Study, Smothering Tithe, or payoff from Rograkh Silas with Commandeer.
+
+Hand 3
+Mulligan 3
+Turn Order: Tymna Kraum, Kinnan, Rograkh Silas, Tymna Thrasios
+Worldly Tutor, Mox Diamond, Commandeer, Ancient Tomb, Rhystic Study, Delighted Halfling, Swan Song
+
+Mulligan. While drawing a land gives us the huge upside of turn 1 Rhystic Study, the downside of missing our 1st land drop is huge. This hand is more keepable on a mull to 4 (keeping Mox Diamond, Ancient Tomb, Rhystic Study, and Delighted Halfling) because a 3 is not likely to be better than the potential this hand has.
+
+Hand 4
+Mulligan 4
+Turn Order: Tymna Thrasios, Kinnan, Tymna Kraum, Rograkh Silas
+Forbidden Orchard, Lotus Petal, Mystic Remora, Mindbreak Trap, Tezzeret the Seeker, Arcane Signet, Astral Dragon
+
+Keep. Turn 1 Arcane Signet into Mystic Remora is always a strong opening, especially when going 2nd. We're also happy to see Mindbreak Trap in our opening hand to stop an early win attempt.
+
+Hand 5
+Mulligan 5
+Turn Order: Tymna Kraum, Tymna Thrasios, Rograkh Silas, Kinnan
+Spellskite, Exotic Orchard, Command Tower, The One Ring, Fyndhorn Elves, Delighted Halfling, Valley Floodcaller
+
+Mulligan. This hand is keepable, but going last with the plan of turn 3 The One Ring isn't idea. We'll go turn 1 Fyndhorn Elves, turn 2 Kinnan, Bonder Prodigy and Delighted Halfling, and turn 3 The One Ring drawing 1 card. The game might be over by this point, so we can likely do better. This hand is probably a keep on a mull to 4 or 5.
+
+Hand 6
+Mulligan 6
+Turn Order: Tymna Kraum, Kinnan, Tymna Thrasios, Rograkh Silas
+Simic Signet, Breeding Pool, The One Ring, Nyxbloom Ancient, Dramatic Reversal, Cephalid Coliseum, Lotus Petal
+
+Mulligan. While it looks like this hand has a lot of mana, it doesn't play out as well as we'd like. We can go turn 1 Simic Signet using our Lotus Petal into turn 2 Kinnan, Bonder Prodigy, but this just leaves use with 4 mana on turn 3 to tap out for The One Ring. That can get us there, but we can do better on a 7.
+
+Hand 7
+Mulligan 7
+Turn Order: Kinnan, Tymna Thrasios, Tymna Kraum, Rograkh Silas
+Bloom Tender, Seedborn Muse, Sink into Stupor, Clever Impersonator, Flooded Strand, Elvish Spirit Guide, Springleaf Drum
+
+Keep. We can cast Bloom Tender turn 1 using Elvish Spirit Guide. Turn 2 we'll cast Kinnan, Bonder Prodigy into Springleaf Drum, giving us 4 mana for Clever Impersonator to hopefully copy a Rhystic Study or Mystic Remora. If those aren't on the field, we can use it to make more mana by copying a mana rock or Bloom Tender to setup for a turn 3 Seedborn Muse.
+
+Playing Expensive Cards
+Card Choices
+Draw
+Engines: Rhystic Study, Mystic Remora, The One Ring, Copy Enchantment, Mirrormade, Clever Impersonator, Consecrated Sphinx, Nezahal, Primal Tide, Faerie Mastermind
+Combos
+Infinite Mana: Basalt Monolith, Hullbreaker Horror
+Win Cons: Finale of Devastation, Cephalid Coliseum
+Tutors
+Into Play Tutors: Transmute Artifact, Tezzeret the Seeker, Nature's Rhythm, Green Sun's Zenith, Finale of Devastation, Invastion of Ikoria, Chord of Calling
+To Hand Tutors: Trophy Mage
+Ramp
+Fast Mana: Sol Ring, Mana Vault, Chrome Mox, Mox Diamond, Lotus Petal, Mox Opal, Mox Amber, Grim Monolith
+Mana Boosters: Kinnan, Bonder Prodigy, Nyxbloom Ancient
+2 Mana Rocks: Arcane Signet, Fellwar Stone, Simic Signet, Talisman of Curiosity
+Untappers: Dramatic Reversal
+Interaction
+Bounce & Removal: Otawara, Soaring City, Chain of Vapor, Into the Flood Maw, Sink into Stupor, Force of Vigor
+On the Stack Interaction: Pact of Negation, Dispel, Flusterstorm, Mental Mistep, Miscast, Swan Song, Fierce Guardianship, Force of Negation, Sink into Stupor, Mindbreak Trap, Force of Will
+Miscellaneous Effects
+Flash Enablers: High Fae Trickster, Valley Floodcaller, Borne Upon a Wind
+Copy Effects: Phyrexian Metamorph, Clever Impersonator, Copy Artifact, Mirrormade, Copy Enchantment, Mockingbird, Flesh Duplicate, Mirage Mirror
+Recursion: Endurance, Finale of Devastation, Invasion of Ikoria, Noxious Revival
+Win Conditions: Finale of Devastation, Faerie Mastermind
+Videos
+Deck Tech with WoundedSatellite
+
+
+Memes
+My Body Is A MachineMain Phase SpinSpin Into ElfSurprise PikachuCount to 7Playing Expensive Cards
+Other Decks by FreedomWaffle
+View my current lists here.
+
+Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. © 1993-2026 Wizards. All Rights Reserved.
+
+Moxfield LLC is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. Moxfield LLC may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under Wizards' Fan Site Policy. MAGIC: THE GATHERING® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards' trademarks or other intellectual property, please visit their website at https://company.wizards.com/.
+
+Some card prices and other card data are provided by Scryfall. Scryfall makes no guarantee about its price information and recommends you see stores for final prices and details.
+
+Discord
+Facebook
+YouTube
+TikTok
+Instagram
+Threads
+Bluesky
+Reddit
+Patreon
+
+Moxfield just announced a new search engine for Sorcery: Contested Realm: sorcery.moxfield.com
+© 2026 Moxfield LLC·Terms of Service·Privacy Policy·Affiliate Disclosures·Version 2026.10.09.1
+
+🤖Copied to clipboard!

@@ -1,0 +1,203 @@
+
+#### Quick explanation in case someone other than me (the deck builder) wants to play with my ~~dick~~ deck
+
+===accordion
+===panel: Introduction: Yuriko and its overall gameplan
+
+This is a cEDH deck focused around abusing the triggered ability of [[Yuriko, the Tiger's Shadow]] as much as possible in order to secure a win. It accomplishes this by either manipulating the top card(s) of the library via cards like [[Lim-Dul's Vault]] or [[Insidious Dreams]] in order to maximize flip damage or to draw enough cards to find a win through a [[Thassa's Oracle]] combo via either the classic [[Thassa's Oracle]] + [[Demonic Consultation]]/[[Tainted Pact]] line or through a [[Doomsday]] pile.
+
+This primer will walk you through general Yuriko play patterns, take you through different ways to win with the deck, teach you how to evaluate your starting hands, and hopefully provide you with enough knowledge to become a passable Yuriko pilot.
+===endpanel
+===endaccordion
+
+===accordion
+===panel: A bit more on Yuriko's wincons
+When you zoom out and look at the deck from a macro scale, there are really two main ways to win. Those are wins with Yuriko and wins without Yuriko. With that being said, winning with Yuriko is very much the Plan A of the deck and significant effort has been put in to maximize the different ways Plan A can be accomplished. As such it's worthwhile to dig in a little deeper and evaluate the main lines you can take to win both with and without Yuriko on the battlefield.
+
+===accordion|autocollapse
+
+===panel: 1. Unmanipulated Yuriko flips:
+This is pretty self explanatory. Go wide with ninjas and just flip to win. This is the default, slowest, and worst way to win with Yuriko as it's extremely telegraphed. Ideally you want to find a way to transition out of this wincon and into something else. 
+===endpanel
+
+
+===panel: 2. Manipulated Yuriko flips:
+   Basically you wait until you're opponents are at a certain life threshold (usually around 20 life) and you're at a certain ninja threshold (2 - 3 ninjas that can consistently get in will usually be enough here) before you should start going for the win via manipulated flips. These cards listed below can help you accomplish this method of winning. 
+* [[Lim-dul's Vault]]: Look for a pile with [[Shadow of Mortality]] 
+* [[Vampiric tutor]]: You're also most likely to grab [[Shadow of Mortality]] here as well 
+* [[Mystical Tutor]]: here you're probably gonna grab [[Enter the Infinite]] if you're trying to do maximum damage
+* [[Imperial Seal]]: same deal with vamp tutor
+* [[Brainstorm]]: classic Yuriko card, you're going to want to use this when you have big cmc cards in your hand and stick them back on top to flip for the win
+* [[Insidious Dreams]]: This card works best when you have a full hand and at least 3 ninjas that can get in. Here you usually want to grab [[Shadow of Mortality]], [[Enter the Infinite]], and [[Temporal Trespass]] 
+* [[Doomsday]]: When trying to win via flips you should do the same as with Insidious Dreams, but you probably want to add [[Thassa's Oracle]] in as either the 4th or 5th card in the pile just in case you get stopped somehow.
+
+It should again be noted that it is best to wait until you can kill someone (or the entire table) to cast these cards if the goal is to find a big damage flip.  Most of the cards here are tutors and it's important to realize that you can (and often should) tutor for other game winning pieces such as [[Rhystic study]] or stax pieces like [[Grafdigger's cage]]. It should also be noted that most of these cards are instants, and thus you want to cast these ***in response*** to the Yuriko triggers while they are on the stack. This prevents your opponents from doing annoying things like removing Yuriko or your other ninjas from the battlefield to prevent you from getting the triggers.
+===endpanel
+
+===panel:3. Yuriko assisted combo (Doomsday):
+This deck runs [[Doomsday]] as a way to try and efficiently close out the game and aims to utilize Yuriko's card drawing capabilites as a way to crack the pile. There are two main styles of pile for Yuriko: [[Thassa's Oracle]] piles and damage flip piles. [[Thassa's Oracle]] piles are best used when you have only 1 or 2 ninjas that can get in. Damage piles are best used when you're confident that your opponents aren't going to be able to remove your Yuriko before damage is dealt and you have 3 or more ninjas that can get in. 
+
+A classic [[Thassa's Oracle]] pile requires you to be able to make at least 4 mana ([[symbol:b]][[symbol:b]][[symbol:b]] + [[symbol:u]]) along with having at least 2x [[Island]] type lands ie [[Underground Sea]] + [[Watery Grave]] and will look something like this: [[Street Wraith]], [[Gush]], [[Lotus Petal]], [[Thassa's Oracle]], [[Agadeem's Awakening]]/[[Sakashima's Student]]. 
+===endpanel
+
+===panel: 4. Yuriko unassisted combos:
+These combos do not require Yuriko to be on the battlefield in order to win:
+1. [[Thassa's Oracle]] + [[Demonic Consultation]] or [[Tainted Pact]]
+2. [[Nashi, Moon Sage's Scion]] + [[Enter the Infinite]] into [[Thassa's Oracle]]
+    * It should be noted that with this combo requires you to be able to generate [[symbol:u]][[symbol:u]] after [[Enter the Infinite]] resolves, usually this means that of the cards [[Chrome Mox]], [[Lotus Petal]] and [[Mox Amber]] two of those cards should still be left in your deck before going for this method of winning assuming that you have already made a land drop.
+   * It should also be noted that if an opponent has [[Orcish Bowmasters]] you just straight up die so be wary if any opponents have [[symbol:1]][[symbol:b]] up.
+===endpanel
+===endaccordion
+===endpanel
+===endaccordion
+
+===accordion|autocollapse
+===panel: Mulligan guide + Sample hands
+===accordion
+===panel: Mulligan theory
+Anyone who has ever played or played against Yuriko has seen the classic Yuirko start of:
+* Turn 1: Play land, play evasive 1 drop 
+* Turn 2: Play land, move to combat, ninjutsu in Yuriko 
+
+This leads to the common misconception that is all you need to have in order to succeed with Yuriko is to have two lands and an evasive one drop in your starting hand. This is not the case. Ideally in your starting seven you want to see the turn two yuriko and a path to victory. This could mean that you have at least 2 ninjas in your hand, or you could have [[Thassa's Oracle]] + a tutor of some sort.
+
+With all that being said having only a turn two Yuriko is not terrible and you should be comfortable going down to four or maybe even to down to three if the situation calls for it.
+===endpanel
+===panel: Sample hands
+For these hands, we're going to assume that we're in a grindy pod and that this is the first seven cards you see. If the pod has a turbo deck, it's generally prudent to mulligan until you have a counterspell in hand or you're down to 4 or 5 cards in your starting hand
+
+===accordion
+===panel: Hand 1
+[[Silver-Fur Master]], [[Island]], [[City of Brass]], [[Mindbreak Trap]] [[Insidious Dreams]], [[Changeling Outcast]], [[Verdant Catacombs]]
+
+This hand is a keep, as it provides a clear path to victory with three ninjas and a one card wincon in the form of [[Insidious Dreams]] and has interaction in the form of [[Mindbreak Trap]] to stop other players.
+
+===endpanel
+===panel: Hand 2
+[[Misdirection]], [[Snow-Covered Swamp]], [[Scalding Tarn]], [[Island]], [[Harrier Strix]], [[Thassa's Oracle]], [[Enter the Infinite]]
+
+On a starting seven I would bin this, while it does have [[Thassa's Oracle]] and a turn two Yuriko, there's no cards in this hand that can give me momentum to finish out the game. I could see keeping this on a five however.
+===endpanel
+
+===panel: Hand 3
+[[Snuff Out]], [[Faerie Seer]], [[Orcish Bowmasters]], [[Flare of Malice]], [[Lotus Petal]], [[Morphic Pool]], [[Dismember]]
+
+This is an easy mulligan. This barely gives us a turn two yuriko. [[Snuff Out]] is turned off because there's no swamp in this hand, and [[orcish bowmasters]] may not be castable because there's only one land. The only way I would keep this is if I was down to four, otherwise I would keep looking. 
+===endpanel
+===endaccordion
+
+===endpanel
+===endaccordion
+===endpanel
+===endaccordion
+
+===accordion
+===panel: Conclusion: On tempo plus my ramblings on card choices and deckbuilding philosophy
+===accordion|autocollapse
+===panel: On the concept of tempo decks, and how it relates to Yuriko
+
+To first talk about tempo decks, it's wise to describe what a tempo deck does. Generally every deck is optimized to play the game on an axis that they have an advantage in, a tempo deck is an anti-meta strategy that tries to prevent favorable for opponent game states by constantly disrupting them while advancing its own game plan. 
+
+An example of this would be a tempo deck casting [[Unsummon]] on a big beater that an opponent had to tap out in order to cast, essentially time walking them. A classic tempo deck would be composed of cheap threats like [[Delver of Secrets]] and lots of free interaction like [[Force of Will]], [[Force of Negation]] to disrupt the opponent while chipping away at their life totals. If this is sounding at all familiar, you're not the only one. Lots of people consider Yuriko to be one of the few viable tempo decks in cEDH.
+
+Personally, I couldn't disagree more. A hallmark of tempo decks is going 1 for 1 with it's interaction against threats (sometimes even 2 for 1 when you cast a free counterspell like [[Force of Negation]]). This is fine in a two player format like legacy, however in cEDH its neither practical or possible to constantly disrupt your opponents with your interaction. Doing so would end up giving one of your opponents the game. 
+
+Here we have to be careful with our removal/countermagic in terms of what we want to fight over. In my book a *real* cedh tempo deck would probably look more similara to what we could consider to be a stax deck because stax pieces efficiently disrupt the tempo of multiple players and force a game state where resources must be dedicated to answering certain pieces lest the game run away from you. 
+
+===endpanel
+===endaccordion
+===accordion|autocollapse
+===panel: Ramblings on card choices
+Some notable cuts:
+* [[Roaming Throne]] - I have a couple of issues with this card:
+    1. It costs [[symbol:4]] to cast. In a deck that's designed to play with 3 - 4 mana, that's functionally an entire turn cycle's worth of actions in just one card and given how quickly it gets answered by my opponents, I'd rather not make that investment. If I'm tapping out 4 mana I want the effect to win me the game right there or be immediately backbreaking to my opponents. Neither of which happens here.
+    2. It enables a bad gameplan. While card advantage is always welcome, Yuriko flips are a very telegraphed method of winning. Oftentimes your opponents will realize that their window of opportunity to win is closing fast due to the life total pressure you put on the board. This creates situations where every player after you is pushing and you end up losing before it gets back to your turn. The best way to win with Yuriko flips is to do so while your opponents think they still have time. This card is a big banner saying that the game will be over in 1-2 turn cycles which is at odds of this gameplan.
+* [[Nanogene Conversion]] - Given how much I was harping on winning the game while your opponents still think they're safe, it may come as a surprise that I don't like this card and there are a couple major reasons for this:
+    1.  It's a sorcery. Being at sorcery speed makes this card way too slow. It gives your opponents a larger window to time to interact with it and throw a monkey wrench into your gameplan.
+    2. It requires you to have significantly more creatures than your opponent. *Everything* becomes Yuriko, and with that your opponents have no reason not to block your creatures when they swing in. So you need at least three more Yurikos than the defending player to make this worth it imo.
+   4. It's inherently non-deterministic. This is the biggest issue to me. To me one of the most difficult things about playing Yuriko is the amount of heat you get from the rest of the table when you do a big flip. This card has a tendency to get big flips, but not big enough flips to close out the game.  
+
+Some notable includes:
+* [[Insidious Dreams]]: This card is generally seen as a trap card in the Yuriko community due to the additional discard cost that the card has. However it is a one card wincon and as such it is in the deck. Despite the Yuriko gameplan being telegraphed, it is still possible to take your opponents by surprise because they're not actually expecting to die off flips. [[Insidious Dreams]] and to a lesser extent cards like [[Doomsday]] and [[Lim-Dul's Vault]] allow us to play off this perception and win when it's least expected. The main idea of this deck is to *win when your opponents don't quite think you're the main threat just yet* like that one player who wins because they randomly have [[Thassa's Oracle]] + [[Demonic Consultation]] in hand. Since [[Insidious Dreams]] has the potential to have your opponents lose 38 life off three flips ([[Shadow of Mortality]], [[Enter the Infinite]], [[Temporal Tresspass]]), it becomes easy to understand why this is in the list. 
+* [[Doomsday]]: This is a card that has lots of Yuriko players split on whether this card is worth playing. Like with all classic Yuriko builds this deck struggles to actually close out games. As such any card that can easily close out the game in a deterministic manner need to be considered no matter how risky it is hence the card being in the deck.
+
+===endpanel
+===endaccordion
+
+===endpanel
+===endaccordion
+
+
+===accordion|autocollapse
+===panel: changelog (don't bother reading this)
+===accordion
+===panel: Winter 2025
+first round cuts 
+
+out: [[dokuchi silencer]], [[crippling fear]], [[roaming throne]], [[sol ring]], [[mox diamond]]
+
+in: [[mothdust changeling]],  [[sickening shoal]], [[disrupting shoal]], [[dark ritual]], [[demonic tutor]]
+
+second round cuts
+
+out: [[ingenious prodigy]], [[mana confluence]], [[exotic orchard]], [[an offer you can't refuse]], [[sword coast serpent]]
+
+in: [[faerie dreamthief]], [[nashi, moon sage's scion]], [[enter the infinite]], [[dispel]], [[dismember]] 
+===endpanel
+===panel: Experiment period
+
+out: [[nashi, moon sage's scion]], [[enter the infinite]], [[ninja of the deep hours]], [[covert technician]], [[marsh flats]], [[siren stormtamer]], [[spectral sailor]]
+
+in: [[saiba cryptomancer]], [[sol ring]], [[patchwork banner]], [[roaming throne]], [[prismatic vista]], [[signal pest]], [[spyglass siren]]
+
+out: [[roaming throne]] [[blood chief ascension]], [[personal tutor]]
+
+in: [[doomsday]], [[street wraith]], [[mist-syndicate naga]]
+===endpanel
+===panel: Summer
+out: [[dispel]] 
+
+in: [[mana confluence]]
+
+out: [[doomsday]] [[street wraith]]
+
+in [[crippling fear]] [[massacre]]
+===endpanel
+===panel: First round cuts
+out: [[patchwork banner]] [[memnite]] [[phyrexian walker]] [[massacre]]
+
+in: [[cover of darkness]] [[harrier strix]] [[mausoleum wanderer]] [[Llawan, Cephalid Empress]]
+===endpanel
+
+===panel: Final change
+out [[llawan, cephalid empress]] 
+in [[grafdigger's cage]] [[bloodchief ascension]] [[cursed totem]]
+===endpanel
+===panel: Winter
+out [[subtlety]], [[flusterstorm]], [[nashi, searcher in the dark]],  [[saiba cryptomancer]], [[mist-syndicate naga]], [[patchwork banner]], [[spyglass siren]] 
+
+in [[bloodchief ascension]], [[cursed totem]], [[doomsday]], [[gush]], [[street wraith]], [[nashi, moon sage's scion]], [[enter the infinite]], [[null rod]]
+
+Out: [[grafdigger's cage]]
+
+In: [[weathered runestone]]
+
+out: [[bloodchief ascension]], [[null rod]], [[consign // oblivion]]
+
+in: [[grafdigger's cage]], [[flusterstorm]], [[insidious dreams]]
+===endpanel
+
+===panel: post winter experiment period
+out: [[mistblade shinobi]], [[inkrise infiltrator]], [[weathered runestone]], [[mausoleum wanderer]], [[tetsuko umezawa, fugitive]]
+
+in: [[irma, part-time mutant]], [[flitterwing nuisance]], [[splinter's technique]], [[smoke shroud]], [[splinter, hamato yoshi]]
+===endpanel
+
+===panel: summer experiment period
+out: [[mana confluence]], [[mausoleum wanderer]], [[universal automaton]], [[smoke shroud]], , [[satoru, the infiltrator]]
+
+in: [[marsh flats]], [[stature, size shifter]], [[yuriko, hope from the shadows]], [[samut, tyrant of naktamun]], [[fblthp, impossibly lost]], 
+===endpanel
+===endaccordion
+===endpanel
+===endaccordion

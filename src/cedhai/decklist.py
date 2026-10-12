@@ -50,12 +50,19 @@ def load_decklist(path: str | Path) -> Decklist:
 
         normalized = line.strip().lower().rstrip(":")
         if normalized in _SECTION_HEADERS:
-            section = "commander" if normalized in {"commander", "commanders"} else "main"
+            if normalized in {"commander", "commanders"}:
+                section = "commander"
+            elif normalized in {"sideboard", "companions"}:
+                section = normalized
+            else:
+                section = "main"
             continue
 
         match = _COUNTED_LINE.match(line)
         if match:
             count = int(match.group("count"))
+            if count <= 0:
+                raise ValueError(f"Card count must be positive: {line}")
             name = _clean_card_name(match.group("name"))
         else:
             count = 1
