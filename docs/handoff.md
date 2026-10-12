@@ -15,7 +15,7 @@ and generated artifacts remain local under ignored `tools/`, `.venv/`, and `runs
 - Four exact reference cEDH lists pass Scryfall preflight with verified aliases.
   Eleven distinct recent implementations remain missing locally; upstream
   source has not been integrated/tested. Full cEDH decision coverage is future
-  work. No model has been trained.
+  work. A small policy/value model has now completed a local CPU smoke run.
 
 ## Resumed Batch Results
 
@@ -56,16 +56,40 @@ by default. The resumed batch verifies the latest numeric-feature extension in
 eight actual games. The earlier combat suite separately passed all four engine
 integration tests. No simulation remains running.
 
+## Colab And Model Setup
+
+`notebooks/colab_training.ipynb` uploads a checksummed Python/data bundle, audits
+it, installs the optional training dependency, mounts Drive with authorization,
+and runs the trainer with per-epoch checkpoints. Hosted Colab and CUDA execution
+are not verified in this local session. The bundle excludes Git credentials and
+Java runtimes. User-facing setup is in `docs/colab.md`.
+
+The local five-epoch CPU run is `runs/model-colab-smoke`. It uses 162 meaningful
+scripted training choices and 144 validation choices. Final validation imitation
+accuracy is about 43%; that is not win rate. Checkpoint reload, legal-action masks,
+external selection, and deterministic resume-versus-uninterrupted CPU weights
+pass tests. Default suite: 33 passed, four opt-in integration tests skipped.
+
+A local seed-11 checkpoint pod reached its deliberate 16-turn cap successfully:
+538 decisions, 16 lands, two casts/resolutions, no illegal-action errors. It had
+not reached combat and is not a win/loss evaluation. Results and model provenance
+are under `runs/model-colab-game-smoke`; truncated runs are not training labels.
+
+The longer seed-11 pod in `runs/model-colab-game-complete` finished naturally on
+individual player turn 44: 1,593 decisions, 44 lands, 13 casts/resolutions,
+21 attacks, and six blocks. Model seat 0 played ten lands, cast three creatures,
+and declared six attacks; scripted seat 3 won. This verifies the checkpoint
+through actual gameplay, not improvement. The short/long runs share a seed and
+are not independent evaluation samples. Local testing used PyTorch 2.14.1+cpu;
+NumPy is absent and PyTorch emitted a nonfatal interoperability warning.
+
 ## Next Milestone
 
-1. Implement a small masked action-scoring model and outcome-value head, seeded
-   initialization, explicit configuration, and checkpoint provenance.
-2. Use scripted behavior labels for a wiring smoke test, separate random
-   exploration, and exclude forced choices from policy loss. This is behavior
-   cloning/value prediction, not self-play reinforcement learning.
-3. Test masks, checkpoint round trips, and real-game selection through the
-   external `Agent` interface. Run engine games sequentially because XMage uses
-   a shared H2 database. Imitation accuracy does not establish improvement.
+1. Run the notebook in the user's Colab account and verify persistent checkpoints.
+2. Expand held-out seeds and seating-balanced learned-agent evaluation. Scripts
+   supply behavior-cloning controls, not optimal actions or RL objectives.
+3. Run engine games sequentially because XMage uses a shared H2 database.
+   Imitation accuracy does not establish improvement; collect real outcomes.
 4. Expand independent seeds and mechanics curricula before cEDH/self-play.
    Update engine/card support and decision coverage before using cEDH lists.
 

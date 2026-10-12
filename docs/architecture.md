@@ -3,7 +3,10 @@
 Checkpoint: 2026-10-12. Verified features are green; future work is gray.
 Eight real games completed naturally and exported/audited without rejection:
 11,504 rows, 668 meaningful choices, combat coverage in both seed-disjoint splits.
-No model has been trained. One seed per split permits only a training smoke test.
+A five-epoch CPU policy/value smoke run completed. One seed per split permits
+only wiring checks, not performance claims. Hosted Colab execution is pending.
+The checkpoint completed a native seed-11 game and lost to a scripted control;
+its six attacks verify the connection, not strategic quality.
 
 ```mermaid
 flowchart LR
@@ -39,8 +42,16 @@ flowchart LR
     end
     Readiness --> Gate["Smoke-training readiness, not competitive evidence"]
     Evaluation -.-> Gate
-    Gate -.-> Model["Small policy and value model"]
-    Model -.-> Python
+    Gate --> Model["Masked policy and outcome model: scripted imitation"]
+    Model --> Checkpoint["Resumable weights / optimizer / data and source hashes"]
+    Checkpoint --> Learned["ModelAgent and local gameplay smoke check"]
+    Learned --> Python
+    subgraph Cloud["Colab setup: hosted execution not yet verified"]
+    Readiness --> Bundle["Checksummed Python and data upload bundle"]
+    Bundle --> Notebook["Colab notebook: CPU or available CUDA"]
+    Notebook --> Drive["User-authorized Drive checkpoint persistence"]
+    Drive --> Checkpoint
+    end
     Lists --> Forge["Forge built-in AI baseline and logs"]
     Smoke["Synthetic SmokeEngine protocol tests"] --> Tests["Automated Python and real-engine tests"]
     Java --> Tests
@@ -53,7 +64,9 @@ flowchart LR
     classDef future fill:#edf0f3,stroke:#68737c,color:#26313a
     class Lists,Audit,Validate,Fixtures,Rules,Java,Choices,Helpers,IPC,Python,Trace,Outcome,Forge,Smoke,Tests verified
     class Dataset,Masks,Split,Readiness,Evaluation,Uncertainty,Gate verified
-    class Model,Gaps,FullCEDH,DeckSearch future
+    class Model,Checkpoint,Learned,Bundle verified
+    class Notebook,Drive draft
+    class Gaps,FullCEDH,DeckSearch future
 ```
 
 The current extension covers attacker/defender choices, blocker choices, public
@@ -83,3 +96,9 @@ padding/masks, actor rewards, and source row counts. Forced decisions have zero
 policy weight. It reports meaningful decisions by scope and collecting policy;
 random-policy labels must not be mistaken for demonstrations of strong play.
 Training and validation need meaningful choices and remain seed-disjoint.
+
+The smoke trainer uses only meaningful scripted choices by default, scores
+legal actions with a small shared MLP, and predicts actor outcomes. Checkpoints
+retain optimizer state, configuration, and exact data/source hashes. Colab receives
+Python/data only; Java simulations remain local. The notebook mounts Drive only
+with user authorization. GPU hardware and hosted execution remain unverified.

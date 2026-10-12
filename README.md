@@ -13,7 +13,8 @@ curriculum currently supports four-player Commander with simple legal decks:
 - choose supported creature casts, attackers, defending players, and blockers;
 - evaluate seeded games with balanced seating and export masked training data.
 
-Full cEDH gameplay and learned policies are not implemented yet. Native helpers
+Full cEDH gameplay and self-play RL are not implemented yet. A small curriculum
+policy/value trainer and checkpoint agent are available. Native helpers
 handle mulligans, mana payment, combat damage, and commander-return choices.
 
 ## Quick Start
@@ -54,7 +55,8 @@ the work leading to the first training run.
 The latest eight-game real-engine batch completed without errors or truncations.
 All eight trajectories passed export/audit: 11,504 rows and 668 meaningful
 choices, with priority, attack, and block coverage in both seed-disjoint splits.
-The dataset is ready for a training smoke test. No model has been trained yet.
+The dataset supports a training smoke test. A five-epoch CPU smoke run completed;
+this does not establish playing strength or generalization.
 
 ```powershell
 .\.venv\Scripts\python.exe -m cedhai.evaluate --seeds 7 10 --out runs/evaluation-new
@@ -72,3 +74,27 @@ performance claim. Random/scripted choices are not optimal-action labels.
 See [the curriculum](docs/curriculum.md) and [the handoff note](docs/handoff.md)
 for verified results and the next training milestone. Generated trajectories
 and datasets stay in ignored `runs/`; source, tests, and documentation go to GitHub.
+
+## Train With Colab
+
+Open [the notebook](notebooks/colab_training.ipynb) using Colab's File > Upload
+notebook. Run its cells in order and upload the prepared local
+`runs/cedhai-colab.zip` when prompted. Authorize the Drive mount to keep per-epoch
+checkpoints in `MyDrive/cedhai/checkpoints`. No private GitHub token is needed.
+See [the Colab guide](docs/colab.md) for setup, resume, and local evaluation.
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -e ".[training]"
+.\.venv\Scripts\python.exe -m cedhai.train --dataset runs/curriculum-dataset-verified --out runs/model-new --epochs 5 --device cpu
+.\.venv\Scripts\python.exe -m cedhai.play_model --checkpoint runs/model-new/latest.pt --out runs/model-game-new
+```
+
+This is scripted behavior cloning and outcome prediction, not reinforcement
+learning. Forced/random choices are excluded by default. The notebook supports
+CPU or available CUDA and saves resumable optimizer/model state. Local CPU
+training, checkpoint resume, and legal-action selection are tested; execution
+inside a hosted Colab account and CUDA have not been verified here.
+
+The local checkpoint also completed a real seed-11 XMage game, casting three
+creatures and declaring six attacks. It lost to a scripted opponent; this is a
+verified gameplay connection, not evidence of competitive strength.
