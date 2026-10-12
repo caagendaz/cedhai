@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 MAX_MESSAGE_BYTES = 1024 * 1024
 
 
-def export_xmage_deck(source: Path) -> str:
+def export_xmage_deck(source: Path, aliases: dict | None = None) -> str:
     """Convert a Forge deck or our sectioned text format to XMage text import."""
     if source.suffix.lower() == ".dck":
         sections: dict[str, list[str]] = {"main": [], "commander": []}
@@ -47,6 +47,13 @@ def export_xmage_deck(source: Path) -> str:
         }
         if not sections["commander"]:
             raise ValueError("Text deck requires an explicit Commander section")
+    if aliases:
+        for section, lines in sections.items():
+            normalized = []
+            for line in lines:
+                count, name = line.split(" ", 1)
+                normalized.append(count + " " + aliases.get(name, {}).get("name", name))
+            sections[section] = normalized
     return "\n".join([*sections["main"], "//sideboard", *sections["commander"]]) + "\n"
 
 
@@ -141,6 +148,7 @@ def run_bridge(jdk: Path, engine_dir: Path, decks: list[Path], out: Path,
             errors.append("Engine error detected; inspect stdout.log and stderr.log")
         metadata.update({"decisions": session.decisions, "applied_lands": session.applied_lands,
                          "cast_spells": session.cast_spells, "resolved_spells": session.resolved_spells,
+                         "attacks": session.attacks, "blocks": session.blocks,
                          "completion": session.finished, "errors": errors,
                          "success": metadata["returncode"] == 0 and session.finished is not None and not errors})
     (out / "result.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
@@ -153,7 +161,7 @@ def main() -> None:
     parser.add_argument("--engine-dir", type=Path, default=ROOT / "tools/magezero/xmage")
     parser.add_argument("--decks", type=Path, nargs=4)
     parser.add_argument("--seed", type=int, default=7)
-    parser.add_argument("--policy", choices=("random", "land", "pass", "develop"), default="random")
+    parser.add_argument("--policy", choices=("random", "land", "pass", "develop", "defend"), default="random")
     parser.add_argument("--mode", choices=("land", "basic"), default="land")
     parser.add_argument("--turns", type=int, default=4)
     parser.add_argument("--timeout", type=int, default=300)

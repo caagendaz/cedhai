@@ -28,6 +28,26 @@ def applied(action_id="land:0"):
 
 
 class DecisionBridgeTests(unittest.TestCase):
+    def test_combat_choices_and_terminal_rewards_are_verified(self):
+        session = DecisionSession(io.StringIO(), 7, "develop")
+        event = decision()
+        event.update(schema_version=2, scope="attack")
+        event["observation"]["legal_actions"] = [{"id": "skip", "label": "Skip"},
+                                                 {"id": "attack:1", "label": "Attack seat 1"}]
+        self.assertEqual(session.handle(event)["action_id"], "attack:1")
+        application = applied("attack:1")
+        application["schema_version"] = 2
+        session.handle(application)
+        self.assertEqual(session.attacks, 1)
+        finished = {"event": "finished", "schema_version": 2, "game_id": "xmage-7",
+                    "decisions": 1, "applied_lands": 0, "cast_spells": 0, "resolved_spells": 0,
+                    "attacks": 1, "blocks": 0, "terminal": True, "truncated": False,
+                    "winners": [0], "rewards": [0.0] * 4}
+        with self.assertRaisesRegex(ValueError, "Rewards"):
+            session.handle(finished)
+        finished["rewards"] = [1.0, 0.0, 0.0, 0.0]
+        session.handle(finished)
+
     def test_cast_application_and_resolution_are_distinct(self):
         session = DecisionSession(io.StringIO(), 7, "develop")
         event = decision()

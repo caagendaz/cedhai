@@ -1,8 +1,8 @@
 # Architecture And Current Work
 
 Solid arrows describe the existing simulation and recording path. Dotted arrows
-describe the next data/evaluation/training stages. The combat extension is being
-verified before it is committed. The first learning environment is the bounded
+describe the next data/evaluation/training stages. The combat extension has passed
+the real-engine integration suite. The first learning environment is the bounded
 basic-creature Commander curriculum; full cEDH decisions remain later work.
 
 ```mermaid

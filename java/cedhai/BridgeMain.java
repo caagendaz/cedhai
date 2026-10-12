@@ -3,6 +3,7 @@ package cedhai;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import mage.abilities.ActivatedAbility;
+import mage.abilities.Ability;
 import mage.abilities.PlayLandAbility;
 import mage.abilities.SpellAbility;
 import mage.cards.Card;
@@ -18,9 +19,12 @@ import mage.game.GameOptions;
 import mage.game.mulligan.MulliganType;
 import mage.game.permanent.Permanent;
 import mage.game.stack.StackObject;
+import mage.game.events.GameEvent;
+import mage.game.combat.CombatGroup;
 import mage.player.ai.ComputerPlayer;
 import mage.players.Player;
 import mage.util.RandomUtil;
+import mage.watchers.common.CommanderInfoWatcher;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -41,6 +45,8 @@ public final class BridgeMain {
     private static int appliedLands;
     private static int castSpells;
     private static int resolvedSpells;
+    private static int attacks;
+    private static int blocks;
     private static boolean basicMode;
     private static final Set<String> SIMPLE_CREATURES = Set.of("Isamaru, Hound of Konda",
         "Savannah Lions", "Elite Vanguard", "Grizzly Bears", "Runeclaw Bear", "Yargle and Multani");
@@ -78,12 +84,25 @@ public final class BridgeMain {
 
     private static Map<String, Object> publicState(Game game) {
         List<Object> players = new ArrayList<>();
+        List<Object> commanders = new ArrayList<>();
         for (BridgePlayer original : SEATS) {
             Player player = game.getPlayer(original.getId());
             players.add(fields("seat", original.seat, "life", player.getLife(),
                 "hand_count", player.getHand().size(), "library_count", player.getLibrary().size(),
                 "battlefield_count", game.getBattlefield().getAllActivePermanents(player.getId()).size(),
-                "in_game", player.isInGame(), "mana_pool", player.getManaPool().getMana().toString()));
+                "in_game", player.isInGame(), "has_won", player.hasWon(), "has_lost", player.hasLost(),
+                "has_drawn", player.hasDrew(), "mana_pool", player.getManaPool().getMana().toString()));
+            for (UUID id : game.getCommandersIds(player, CommanderCardType.ANY, false)) {
+                Card card = game.getCard(id);
+                if (card == null) continue;
+                List<Integer> damage = new ArrayList<>();
+                CommanderInfoWatcher watcher = game.getState().getWatcher(CommanderInfoWatcher.class, id);
+                for (BridgePlayer target : SEATS) {
+                    damage.add(watcher == null ? 0 : watcher.getDamageToPlayer().getOrDefault(target.getId(), 0));
+                }
+                commanders.add(fields("owner_seat", original.seat, "name", card.getName(), "id", id.toString(),
+                    "zone", game.getState().getZone(id), "damage_to_seats", damage));
+            }
         }
         List<Object> battlefield = new ArrayList<>();
         for (Permanent permanent : game.getBattlefield().getAllActivePermanents()) {
@@ -104,10 +123,15 @@ public final class BridgeMain {
             // Basic mode only casts face-up vanilla creatures; expose their visible stack state.
             stack.add(fields("name", object.getName(), "controller_seat", seat(object.getControllerId())));
         }
+        List<Object> combat = new ArrayList<>();
+        for (CombatGroup group : game.getCombat().getGroups()) {
+            combat.add(fields("defender_seat", seat(group.getDefenderId()),
+                "attackers", group.getAttackers(), "blockers", group.getBlockers()));
+        }
         return fields("turn", game.getState().getTurnNum(),
             "phase", game.getState().getTurn().getPhase().getType().name(),
             "active_seat", seat(game.getActivePlayerId()), "players", players,
-            "battlefield", battlefield, "stack", stack);
+            "battlefield", battlefield, "stack", stack, "combat", combat, "commanders", commanders);
     }
 
     private static void recordResolutions(Game game) {
@@ -142,6 +166,113 @@ public final class BridgeMain {
             return new BridgePlayer(this);
         }
 
+        private String[] ask(Game game, String scope, List<Object> actions) {
+            List<Object> hand = new ArrayList<>();
+            for (Card card : getHand().getCards(game)) {
+                hand.add(fields("id", card.getId().toString(), "name", card.getName(),
+                    "mana_value", card.getManaValue(), "mana_cost", card.getManaCost().getText()));
+            }
+            hand.sort(Comparator.comparing(item -> ((Map<?, ?>) item).get("name").toString()));
+            int step = decisions++;
+            String requestId = gameId + ":" + step;
+            Map<String, Object> observation = fields("game_id", gameId, "step", step, "seat", seat,
+                "public_state", publicState(game), "private_state", fields("hand", hand), "legal_actions", actions);
+            JsonObject response = exchange(fields("event", "decision", "schema_version", 2,
+                "request_id", requestId, "scope", scope, "observation", observation));
+            if (!requestId.equals(response.get("request_id").getAsString())) {
+                failure = new IllegalStateException("Mismatched decision response");
+                throw failure;
+            }
+            String selected = response.get("action_id").getAsString();
+            boolean offered = actions.stream().anyMatch(item -> ((Map<?, ?>) item).get("id").equals(selected));
+            if (!offered) {
+                failure = new IllegalStateException("Python selected an unavailable action");
+                throw failure;
+            }
+            return new String[]{requestId, selected};
+        }
+
+        private void combatApplied(Game game, String[] choice, Permanent creature) {
+            exchange(fields("event", "applied", "schema_version", 2, "request_id", choice[0],
+                "action_id", choice[1], "seat", seat, "card_id", creature.getId().toString(),
+                "card_name", creature.getName(), "zone", choice[1].equals("skip") ? "NONE" : "BATTLEFIELD",
+                "public_state", publicState(game)));
+        }
+
+        @Override
+        public void selectAttackers(Game game, UUID attackingPlayerId) {
+            if (!basicMode || game.isSimulation()) return;
+            game.fireEvent(new GameEvent(GameEvent.EventType.DECLARE_ATTACKERS_STEP_PRE, null, null, attackingPlayerId));
+            if (game.replaceEvent(GameEvent.getEvent(GameEvent.EventType.DECLARING_ATTACKERS, attackingPlayerId, attackingPlayerId))) return;
+            List<Permanent> creatures = getAvailableAttackers(game);
+            creatures.sort(Comparator.comparing(Permanent::getName).thenComparing(p -> p.getId().toString()));
+            for (Permanent creature : creatures) {
+                List<Object> actions = new ArrayList<>();
+                actions.add(fields("id", "skip", "label", "Do not attack"));
+                Map<String, UUID> targets = new LinkedHashMap<>();
+                for (BridgePlayer other : SEATS) {
+                    if (!other.getId().equals(getId()) && game.getCombat().getDefenders().contains(other.getId())
+                            && game.getPlayer(other.getId()).isInGame() && creature.canAttack(other.getId(), game)) {
+                        String id = "attack:" + other.seat;
+                        targets.put(id, other.getId());
+                        actions.add(fields("id", id, "label", "Attack seat " + other.seat + " with " + creature.getName(),
+                            "features", fields("kind", "attack", "card_id", creature.getId().toString(),
+                                "target_seat", other.seat, "power", creature.getPower().getValue(),
+                                "toughness", creature.getToughness().getValue())));
+                    }
+                }
+                String[] choice = ask(game, "attack", actions);
+                if (!choice[1].equals("skip")) {
+                    declareAttacker(creature.getId(), targets.get(choice[1]), game, false);
+                    CombatGroup group = game.getCombat().findGroup(creature.getId());
+                    if (group == null || !group.getDefenderId().equals(targets.get(choice[1]))) {
+                        throw new IllegalStateException("Attacker declaration failed");
+                    }
+                    attacks++;
+                }
+                combatApplied(game, choice, creature);
+            }
+            game.getPlayers().resetPassed();
+        }
+
+        @Override
+        public void selectBlockers(Ability source, Game game, UUID defendingPlayerId) {
+            if (!basicMode || game.isSimulation()) return;
+            game.fireEvent(new GameEvent(GameEvent.EventType.DECLARE_BLOCKERS_STEP_PRE, null, null, defendingPlayerId));
+            if (game.replaceEvent(GameEvent.getEvent(GameEvent.EventType.DECLARING_BLOCKERS, defendingPlayerId, defendingPlayerId))) return;
+            List<Permanent> creatures = getAvailableBlockers(game);
+            creatures.sort(Comparator.comparing(Permanent::getName).thenComparing(p -> p.getId().toString()));
+            for (Permanent creature : creatures) {
+                List<Object> actions = new ArrayList<>();
+                actions.add(fields("id", "skip", "label", "Do not block"));
+                Map<String, UUID> targets = new LinkedHashMap<>();
+                for (CombatGroup group : game.getCombat().getGroups()) {
+                    if (!group.getDefenderId().equals(getId()) || !group.canBlock(creature, game)) continue;
+                    for (UUID attacker : group.getAttackers()) {
+                        if (!creature.canBlock(attacker, game)) continue;
+                        String id = "block:" + targets.size();
+                        Permanent target = game.getPermanent(attacker);
+                        targets.put(id, attacker);
+                        actions.add(fields("id", id, "label", "Block " + target.getName() + " with " + creature.getName(),
+                            "features", fields("kind", "block", "card_id", creature.getId().toString(),
+                                "target_seat", seat(target.getControllerId()), "power", creature.getPower().getValue(),
+                                "toughness", creature.getToughness().getValue())));
+                    }
+                }
+                String[] choice = ask(game, "block", actions);
+                if (!choice[1].equals("skip")) {
+                    UUID attacker = targets.get(choice[1]);
+                    declareBlocker(defendingPlayerId, creature.getId(), attacker, game, false);
+                    if (!game.getCombat().findGroup(attacker).getBlockers().contains(creature.getId())) {
+                        throw new IllegalStateException("Blocker declaration failed");
+                    }
+                    blocks++;
+                }
+                combatApplied(game, choice, creature);
+            }
+            game.getPlayers().resetPassed();
+        }
+
         @Override
         public boolean priority(Game game) {
             if (game.isSimulation()) {
@@ -171,25 +302,9 @@ public final class BridgeMain {
                         "mana_value", card.getManaValue(), "power", card.getPower().getValue(),
                         "toughness", card.getToughness().getValue())));
             }
-            List<Object> hand = new ArrayList<>();
-            for (Card card : getHand().getCards(game)) {
-                hand.add(fields("id", card.getId().toString(), "name", card.getName(),
-                    "mana_value", card.getManaValue(), "mana_cost", card.getManaCost().getText()));
-            }
-            hand.sort(Comparator.comparing(item -> ((Map<?, ?>) item).get("name").toString()));
-            int step = decisions++;
-            String requestId = gameId + ":" + step;
-            Map<String, Object> observation = fields("game_id", gameId, "step", step, "seat", seat,
-                "public_state", publicState(game), "private_state", fields("hand", hand),
-                "legal_actions", actions);
-            JsonObject response = exchange(fields("event", "decision", "schema_version", 2,
-                "request_id", requestId, "scope", basicMode ? "priority_basic" : "own_hand_land_or_pass",
-                "observation", observation));
-            if (!requestId.equals(response.get("request_id").getAsString())) {
-                failure = new IllegalStateException("Mismatched decision response");
-                throw failure;
-            }
-            String selected = response.get("action_id").getAsString();
+            String[] choice = ask(game, basicMode ? "priority_basic" : "own_hand_land_or_pass", actions);
+            String requestId = choice[0];
+            String selected = choice[1];
             boolean result;
             String cardName = "";
             String cardId = "";
@@ -294,9 +409,12 @@ public final class BridgeMain {
             boolean truncated = game.isPaused();
             List<Integer> winners = new ArrayList<>();
             for (BridgePlayer player : SEATS) if (game.getPlayer(player.getId()).hasWon()) winners.add(player.seat);
+            List<Double> rewards = new ArrayList<>();
+            for (int i = 0; i < 4; i++) rewards.add(winners.contains(i) ? 1.0 : 0.0);
             exchange(fields("event", "finished", "schema_version", 2, "game_id", gameId,
                 "decisions", decisions, "applied_lands", appliedLands, "truncated", truncated,
                 "cast_spells", castSpells, "resolved_spells", resolvedSpells,
+                "attacks", attacks, "blocks", blocks, "rewards", truncated ? null : rewards,
                 "terminal", !truncated && game.checkIfGameIsOver(), "winners", winners,
                 "public_state", publicState(game)));
             System.out.println("Bridge completed: " + decisions + " decisions, " + appliedLands + " land plays");

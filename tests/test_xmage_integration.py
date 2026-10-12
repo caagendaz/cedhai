@@ -11,6 +11,32 @@ from cedhai.run_bridge import ROOT, run_bridge
 
 @unittest.skipUnless(os.environ.get("CEDHAI_TEST_XMAGE") == "1", "opt-in XMage integration test")
 class XMageIntegrationTests(unittest.TestCase):
+    def test_combat_eliminates_players_and_produces_true_rewards(self):
+        jdk = next((ROOT / "tools/jdk").glob("jdk-*"))
+        deck = ROOT / "examples/decks/curriculum/yargle.txt"
+        out = ROOT / "runs" / ("combat-integration-" + uuid.uuid4().hex[:12])
+        result = run_bridge(jdk, ROOT / "tools/magezero/xmage", [deck] * 4, out, 7, "develop", 100, 300, "basic")
+        self.assertTrue(result["success"], result)
+        self.assertGreater(result["attacks"], 0)
+        finished = result["completion"]
+        self.assertTrue(finished["terminal"])
+        self.assertFalse(finished["truncated"])
+        self.assertEqual(sum(finished["rewards"]), 1.0)
+        self.assertEqual(len(finished["winners"]), 1)
+        self.assertEqual([p["seat"] for p in finished["public_state"]["players"] if p["has_won"]], finished["winners"])
+        self.assertFalse(any(p["in_game"] for p in finished["public_state"]["players"]))
+        events = [json.loads(line) for line in (out / "trajectory.jsonl").read_text().splitlines()]
+        self.assertTrue(any(any(max(c["damage_to_seats"]) > 0 for c in event["observation"]["public_state"]["commanders"])
+                            for event in events if event["event"] == "decision"))
+
+    def test_blocker_choices_are_applied(self):
+        jdk = next((ROOT / "tools/jdk").glob("jdk-*"))
+        deck = ROOT / "examples/decks/curriculum/isamaru.txt"
+        out = ROOT / "runs" / ("blocking-integration-" + uuid.uuid4().hex[:12])
+        result = run_bridge(jdk, ROOT / "tools/magezero/xmage", [deck] * 4, out, 7, "defend", 12, 300, "basic")
+        self.assertTrue(result["success"], result)
+        self.assertGreater(result["blocks"], 0)
+
     def test_python_casts_are_paid_and_resolve(self):
         jdk = next((ROOT / "tools/jdk").glob("jdk-*"))
         deck = ROOT / "examples/decks/curriculum/isamaru.txt"
@@ -51,7 +77,7 @@ class XMageIntegrationTests(unittest.TestCase):
             self.assertEqual(len(state["players"]), 4)
             # Opponents expose public counts, never hands or library identities.
             for player in state["players"]:
-                self.assertEqual(set(player), {"seat", "life", "hand_count", "library_count", "battlefield_count", "in_game", "mana_pool"})
+                self.assertEqual(set(player), {"seat", "life", "hand_count", "library_count", "battlefield_count", "in_game", "mana_pool", "has_won", "has_lost", "has_drawn"})
             self.assertEqual(set(observation["private_state"]), {"hand"})
             actor = state["players"][observation["seat"]]
             self.assertEqual(len(observation["private_state"]["hand"]), actor["hand_count"])
