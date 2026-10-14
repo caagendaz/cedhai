@@ -1,6 +1,8 @@
 # Architecture And Current Work
 
 Checkpoint: 2026-10-12. Verified features are green; future work is gray.
+Results-review extension: 2026-10-13. The user reports the cloud games finished,
+but no result archive or saved cell outputs have reached this workspace yet.
 The compute target is now cloud-first at the user's request. Local long-running
 simulation was stopped. Linux/Colab gameplay is implemented but not yet verified.
 Eight real games completed naturally and exported/audited without rejection:
@@ -68,6 +70,10 @@ flowchart LR
     Drive --> Checkpoint
     Evaluation --> CloudResults["Drive: completed games / partial attempts / summaries"]
     CloudResults --> Drive
+    CloudResults --> Export["Summary ZIP in Drive and remote /content root"]
+    Export --> Review["Local lightweight importer: outcome / seat / choice checks"]
+    Review --> ReviewReport["Markdown and JSON review with limits and next steps"]
+    ReviewReport -.-> Improved["Future informed curriculum and policy improvements"]
     end
     Lists --> Forge["Forge built-in AI baseline and logs"]
     Smoke["Synthetic SmokeEngine protocol tests"] --> Tests["Automated Python and real-engine tests"]
@@ -84,6 +90,8 @@ flowchart LR
     class Model,Checkpoint,Learned,Bundle,Notebook,Download,Diagnostics verified
     class Drive,CloudSetup,CloudRules,CloudResults draft
     class VSCode,Upload draft
+    class Export,Review,ReviewReport verified
+    class Improved future
     class Gaps,FullCEDH,DeckSearch future
 ```
 
@@ -133,3 +141,8 @@ The VS Code notebook avoids browser-only transfer widgets and guards against
 local execution. Installed extension settings/commands were inspected (0.9.7).
 Google account sign-in and remote kernel selection remain user-controlled;
 opening the notebook does not itself start simulations or provision a runtime.
+
+Summary review never executes archive content or tries to reopen remote Drive
+paths on the PC. It recomputes counts and cross-checks diagnostics, but cannot
+independently attest to raw gameplay integrity. The user's actual batch still
+needs importing before deciding on retraining or claiming policy improvement.

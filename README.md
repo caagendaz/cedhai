@@ -77,6 +77,25 @@ the work leading to the first training run.
 
 ## Evaluation And Data Readiness
 
+### Review Colab Results
+
+After evaluation, run the notebook's summary/diagnostics and ZIP cells. The ZIP
+cell now exposes `evaluation-summary.zip` directly under remote `/content`, with
+its path, existence, and size printed; a persistent copy remains in Drive.
+Right-click that file in Colab Contents > Download, then place it in this project.
+No evaluation rerun is needed just to export results.
+
+```powershell
+.\.venv\Scripts\python.exe -m cedhai.review_results --archive evaluation-summary.zip --out runs/review-new
+```
+
+The lightweight importer writes `review.md` and `review.json`, preserving the two
+original JSON documents. It recomputes outcomes, checks seating and development
+seed separation, reconciles diagnostic counts, and flags incomplete batches.
+Cloud paths are never reopened locally, ZIP contents are not executed/extracted,
+and reported metadata is not proof of raw trajectory integrity. No Colab result
+archive has been imported here yet; model performance remains unassessed.
+
 Checkpoint evaluation supports `--checkpoint`, a `model` policy profile,
 `--development-seeds`, and `--resume`. Reports include per-seat outcomes and
 meaningful choice counts. A frozen checkpoint snapshot prevents mid-batch weight

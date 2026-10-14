@@ -54,3 +54,23 @@ class ColabBundleTests(unittest.TestCase):
         with patch("platform.system", return_value="Windows"), self.assertRaisesRegex(RuntimeError, "remote Colab kernel"):
             notebook = json.loads(path.read_text())
             exec("".join(notebook["cells"][1]["source"]), {})
+
+    def test_summary_export_exposes_zip_at_remote_root(self):
+        path = Path(__file__).resolve().parents[1] / "notebooks/colab_vscode.ipynb"
+        notebook = json.loads(path.read_text())
+        source = next("".join(cell["source"]) for cell in notebook["cells"]
+                      if cell["cell_type"] == "code" and "summary_zip =" in "".join(cell["source"]))
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            evaluation = root / "evaluation"
+            evaluation.mkdir()
+            (evaluation / "evaluation.json").write_text("{}")
+            diagnostics = root / "diagnostics.json"
+            diagnostics.write_text("{}")
+            target = root / "remote-root-summary.zip"
+            source = source.replace("/content/evaluation-summary.zip", target.as_posix())
+            exec(source, {"Path": Path, "run_root": root, "evaluation": evaluation,
+                          "diagnostics_path": diagnostics})
+            self.assertTrue(target.exists())
+            with zipfile.ZipFile(target) as archive:
+                self.assertEqual(set(archive.namelist()), {"evaluation.json", "diagnostics.json"})

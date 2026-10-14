@@ -1,5 +1,32 @@
 # Development Checkpoint: 2026-10-12
 
+## Results Review Update: 2026-10-13
+
+The user says the Colab batch finished and ran the export cells but could not
+find the ZIP. No result ZIP is in the project root and the saved VS Code notebook
+still has no execution outputs. Do not invent win rates or assume full cloud
+verification from this workspace. The user must download the archive (or share
+saved outputs) before actual results can be assessed.
+
+`cedhai.review_results` imports `evaluation-summary.zip` without extracting or
+executing archive content or reopening cloud paths. It checks schemas, canonical
+seating, declared fresh seeds, completion flags, checkpoint metadata, recomputed
+win/seat summaries, and diagnostic counts. It preserves original JSON and writes
+`review.json`/`review.md`; valid partial batches are flagged and exit nonzero.
+Warnings explicitly limit what summary-only checks prove. Four new importer
+tests and four bundle/notebook tests pass; no local games or training were run.
+
+Both simulation notebook export cells now copy the summary ZIP into remote
+`/content/evaluation-summary.zip`, print existence/size, and retain its Drive
+copy. The export cell is compatible with the user's existing cloud installation;
+only that cell needs rerunning, not the games. Download using Colab Contents.
+
+Next concrete action: obtain the user's actual archive and run
+`cedhai.review_results --archive evaluation-summary.zip --out runs/review-new`.
+Inspect outcomes/choice behavior before optional retraining, and preserve this
+inspected evaluation batch as development evidence rather than repeatedly tuning
+against it and claiming it remains untouched test data.
+
 Work has resumed. The private repository is `caagendaz/cedhai`. Every feature
 push includes README and Mermaid updates. Runtimes, the virtual environment,
 and generated artifacts remain local under ignored `tools/`, `.venv/`, and `runs/`.

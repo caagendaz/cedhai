@@ -17,7 +17,7 @@ views; no credentials or local compute defaults are configured.
    extension. The command palette also offers Colab: Mount Google Drive to Server...
    if an explicit mount cell is needed.
 5. Results stay in Drive. In Colab Contents, refresh and find
-   `drive/MyDrive/cedhai/cloud/cloud-evaluation-v1/evaluation-summary.zip`, then
+   `/content/evaluation-summary.zip` (remote root), then
    right-click > Download. Checkpoints/logs are available in the same remote tree.
 
 The extension's [official guide](https://github.com/googlecolab/colab-vscode/wiki/User-Guide)
@@ -31,6 +31,32 @@ The first code cell guards against accidental local execution. Syntax and
 transfer-widget avoidance are tested; actual VS Code remote authentication,
 Drive mounting, and Linux game preflight need the user's connected session.
 No runtime has been provisioned or account authorized by the coding agent.
+
+## Review The Completed Batch
+
+Run the summary/diagnostics cell and then the ZIP export cell, not the evaluation
+cell again. The updated export keeps the Drive copy and copies the ZIP to
+`/content/evaluation-summary.zip`, prints its actual size, and checks that the
+input JSON files exist. Refresh Colab Contents, right-click the root ZIP, and
+Download. This direct-root copy avoids navigating the nested Drive directory.
+If your kernel is still running the previous notebook version, rerun only the
+updated export cell; the existing cloud installation/bundle is sufficient for it.
+
+The new local command is `cedhai.review_results --archive evaluation-summary.zip
+--out runs/review-new`. It needs no Java, GPU, or PyTorch and performs no games or
+training. It accepts only the two expected JSON files with size limits, preserves
+their bytes, recomputes the summary, checks canonical seat coverage and declared
+seed separation, and matches diagnostic subtotals to per-game decision counts.
+It rejects corrupt/stale summaries before creating an output directory. Valid
+partial reports are written but receive an incomplete flag and nonzero exit code.
+
+The Markdown review shows wins/rates by profile and seat, seed-block ranges,
+meaningful versus forced choices, offered/selected actions, and review priorities.
+Passing/skipping is not automatically a mistake. Summary-only checks cannot
+verify cloud trajectories or undeclared development seeds, and even a completed
+20-game vanilla curriculum batch does not establish cEDH competence. Inspect
+results before launching optional retraining. No actual cloud archive is present
+on this PC yet, so its measured performance cannot currently be assessed.
 
 ## Cloud-First Simulation And Evaluation
 
