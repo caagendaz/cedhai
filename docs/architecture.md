@@ -75,8 +75,12 @@ flowchart LR
     Export --> Review["Local lightweight importer: outcome / seat / choice checks"]
     Review --> ReviewReport["Markdown and JSON review with limits and next steps"]
     ReviewReport --> Measured["Imported: model 3/20 wins / five seed blocks"]
-    Measured -.-> MoreData["Next: independent cloud training seeds + fresh future tests"]
-    MoreData -.-> Improved["Future informed curriculum and policy improvements"]
+    Measured --> Expansion["Prepared cloud runner: 24 collection games / guarded resume"]
+    Expansion --> MoreData["Next: independent training seeds / audited data"]
+    MoreData --> CandidateTraining["Pending: fresh candidate / 20 epochs"]
+    CandidateTraining --> MatchedNew["Pending: reference + candidate / 20 games each"]
+    MatchedNew --> PairCompare["Paired seed-block comparison / three downloadable files"]
+    PairCompare -.-> Improved["Future informed curriculum and policy improvements"]
     end
     Lists --> Forge["Forge built-in AI baseline and logs"]
     Smoke["Synthetic SmokeEngine protocol tests"] --> Tests["Automated Python and real-engine tests"]
@@ -94,7 +98,9 @@ flowchart LR
     class Drive,CloudSetup,CloudRules,CloudResults draft
     class VSCode,Upload draft
     class Export,Review,ReviewReport,Measured verified
-    class Improved,MoreData future
+    class Expansion,PairCompare verified
+    class MoreData,CandidateTraining,MatchedNew draft
+    class Improved future
     class Gaps,FullCEDH,DeckSearch future
 ```
 
@@ -152,3 +158,10 @@ and documented in `evaluation/2026-10-14-colab.md`. Its aggregate choices show
 always attacking/blocking, not demonstrated tactical quality. Keep it as inspected
 development evidence rather than repeatedly tuning on it and calling it untouched
 test data. No policy improvement has been established.
+
+The next iteration uses a guarded four-stage cloud runner, frozen reference,
+independent collection seeds, fresh candidate initialization, and matched
+reference/candidate gameplay. Source/configuration hashes and state live in Drive.
+Its tests pass, but the new collection/training/evaluation has not run yet.
+Training labels remain scripted imitation; extra data and epochs do not guarantee
+better decisions. Paired comparison cannot attribute changes solely to more data.

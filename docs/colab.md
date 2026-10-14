@@ -1,5 +1,50 @@
 # Colab Training
 
+## Next Experiment
+
+Use `notebooks/colab_next_experiment.ipynb` for the next measured iteration,
+rather than rerunning the first model's old evaluation. Select the Colab CPU
+kernel and upload `runs/cedhai-next.zip` via Explorer once. Authorize the same
+Google account as before. The notebook restores the reference from
+`MyDrive/cedhai/cloud/cloud-evaluation-v1/latest.pt`, verifies its hash, and keeps
+the new bundle/state under `MyDrive/cedhai/cloud/expanded-v1`.
+
+Run four stages in order:
+
+1. Collect 24 games: seeds 21-26, four rotations, scripted/random controls.
+2. Export/audit, then train a fresh candidate for 20 epochs on meaningful scripted
+   labels. There are five training seeds but only one validation seed (25), so
+   validation remains limited. Forced/random labels are excluded by default.
+3. Run 20 reference and 20 candidate games on matched seeds 31,32,33,34,36 and
+   seating/opponents. All inspected and collection seeds are declared development.
+4. Export reference-summary.zip, candidate-summary.zip, and comparison.json to
+   remote `/content` for Contents > Download. Persistent copies remain in Drive.
+
+This totals 64 games plus training and can span several sessions. If interrupted,
+reconnect, keep the same RUN_NAME and bundle, then rerun setup and the interrupted
+stage. The bundle is saved in Drive after the first upload. Configuration/code
+hashes cannot change on resume. Dataset/training attempts are never deleted;
+training resumes from the last completed checkpoint and restores optimizer state.
+Completed evaluation games are skipped. Stop an active stage before restarting.
+
+The reference checkpoint is frozen; the candidate starts from a fresh seeded
+initialization, not from the reference weights. Pairing controls gameplay seeds,
+seats, and opponents, not the training history. Both data quantity and training
+budget change; this is not a data-only causal study. The paired bootstrap operates
+on independent seed blocks and remains exploratory with five blocks. Summary
+validation cannot substitute for independent raw-trajectory inspection.
+
+No new cloud run has been executed by the coding agent. Tests cover the cloud
+guard, stage ordering, collection resume/config mismatch, preserved paths,
+process-group cleanup, paired arithmetic, and incompatible-experiment rejection.
+The notebook and source need execution in the user's authenticated Colab session.
+
+Local result comparison (lightweight, no simulations/training):
+
+```powershell
+.\.venv\Scripts\python.exe -m cedhai.compare_results --reference reference-summary.zip --candidate candidate-summary.zip --out runs/paired-comparison.json
+```
+
 ## VS Code Workflow
 
 The official `google.colab` extension version 0.9.7 and Jupyter are installed

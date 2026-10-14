@@ -2,6 +2,22 @@
 
 ## Cloud-First Workflow
 
+### Next Experiment
+
+Open [colab_next_experiment.ipynb](notebooks/colab_next_experiment.ipynb) with a
+Colab CPU kernel and upload the new `runs/cedhai-next.zip` using Explorer. It
+recovers the reviewed checkpoint from Drive, collects 24 games on seeds 21-26,
+audits the dataset, and trains a fresh candidate for 20 epochs. Then both the
+reference and candidate play 20 matched fresh-seed games each. Outputs/resume
+state stay under `MyDrive/cedhai/cloud/expanded-v1`.
+
+Run stages individually and inspect dataset warnings before training. This is
+64 games total and may span sessions. Resume rejects changed code/configuration,
+preserves partial attempts, and uses completed model/optimizer checkpoints.
+No new experiment has run yet; orchestration/comparison tests pass. More data
+and more epochs both change, so improvements cannot be attributed to data alone.
+See [the expansion guide](docs/colab.md#next-experiment).
+
 **VS Code:** Open [colab_vscode.ipynb](notebooks/colab_vscode.ipynb), select a
 **Colab** kernel, and sign in. Right-click `runs/cedhai-cloud.zip` and `latest.pt`
 in Explorer > **Upload to Colab**, then run the notebook cells. Use the Colab

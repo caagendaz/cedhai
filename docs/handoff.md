@@ -1,5 +1,33 @@
 # Development Checkpoint: 2026-10-12
 
+## Prepared Next Experiment: 2026-10-14
+
+The user approved continuing. New `colab_next_experiment.ipynb` and
+`cedhai.next_experiment` orchestrate cloud-only collection/train/evaluate/export.
+Prepared upload is `runs/cedhai-next.zip`. The existing epoch-5 reference is
+recovered from Drive and checked against its reviewed hash, not overwritten.
+
+Plan: 24 collection games on seeds 21-26; strict export/audit; a fresh seeded
+candidate trained for 20 epochs; then 20 games per checkpoint on matched fresh
+seeds 31,32,33,34,36. Collection gives five training seeds and only one validation
+seed, which remains a limitation. Total 64 games, potentially multiple sessions.
+Do not imply training has started or improvement has occurred: the new run is
+not yet executed. The user must run stages in the authenticated Colab notebook.
+
+Drive configuration/source hashes are immutable per run name. Dataset/training
+attempts are preserved, model/optimizer checkpoints support resume, and evaluation
+skips completed games. Interrupt handling terminates module groups including Java
+children. The controller emits streamed progress instead of silent long waits.
+
+`cedhai.compare_results` accepts two independently validated summary ZIPs,
+requires matched seeds/seats/opponents/deck/bridge/settings and distinct model
+hashes, then computes paired seed-block win-rate differences. Five seed blocks
+are exploratory; more data and more epochs both changed, so there is no data-only
+causal inference. Download reference-summary.zip, candidate-summary.zip, and
+comparison.json from remote `/content` after completion.
+
+Fifteen focused lightweight tests pass. No new local games/training were run.
+
 ## Imported Results: 2026-10-14
 
 The downloaded `evaluation-summary.zip` is now present and imported into
