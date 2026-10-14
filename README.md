@@ -93,8 +93,13 @@ The lightweight importer writes `review.md` and `review.json`, preserving the tw
 original JSON documents. It recomputes outcomes, checks seating and development
 seed separation, reconciles diagnostic counts, and flags incomplete batches.
 Cloud paths are never reopened locally, ZIP contents are not executed/extracted,
-and reported metadata is not proof of raw trajectory integrity. No Colab result
-archive has been imported here yet; model performance remains unassessed.
+and reported metadata is not proof of raw trajectory integrity.
+
+The [first imported Colab review](docs/evaluation/2026-10-14-colab.md) reports 20
+terminal games with no errors/truncations. The model won 3/20 (15%), with an
+exploratory seed-block bootstrap range of 5%-25%. The checkpoint hash matches the
+local file. This does not establish strategic improvement or cEDH competence.
+Next: expand independent training data in Colab and reserve new evaluation seeds.
 
 Checkpoint evaluation supports `--checkpoint`, a `model` policy profile,
 `--development-seeds`, and `--resume`. Reports include per-seat outcomes and

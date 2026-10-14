@@ -6,3 +6,4 @@ runs/
 *.egg-info/
 tools/
 *.pt
+/evaluation-summary*.zip

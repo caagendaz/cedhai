@@ -1,5 +1,26 @@
 # Development Checkpoint: 2026-10-12
 
+## Imported Results: 2026-10-14
+
+The downloaded `evaluation-summary.zip` is now present and imported into
+`runs/colab-review-20261014`. All consistency checks pass: 20 terminal games,
+no errors/truncations, five complete seed blocks. The model won 3/20 (15%);
+exploratory bootstrap range 5%-25%, seat wins 0/5, 0/5, 2/5, 1/5. The reported
+checkpoint SHA-256 matches the actual local `latest.pt`.
+
+Model behavior: 383 meaningful choices, 7,384 forced decisions; lands 223/226,
+casts 61/64, attacks 71/71, blocks 28/28. Zero passes in 58 cast opportunities
+without competing land plays. This establishes aggregate behavior, not tactical
+quality. No raw trajectories were imported, and no improvement is established.
+Measured results/provenance are in `docs/evaluation/2026-10-14-colab.md`.
+Root summary ZIP downloads are now ignored by Git and preserved locally.
+
+Next: optional Colab collection on seeds 21-26, review coverage/split warnings,
+then a larger imitation smoke experiment. Treat inspected evaluation seeds as
+development evidence and reserve new untouched seeds for subsequent evaluation.
+No local simulations/training were run for this review. The 2026-10-13 note
+below is historical; its missing-archive blocker is resolved.
+
 ## Results Review Update: 2026-10-13
 
 The user says the Colab batch finished and ran the export cells but could not

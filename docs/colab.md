@@ -55,8 +55,10 @@ meaningful versus forced choices, offered/selected actions, and review prioritie
 Passing/skipping is not automatically a mistake. Summary-only checks cannot
 verify cloud trajectories or undeclared development seeds, and even a completed
 20-game vanilla curriculum batch does not establish cEDH competence. Inspect
-results before launching optional retraining. No actual cloud archive is present
-on this PC yet, so its measured performance cannot currently be assessed.
+results before launching optional retraining. The first archive was imported on
+2026-10-14: 20 terminal games, model wins 3/20, no reported failures/truncations.
+See [the measured review](evaluation/2026-10-14-colab.md). Expand training on
+different seeds and reserve new untouched test seeds for a later checkpoint.
 
 ## Cloud-First Simulation And Evaluation
 
